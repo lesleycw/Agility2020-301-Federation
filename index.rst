@@ -20,7 +20,7 @@ What’s inside
 
 `Acknowledgements <#acknowledgements>`__
 
-`Lab 1 – SAML Service Provider (SP) Lab 6 <#Lab-1-–-SAML-Service-Provider-(SP)-Lab>`__
+`Lab 1 – SAML Service Provider (SP) Lab 6 <#lab-1-–-saml-service-provider-(sp)-lab>`__
 
 `Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA)
 14 <#_Toc515970476>`__
@@ -160,13 +160,13 @@ TASK 1 – Configure the SAML Service Provider (SP)
 
 Refer to the instructions and screen shots below:
 
-+------------------------------------------------------------------------------+------------------------------------------------------+
-| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                                                                            | |image1|   |
-|                                                                                                                                                       |            |
-| 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***                                                             |            |
-|                                                                                                                                                       |            |
-| 3. Click the ***Create*** button (far right)                                                                                                          |            |
-+==============================================================================+======================================================+
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 | |image1|                               |
+|                                                                                            |                                        |
+| 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***  |                                        |
+|                                                                                            |                                        |
+| 3. Click the ***Create*** button (far right)                                               |                                        |
++============================================================================================+========================================+
 | 1. In the ***Create New SAML SP Service*** dialogue box click ***General Settings*** in the left navigation pane and key in the following as shown:   | |image2|   |
 |                                                                                                                                                       |            |
 |    -  ***Name***: **app.f5demo.com**                                                                                                                  |            |
