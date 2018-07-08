@@ -8,17 +8,17 @@ What’s inside
 
 `Welcome <#welcome>`__
 
-`Lab Network Setup <#lab network setup>`__
+`Lab-Network-Setup <#lab network setup>`__
 
-`Timing for labs <#timing for labs>`__
+`Timing-for-labs <#timing for labs>`__
 
-`Authentication – Credentials <#authentication credentials>`__
+`Authentication – Credentials <#authentication-credentials>`__
 
-`Utilized Browsers 4 <#_Toc515970472>`__
+`Utilized Browsers <#utilized-browsers>`__
 
-`General Notes 4 <#_Toc515970473>`__
+`General Notes <#general-notes>`__
 
-`Acknowledgements 4 <#acknowledgements>`__
+`Acknowledgements <#acknowledgements>`__
 
 `Lab 1 – SAML Service Provider (SP) Lab 6 <#_Toc515970475>`__
 
