@@ -7,17 +7,11 @@ APM 330 Presented by: Steve Lyons, Chris Miller & Chas Lesley
 What’s inside
 
 `Welcome <#welcome>`__
-
-`Lab-Network-Setup <#lab network setup>`__
-
-`Timing-for-labs <#timing for labs>`__
-
+`Lab Network Setup <#lab-network-setup>`__
+`Timing for labs <#timing-for-labs>`__
 `Authentication – Credentials <#authentication-credentials>`__
-
 `Utilized Browsers <#utilized-browsers>`__
-
 `General Notes <#general-notes>`__
-
 `Acknowledgements <#acknowledgements>`__
 
 `Lab 1 – SAML Service Provider (SP) Lab 6 <#_Toc515970475>`__
