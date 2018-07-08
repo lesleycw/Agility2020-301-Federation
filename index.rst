@@ -6,13 +6,13 @@ APM 330 Presented by: Steve Lyons, Chris Miller & Chas Lesley
 
 What’s inside
 
-`Welcome 3 <#_Toc515970468>`__
+`Welcome <#welcome>`__
 
-`Lab Network Setup 3 <#_Toc515970469>`__
+`Lab Network Setup <#lab network setup>`__
 
-`Timing for labs 4 <#_Toc515970470>`__
+`Timing for labs <#timing for labs>`__
 
-`Authentication – Credentials 4 <#_Toc515970471>`__
+`Authentication – Credentials <#authentication credentials>`__
 
 `Utilized Browsers 4 <#_Toc515970472>`__
 
