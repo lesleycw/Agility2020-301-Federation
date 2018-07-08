@@ -20,7 +20,7 @@ What’s inside
 
 `Acknowledgements <#acknowledgements>`__
 
-`Lab 1 – SAML Service Provider (SP) Lab 6 <#lab-1-–-saml-service-provider-(sp)-lab>`__
+`Lab 1 – SAML Service Provider (SP) Lab 6 <#lab-1:-saml-service-provider-(sp)-lab>`__
 
 `Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA)
 14 <#_Toc515970476>`__
@@ -134,7 +134,7 @@ Team. Many thanks to the 2017 Agility Lab Team for the SAML & OAuth
 Federation Labs, Lucas Thompson for his OAuth/OIDC Lab and our lab
 testers Matt Harmon, Dave Lipowsky & Stu McMath.
 
-Lab 1 – SAML Service Provider (SP) Lab
+Lab 1: SAML Service Provider (SP) Lab
 ======================================
 
 The purpose of this lab is to configure and test a SAML Service
@@ -166,25 +166,28 @@ Refer to the instructions and screen shots below:
 | 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***  |                                        |
 |                                                                                            |                                        |
 | 3. Click the ***Create*** button (far right)                                               |                                        |
-+============================================================================================+========================================+
-| 1. In the ***Create New SAML SP Service*** dialogue box click ***General Settings*** in the left navigation pane and key in the following as shown:   | |image2|   |
-|                                                                                                                                                       |            |
-|    -  ***Name***: **app.f5demo.com**                                                                                                                  |            |
-|                                                                                                                                                       |            |
-|    -  ***Entity ID***: **https://app.f5demo.com**                                                                                                     |            |
-|                                                                                                                                                       |            |
-|     *Note: The yellow box on Host will disappear when the Entity ID is entered.*                                                                      |            |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
-| 1. Click on the ***Security Settings*** in the left navigation menu                                                                                   | |image3|   |
-|                                                                                                                                                       |            |
-| 2. Check the ***Sign Authentication Request*** checkbox                                                                                               |            |
-|                                                                                                                                                       |            |
-| 3. Select **/Common/SAML.key** from drop down menu for the ***Message Signing Private Key ***                                                         |            |
-|                                                                                                                                                       |            |
-| 4. Select **/Common/SAML.crt** from drop down menu for the ***Message Signing Certificate ***                                                         |            |
-|                                                                                                                                                       |            |
-| 5. Click ***OK*** on the dialogue box                                                                                                                 |            |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| 1. In the ***Create New SAML SP Service*** dialogue box click ***General Settings*** in    | |image2|                               |
+|    the left navigation pane and key in the following as shown:                             |                                        |
+|                                                                                            |                                        |
+|    -  ***Name***: **app.f5demo.com**                                                       |                                        |
+|                                                                                            |                                        |
+|    -  ***Entity ID***: **https://app.f5demo.com**                                          |                                        |
+|                                                                                            |                                        |
+|     *Note: The yellow box on Host will disappear when the Entity ID is entered.*           |                                        |
++--------------------------------------------------------------------------------------------+----------------------------------------+
+| 1. Click on the ***Security Settings*** in the left navigation menu                        | |image3|                               |
+|                                                                                            |                                        |
+| 2. Check the ***Sign Authentication Request*** checkbox                                    |                                        |
+|                                                                                            |                                        |
+| 3. Select **/Common/SAML.key** from drop down menu for the                                 |                                        |
+|    ***Message Signing Private Key ***                                                      |                                        |
+|                                                                                            |                                        |
+| 4. Select **/Common/SAML.crt** from drop down menu for the                                 |                                        |
+|    ***Message Signing Certificate ***                                                      |                                        |
+|                                                                                            |                                        |
+| 5. Click ***OK*** on the dialogue box                                                      |                                        |
++--------------------------------------------------------------------------------------------+----------------------------------------+
 
 TASK 2 – Configure the External SAML IDP Connector 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
