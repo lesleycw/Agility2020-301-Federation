@@ -68,7 +68,7 @@ If you wish to replicate these labs in your environment you will need to
 perform these steps accordingly. Additional lab resources are provided
 as illustrated in the diagram below:
 
-|image2|
+|image0|
 
 Timing for labs
 ---------------
@@ -160,7 +160,7 @@ TASK 1 – Configure the SAML Service Provider (SP)
 Refer to the instructions and screen shots below:
 
 +--------------------------------------------------------------------------------------------+----------------------------------------+
-| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 |  |image10.png|                         |
+| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 |  |image1|                              |
 |                                                                                            |                                        |
 | 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***  |                                        |
 |                                                                                            |                                        |
