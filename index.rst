@@ -206,21 +206,35 @@ TASK 2 – Configure the External SAML IDP Connector
 
 Refer to the instructions and screen shots below:
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
-| 1. Click on the ***Access Federation SAML Service Provider External IdP Connectors*** or click on the ***SAML Service Provider*** tab in the horizontal navigation menu and select ***External IdP Connectors***                                   | |image4|   |
-|                                                                                                                                                                                                                                                    |            |
-| 2. Click specifically on the ***Down Arrow*** next to the ***Create*** button (far right)                                                                                                                                                          |            |
-|                                                                                                                                                                                                                                                    |            |
-| 3. Select ***From Metadata*** from the drop down menu                                                                                                                                                                                              |            |
-+====================================================================================================================================================================================================================================================+============+
-| 1. In the ***Create New SAML IdP Connector*** dialogue box, click ***Browse*** and select the **idp.partner.com-app\_metadata.xml** file from the Desktop of your jump host.                                                                       | |image5|   |
-|                                                                                                                                                                                                                                                    |            |
-| 2. In the ***Identity Provider Name*** field enter the following: **idp.partner.com**                                                                                                                                                              |            |
-|                                                                                                                                                                                                                                                    |            |
-| 3. Click ***OK*** on the dialogue box.                                                                                                                                                                                                             |            |
-|                                                                                                                                                                                                                                                    |            |
-|     *Note: The idp.partner.com-app\_metadata.xml was created previously. Oftentimes, IdP providers will have a metadata file representing their IdP service. This can be imported to save object creation time as it has been done in this lab *   |            |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+
++--------------------------------------------------------------------------------------------+
+| 1. Click on the ***Access Federation SAML Service Provider External IdP Connectors***      |
+|                                                                                            |  
+|  or click on the ***SAML Service Provider*** tab in the horizontal navigation menu and     | 
+|                                                                                            |
+|  select ***External IdP Connectors***                                                      |
+|                                                                                            |
+| 2. Click specifically on the ***Down Arrow*** next to the ***Create*** button (far right)  |
+|                                                                                            |
+| 3. Select ***From Metadata*** from the drop down menu                                      |
++--------------------------------------------------------------------------------------------+
+
+|image4|
+
++--------------------------------------------------------------------------------------------+   
+| 1. In the ***Create New SAML IdP Connector*** dialogue box, click ***Browse*** and select  |
+|                                                                                            |
+| the **idp.partner.com-app\_metadata.xml** file from the Desktop of your jump host.         |
+|                                                                                            |
+| 2. In the ***Identity Provider Name*** field enter the following: **idp.partner.com**      | 
+|                                                                                            |
+| 3. Click ***OK*** on the dialogue box.                                                     |
+|                                                                                            |
+| *Note: The idp.partner.com-app\_metadata.xml was created previously. Oftentimes,           |
+   IdP providers will have a metadata file representing their IdP service. This can be       | 
+   imported to save object creation time as it has been done in this lab *                   |
++--------------------------------------------------------------------------------------------+
+
+|image5|
 
 TASK 3 – Bind the External SAML IDP Connector to the SAML SP 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
