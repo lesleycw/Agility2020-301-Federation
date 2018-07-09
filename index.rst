@@ -26,7 +26,7 @@ What’s inside
 
 `Lab 3 – oAuth and OpenID Connect Lab - Google <#lab-3-oauth-and-openid-connect-lab-with-google>`__
 
-`Lab 4 – oAuth and Azur AD Lab <#lab-4-oauth-and-azure-ad-lab>`__
+`Lab 4 – oAuth and Azure AD Lab <#lab-4-oauth-and-azuread-lab>`__
 
 `Conclusion <#conclusion>`__
 
