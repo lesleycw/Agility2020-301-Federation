@@ -20,7 +20,7 @@ What’s inside
 
 `Acknowledgements <#acknowledgements>`__
 
-`Lab 1 – SAML Service Provider (SP) Lab <#lab-1-saml-service-provider-(sp)-lab>`__
+`Lab 1 – SAML Service Provider (SP) Lab <#lab-1-saml-service-provider-lab>`__
 
 `Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA) <#_Toc515970476>`__
 
@@ -133,12 +133,12 @@ Team. Many thanks to the 2017 Agility Lab Team for the SAML & OAuth
 Federation Labs, Lucas Thompson for his OAuth/OIDC Lab and our lab
 testers Matt Harmon, Dave Lipowsky & Stu McMath.
 
-Lab 1 SAML Service Provider (SP) Lab
+Lab 1 SAML Service Provider Lab
 ======================================
 
 The purpose of this lab is to configure and test a SAML Service
-Provider. Students will configure the various aspects of a SAML Service
-Provider, import and bind to a SAML Identity Provider and test
+Provider (SP). Students will configure the various aspects of a SAML Service
+Provider, import and bind to a SAML Identity Provider (iDP) and test
 SP-Initiated SAML Federation.
 
 Objective:
@@ -162,41 +162,41 @@ TASK 1 – Configure the SAML Service Provider (SP)
 Refer to the instructions and screen shots below:
 
 +--------------------------------------------------------------------------------------------+
-| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 |
+| 1. Login to your lab provided **Virtual Edition BIG-IP**                                   |
 |                                                                                            |
-| 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***  |
+| 2. Begin by selecting: **Access Federation -> SAML Service Provider Local SP Services**    |
 |                                                                                            |
-| 3. Click the ***Create*** button (far right)                                               |
+| 3. Click the **Create** button (far right)                                                 |
 +--------------------------------------------------------------------------------------------+
 
 |image1|
 
 +--------------------------------------------------------------------------------------------+
-| 1. In the ***Create New SAML SP Service*** dialogue box click ***General Settings*** in    |
+| 1. In the **Create New SAML SP Service**  dialogue box click **General Settings** in       |
 |                                                                                            |
 |    the left navigation pane and key in the following as shown:                             | 
 |                                                                                            |
-|    -  ***Name***: **app.f5demo.com**                                                       | 
+|    -  **Name**: **app.f5demo.com**                                                         | 
 |                                                                                            |
-|    -  ***Entity ID***: **https://app.f5demo.com**                                          |
+|    -  **Entity ID**: **https://app.f5demo.com**                                            |
 |                                                                                            |
-|     *Note: The yellow box on Host will disappear when the Entity ID is entered.*           |
+|    *Note: The yellow box on Host will disappear when the Entity ID is entered.*            |
 +--------------------------------------------------------------------------------------------+
 
 |image2|
 
 +--------------------------------------------------------------------------------------------+
-| 1. Click on the ***Security Settings*** in the left navigation menu                        |
+| 1. Click on the **Security Settings** in the left navigation menu                          |
 |                                                                                            |
-| 2. Check the ***Sign Authentication Request*** checkbox                                    |
+| 2. Check the **Sign Authentication Request** checkbox                                      |
 |                                                                                            |
 | 3. Select **/Common/SAML.key** from drop down menu for the                                 |
-|    ***Message Signing Private Key ***                                                      |
+|    **Message Signing Private Key **                                                        |
 |                                                                                            |
 | 4. Select **/Common/SAML.crt** from drop down menu for the                                 |
-|    ***Message Signing Certificate ***                                                      |
+|    **Message Signing Certificate **                                                        |
 |                                                                                            |
-| 5. Click ***OK*** on the dialogue box                                                      |
+| 5. Click **OK** on the dialogue box                                                        |
 +--------------------------------------------------------------------------------------------+
 
 |image3|
@@ -207,31 +207,31 @@ TASK 2 – Configure the External SAML IDP Connector
 Refer to the instructions and screen shots below:
 
 +--------------------------------------------------------------------------------------------+
-| 1. Click on the ***Access Federation SAML Service Provider External IdP Connectors***      |
+| 1. Click on the **Access Federation SAML Service Provider External IdP Connectors**        |
 |                                                                                            |  
-|  or click on the ***SAML Service Provider*** tab in the horizontal navigation menu and     | 
+|  or click on the **SAML Service Provider** tab in the horizontal navigation menu and       | 
 |                                                                                            |
-|  select ***External IdP Connectors***                                                      |
+|  select **External IdP Connectors**                                                        |
 |                                                                                            |
-| 2. Click specifically on the ***Down Arrow*** next to the ***Create*** button (far right)  |
+| 2. Click specifically on the **Down Arrow** next to the **Create** button (far right)      |
 |                                                                                            |
-| 3. Select ***From Metadata*** from the drop down menu                                      |
+| 3. Select **From Metadata** from the drop down menu                                        |
 +--------------------------------------------------------------------------------------------+
 
 |image4|
 
 +--------------------------------------------------------------------------------------------+   
-| 1. In the ***Create New SAML IdP Connector*** dialogue box, click ***Browse*** and select  |
+| 1. In the **Create New SAML IdP Connector** dialogue box, click **Browse** and select      |
 |                                                                                            |
 | the **idp.partner.com-app\_metadata.xml** file from the Desktop of your jump host.         |
 |                                                                                            |
-| 2. In the ***Identity Provider Name*** field enter the following: **idp.partner.com**      | 
+| 2. In the **Identity Provider Name** field enter the following: **idp.partner.com**        | 
 |                                                                                            |
-| 3. Click ***OK*** on the dialogue box.                                                     |
+| 3. Click **OK** on the dialogue box.                                                       |
 |                                                                                            |
 | *Note: The idp.partner.com-app\_metadata.xml was created previously. Oftentimes,           |
-   IdP providers will have a metadata file representing their IdP service. This can be       | 
-   imported to save object creation time as it has been done in this lab *                   |
+|   IdP providers will have a metadata file representing their IdP service. This can be      | 
+|   imported to save object creation time as it has been done in this lab *                  |
 +--------------------------------------------------------------------------------------------+
 
 |image5|
