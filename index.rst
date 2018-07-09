@@ -20,7 +20,7 @@ What’s inside
 
 `Acknowledgements <#acknowledgements>`__
 
-`Lab 1 – SAML Service Provider (SP) Lab <#lab-1:-saml-service-provider-(sp)-lab>`__
+`Lab 1 – SAML Service Provider (SP) Lab <#lab-1-saml-service-provider-(sp)-lab>`__
 
 `Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA) <#_Toc515970476>`__
 
@@ -133,7 +133,7 @@ Team. Many thanks to the 2017 Agility Lab Team for the SAML & OAuth
 Federation Labs, Lucas Thompson for his OAuth/OIDC Lab and our lab
 testers Matt Harmon, Dave Lipowsky & Stu McMath.
 
-Lab 1: SAML Service Provider (SP) Lab
+Lab 1 SAML Service Provider (SP) Lab
 ======================================
 
 The purpose of this lab is to configure and test a SAML Service
@@ -142,6 +142,7 @@ Provider, import and bind to a SAML Identity Provider and test
 SP-Initiated SAML Federation.
 
 Objective:
+----------
 
 -  Gain an understanding of SAML Service Provider(SP) configurations and
    its component parts
@@ -149,13 +150,14 @@ Objective:
 -  Gain an understanding of the access flow for SP-Initiated SAML
 
 Lab Requirements:
+-----------------
 
 -  All Lab requirements will be noted in the tasks that follow
 
-Estimated completion time: 25 minutes
+-  Estimated completion time: 25 minutes
 
 TASK 1 – Configure the SAML Service Provider (SP) 
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
@@ -200,7 +202,7 @@ Refer to the instructions and screen shots below:
 |image3|
 
 TASK 2 – Configure the External SAML IDP Connector 
---------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
@@ -359,6 +361,7 @@ Provider. Students will configure a SaaS based SAML Identity Provider
 test IdP-Initiated and SP-Initiated SAML Federation.
 
 Objective:
+----------
 
 -  Gain an understanding of integrating a SaaS SAML Identity
    Provider(IdP)
@@ -366,10 +369,11 @@ Objective:
 -  Gain an understanding of the access flow for IdP-Initiated SAML
 
 Lab Requirements:
+-----------------
 
 -  All Lab requirements will be noted in the tasks that follow
 
-Estimated completion time: 25 minutes
+-  Estimated completion time: 25 minutes
 
 TASK 1 – Sign Up for OKTA Developer Account 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -613,6 +617,7 @@ authentication factor to log in. Archive files are available for the
 completed Lab 2.
 
 Objective:
+----------
 
 -  Gain a better understanding of the F5 use cases OAuth2 and OpenID
    Connect.
@@ -621,10 +626,11 @@ Objective:
    OpenID Connect and JSON Web Tokens (JWT) open up
 
 Lab Requirements:
+-----------------
 
 -  All Lab requirements will be noted in the tasks that follow
 
-Estimated completion time: 25 minutes
+-  Estimated completion time: 25 minutes
 
 TASK 1 – Setup Google’s API Credentials 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -919,16 +925,18 @@ Domain Services is offered by Microsoft Azure as a cloud service. This
 can be used together with OpenID to log in to APM.
 
 Objective:
+----------
 
 -  Gain an understanding of additional F5 OAuth features
 
 -  Deploy a working configuration using F5 APM and Microsoft Azure AD
 
 Lab Requirements:
+-----------------
 
 -  All lab requirements will be noted in the tasks that follow
 
-Estimated completion time: 25 minutes
+-  Estimated completion time: 25 minutes
 
 TASK 1 – Create/Review New Application Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1318,11 +1326,10 @@ student to further explore the BIG-IP platform and Access Policy Manager
 Appendix
 ========
 
-The following items are for information purposes only 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following are for informational purposes only
 
 Setting up an AzureAD Developer Account
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 Refer to the information below:
 
@@ -1331,7 +1338,7 @@ Refer to the information below:
 |                                                                                                                                                                               |                          |
 | 2. The following images show the general flow to setup a free developer account *(this may change as dictated by Microsoft)*                                                  |                          |
 +===============================================================================================================================================================================+==========================+
-| 1. Initial Setup                                                                                                                                                              | |image144|\ |image145|   |
+| 1. Initial Setup                                                                                                                                                              | |image144| |image145|   |
 |                                                                                                                                                                               |                          |
 |                                                                                                                                                                               | |image146| |image147|    |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
@@ -1351,7 +1358,7 @@ Learn More
     assistance with this lab guide and other APM tasks.
 
 Links & Guides
-~~~~~~~~~~~~~~
+--------------
 
 -  **Access Policy Manager (APM) Operations Guide:**
        https://support.f5.com/content/kb/en-us/products/big-ip_apm/manuals/product/f5-apm-operations-guide/_jcr_content/pdfAttach/download/file.res/f5-apm-operations-guide.pdf
