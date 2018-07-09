@@ -170,7 +170,8 @@ Refer to the instructions and screen shots below:
 |image1|
 
 +--------------------------------------------------------------------------------------------+
-| 1. In the ***Create New SAML SP Service*** dialogue box click ***General Settings*** in    | 
+| 1. In the ***Create New SAML SP Service*** dialogue box click ***General Settings*** in    |
+|                                                                                            |
 |    the left navigation pane and key in the following as shown:                             | 
 |                                                                                            |
 |    -  ***Name***: **app.f5demo.com**                                                       | 
