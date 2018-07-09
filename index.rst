@@ -1390,7 +1390,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 2. Click on **App Registration** on the resulting menu and then                              |
 |                                                                                              |
-|    **+ New Application Registration** on the flyout menu.                                    |
+|    **New Application Registration** on the flyout menu.                                    |
 +----------------------------------------------------------------------------------------------+
 
 |image100| 
@@ -1571,7 +1571,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Parameter Value:** **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                             |
 |                                                                                              |
-| 1. Click **Finished**                                                                        |
+| 4. Click **Finished**                                                                        |
 +----------------------------------------------------------------------------------------------+
 
 |image113|
@@ -1581,233 +1581,360 @@ TASK 3 – Create OAuth Provider
 
 Refer to the instructions and screen shots below:
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Create the ***OAuth Provider*** by navigating to ***Access Federation OAuth Client/Resource Server Provider*** and clicking ***Create***                                                                                                                                         | |image114|   |
-+=====================================================================================================================================================================================================================================================================================+==============+
-| 1. Use the following values to create the Request                                                                                                                                                                                                                                   | |image115|   |
-|                                                                                                                                                                                                                                                                                     |              |
-| -  ***Name***: **f5demo\_AzureAD\_Provider**                                                                                                                                                                                                                                        | |image116|   |
-|                                                                                                                                                                                                                                                                                     |              |
-| -  ***Type***: **AzureAD**                                                                                                                                                                                                                                                          |              |
-|                                                                                                                                                                                                                                                                                     |              |
-| -  ***OpenID URI:*** (replace ***\_tennantID\_*** with the following tenantID **f5agilitydemogmail.onmicrosoft.com**                                                                                                                                                                |              |
-|                                                                                                                                                                                                                                                                                     |              |
-|     Resulting URI should be as follows:                                                                                                                                                                                                                                             |              |
-|                                                                                                                                                                                                                                                                                     |              |
-|     **https://login.windows.net/f5agilitydemogmail.onmicrosoft.com/.well-known/openid-configuration**                                                                                                                                                                               |              |
-|                                                                                                                                                                                                                                                                                     |              |
-| 1. Click ***Discover***                                                                                                                                                                                                                                                             |              |
-|                                                                                                                                                                                                                                                                                     |              |
-| 2. Click ***Finished***                                                                                                                                                                                                                                                             |              |
-|                                                                                                                                                                                                                                                                                     |              |
-|     *Note: if using another account you can find you TenantID by navigating to the **Azure Portal** and clicking **Azure Active Directory**. The tenant ID is the “\ **default directory**\ ” as shown. The full name of the TenantID will be your **TenantID.onmicrosoft.com** *   |              |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------+
+| 1. Create the **OAuth Provider** by navigating to **Access Federation** ->                   |
+|                                                                                              |
+|    **OAuth Client/Resource Server Provider** and clicking **Create**                         |
++----------------------------------------------------------------------------------------------+
+
+|image114|
+
++----------------------------------------------------------------------------------------------+
+| 2. Use the following values to create the Request                                            |
+|                                                                                              |
+| -  **Name**: **f5demo\_AzureAD\_Provider**                                                   |
+|                                                                                              |
+| -  **Type**: **AzureAD**                                                                     |
+|                                                                                              |
+| -  **OpenID URI:** (replace **\_tennantID\_** with the following tenantID                    |
+|                                                                                              |
+|    **f5agilitydemogmail.onmicrosoft.com**                                                    |
+|                                                                                              |
+| Resulting URI should be as follows:                                                          |
+|                                                                                              |
+| https://login.windows.net/f5agilitydemogmail.onmicrosoft.com/.well-known/openid-configuration|
+|                                                                                              |
+| 3. Click **Discover**                                                                        |
+|                                                                                              |
+| 4. Click **Finished**                                                                        |
+|                                                                                              |
+| *Note: if using another account you can find you TenantID by navigating to the*              |
+|                                                                                              |
+| * **Azure Portal** and clicking **Azure Active Directory**. The tenant ID is the*            |
+|                                                                                              |
+| *  “\ **default directory**\ ” as shown. The full name of the TenantID will be your*         |
+|                                                                                              |
+| * **TenantID.onmicrosoft.com** *                                                             |
++----------------------------------------------------------------------------------------------+
+
+|image115| |image116| 
 
 TASK 4 – Create OAuth Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Create the ***OAuth Server (Client)*** by navigating to ***Access Federation OAuth Client/Resource Server OAuth Server*** and clicking ***Create***   | |image117|   |
-+==========================================================================================================================================================+==============+
-| 1. Using the following values to complete the OAuth Provider                                                                                             | |image118|   |
-|                                                                                                                                                          |              |
-| -  ***Name:*** **f5demo\_AzureAD\_Server**                                                                                                               |              |
-|                                                                                                                                                          |              |
-| -  ***Mode:*** **Client**                                                                                                                                |              |
-|                                                                                                                                                          |              |
-| -  ***Type:*** **AzureAD**                                                                                                                               |              |
-|                                                                                                                                                          |              |
-| -  ***OAuth Provider:*** **f5demo\_AzureAD\_Provider**                                                                                                   |              |
-|                                                                                                                                                          |              |
-| -  ***DNS Resolver:*** **proxy\_dns\_resolver**                                                                                                          |              |
-|                                                                                                                                                          |              |
-| -  ***Client ID:***                                                                                                                                      |              |
-|                                                                                                                                                          |              |
-|     **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                                                                                                             |              |
-|                                                                                                                                                          |              |
-| -  ***Client Secret:***                                                                                                                                  |              |
-|                                                                                                                                                          |              |
-|     **YqHbzTosdBxdaGl9A/hXCs1ex1HWi+BTUSkgcfhbTwA=**                                                                                                     |              |
-|                                                                                                                                                          |              |
-| -  ***Client’s Server SSL Profile Name:*** **serverssl-insecure-compatible**                                                                             |              |
-|                                                                                                                                                          |              |
-| 1. Click ***Finished***                                                                                                                                  |              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------+
+| 1. Create the **OAuth Server (Client)** by navigating to **Access Federation** ->            |
+|                                                                                              |
+|    **OAuth Client/Resource Server** -> **OAuth Server*** and clicking **Create**             |
++----------------------------------------------------------------------------------------------+
+
+|image117|
+
++----------------------------------------------------------------------------------------------+
+| 2. Using the following values to complete the OAuth Provider                                 |
+|                                                                                              |
+| -  **Name:** **f5demo\_AzureAD\_Server**                                                     |
+|                                                                                              |
+| -  **Mode:** **Client**                                                                      |  
+|                                                                                              |
+| -  **Type:** **AzureAD**                                                                     |
+|                                                                                              |
+| -  **OAuth Provider:** **f5demo\_AzureAD\_Provider**                                         |
+|                                                                                              |
+| -  **DNS Resolver:** **proxy\_dns\_resolver**                                                |
+|                                                                                              |
+| -  **Client ID:** **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                                   |
+|                                                                                              |
+| -  **Client Secret:**  **YqHbzTosdBxdaGl9A/hXCs1ex1HWi+BTUSkgcfhbTwA=**                      |
+|                                                                                              |
+| -  **Client’s Server SSL Profile Name:** **serverssl-insecure-compatible**                   |
+|                                                                                              |
+| 3. Click **Finished**                                                                        |
++----------------------------------------------------------------------------------------------+
+
+|image118| 
 
 TASK 5 – Setup F5 Per Session Policy (Access Policy) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Create the ***Per Session Policy*** by navigating to ***Access Proflie/Policies Access Profiles (Per Session Policies)*** and clicking ***Create***                                                  | |image119|   |
-+=========================================================================================================================================================================================================+==============+
-| 1. In the ***New Profile*** dialogue window enter the following values                                                                                                                                  | |image120|   |
-|                                                                                                                                                                                                         |              |
-| -  ***Name:*** **AzureAD\_OAuth**                                                                                                                                                                       |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Profile Type:*** **All**                                                                                                                                                                          |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Profile Scope:*** **Profile**                                                                                                                                                                     |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Language:*** **English**                                                                                                                                                                          |              |
-|                                                                                                                                                                                                         |              |
-| 1. Click ***Finished***                                                                                                                                                                                 |              |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Click ***Edit*** link on for the **AzureAD\_OAuth** Access Policy                                                                                                                                    | |image121|   |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. In the **AzureAD\_OAuth** Access Policy, click the “\ ***+***\ ” between ***Start*** and ***Deny***                                                                                                  | |image122|   |
-|                                                                                                                                                                                                         |              |
-| 2. Click the ***Authentication*** tab in the events window                                                                                                                                              |              |
-|                                                                                                                                                                                                         |              |
-| 3. Scroll down and click the radio button for ***OAuth Client***                                                                                                                                        |              |
-|                                                                                                                                                                                                         |              |
-| 4. Click ***Add***                                                                                                                                                                                      |              |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. In the ***OAuth\_Client*** window enter the following values as shown:                                                                                                                               | |image123|   |
-|                                                                                                                                                                                                         |              |
-|    -  ***Server: ***                                                                                                                                                                                    |              |
-|                                                                                                                                                                                                         |              |
-|     **/Common/f5demo\_AzureAD\_Server**                                                                                                                                                                 |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Grant Type: ***                                                                                                                                                                                   |              |
-|                                                                                                                                                                                                         |              |
-|     **Authorization code**                                                                                                                                                                              |              |
-|                                                                                                                                                                                                         |              |
-| -  ***OpenID Connect: ***                                                                                                                                                                               |              |
-|                                                                                                                                                                                                         |              |
-|     **Enabled**                                                                                                                                                                                         |              |
-|                                                                                                                                                                                                         |              |
-| -  ***OpenID Connect Flow Type: ***                                                                                                                                                                     |              |
-|                                                                                                                                                                                                         |              |
-|     **Authorization code**                                                                                                                                                                              |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Authentication Redirect Request:*** **/Common/AzureADAuthRedirectRequest**                                                                                                                        |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Token Request:***                                                                                                                                                                                 |              |
-|                                                                                                                                                                                                         |              |
-|     **/Common/Azure\_AD\_Token**                                                                                                                                                                        |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Refresh Token Request:***                                                                                                                                                                         |              |
-|                                                                                                                                                                                                         |              |
-|     **/Common/AzureADTokenRefreshRequest**                                                                                                                                                              |              |
-|                                                                                                                                                                                                         |              |
-| -  ***OpenID Connect UserInfo Request:***                                                                                                                                                               |              |
-|                                                                                                                                                                                                         |              |
-|     **None**                                                                                                                                                                                            |              |
-|                                                                                                                                                                                                         |              |
-| -  ***Redirection URI:***                                                                                                                                                                               |              |
-|                                                                                                                                                                                                         |              |
-|     **https://%{session.server.network.name}/**                                                                                                                                                         |              |
-|                                                                                                                                                                                                         |              |
-|     **oauth/client/redirect**                                                                                                                                                                           |              |
-|                                                                                                                                                                                                         |              |
-| 1. Click ***Save***                                                                                                                                                                                     |              |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Click on the ***Deny*** link, in the ***Select Binding***, select the ***Allow*** radio button and click ***Save***                                                                                  | |image124|   |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Click on the ***Apply Access Policy*** link in the top left-hand corner.                                                                                                                             | |image125|   |
-|                                                                                                                                                                                                         |              |
-|     ***NOTE**: Additional actions can be taken in the Per Session policy (Access Policy). The lab is simply completing authorization. Other access controls can be implemented based on the use case*   |              |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------+
+| 1. Create the **Per Session Policy** by navigating to **Access Proflie/Policies** ->         |
+|                                                                                              |
+|    **Access Profiles (Per Session Policies)** and clicking **Create**                        |
++----------------------------------------------------------------------------------------------+
+
+|image119|
+
++----------------------------------------------------------------------------------------------+
+| 2. In the **New Profile** dialogue window enter the following values                         |
+|                                                                                              |
+| -  **Name:** **AzureAD\_OAuth**                                                              |
+|                                                                                              |
+| -  **Profile Type:** **All**                                                                 |
+|                                                                                              |
+| -  **Profile Scope:** **Profile**                                                            |
+|                                                                                              |
+| -  **Language:** **English**                                                                 |
+|                                                                                              |
+| 3. Click **Finished**                                                                        |
++----------------------------------------------------------------------------------------------+
+
+|image120|
+
++----------------------------------------------------------------------------------------------+
+| 4. Click **Edit** link on for the **AzureAD\_OAuth** Access Policy                           |
++----------------------------------------------------------------------------------------------+
+
+|image121| 
+
++-----------------------------------------------------------------------------------------------+
+| 5. In the **AzureAD\_OAuth** Access Policy, click the “\ **+**\ ” between **Start** & **Deny**|
+|                                                                                               |
+| 6. Click the **Authentication** tab in the events window                                      |
+|                                                                                               |
+| 7. Scroll down and click the radio button for **OAuth Client**                                |
+|                                                                                               |
+| 8. Click ***Add***                                                                            |
++-----------------------------------------------------------------------------------------------+
+
+|image122|
+
++----------------------------------------------------------------------------------------------+
+| 9. In the ***OAuth\_Client*** window enter the following values as shown:                    |
+|                                                                                              |
+| -  **Server:** **/Common/f5demo\_AzureAD\_Server**                                           |
+|                                                                                              |
+| -  **Grant Type:** **Authorization code**                                                    |
+|                                                                                              |
+| -  **OpenID Connect:** **Enabled**                                                           |
+|                                                                                              |
+| -  **OpenID Connect Flow Type:** **Authorization code**                                      |
+|                                                                                              |
+| -  **Authentication Redirect Request:** **/Common/AzureADAuthRedirectRequest**               |
+|                                                                                              |
+| -  **Token Request:** **/Common/Azure\_AD\_Token**                                           |
+|                                                                                              |
+| -  **Refresh Token Request:** **/Common/AzureADTokenRefreshRequest**                         |
+|                                                                                              |
+| -  **OpenID Connect UserInfo Request:** **None**                                             |
+|                                                                                              |
+| -  **Redirection URI:** **https://%{session.server.network.name}/oauth/client/redirect**     |
+|                                                                                              |
+| 10. Click **Save**                                                                            |
++----------------------------------------------------------------------------------------------+
+
+|image123| 
+
++----------------------------------------------------------------------------------------------+
+| 11. Click on the **Deny** link, in the **Select Binding**, select the **Allow** radio button |
+|                                                                                              |
+|    and click ***Save***                                                                      |
++----------------------------------------------------------------------------------------------+
+
+|image124|
+
++----------------------------------------------------------------------------------------------+
+| 12. Click on the ***Apply Access Policy*** link in the top left-hand corner.                  |
+|                                                                                              |
+| *Note: Additional actions can be taken in the Per Session policy (Access Policy). The lab*   |
+|                                                                                              |
+| *is simply completing authorization. Other access controls can be implemented based*         |
+|                                                                                              |
+| *on the use case.*                                                                           |
++----------------------------------------------------------------------------------------------+
+
+|image125|
 
 TASK 6 – Associate Access Policy to Virtual Server 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Navigate to ***Local Traffic Virtual Servers Virtual Server List*** and click on the **app.f5demo.com** ***Virtual Server*** link   | |image126|   |
-|                                                                                                                                        |              |
-| 2. Scroll to the ***Access Policy*** section                                                                                           |              |
-+========================================================================================================================================+==============+
-| 1. Use the ***Access Profile*** drop down to change the ***Access Profile*** to **AzureAD\_OAuth**                                     | |image127|   |
-|                                                                                                                                        |              |
-| 2. Use the ***Per-Request Policy*** drop down to change the ***Per-Request Policy*** to **AzureAD\_oauth\_policy**                     |              |
-|                                                                                                                                        |              |
-| 3. Scroll to the bottom of the ***Virtual Server*** configuration and click ***Update***                                               |              |
-+----------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------+
+| 1. Navigate to **Local Traffic** -> **Virtual Servers** -> **Virtual Server List** and       |
+|                                                                                              |
+|    click on the **app.f5demo.com** Virtual Server link                                       |
+|                                                                                              |
+| 2. Scroll to the **Access Policy** section                                                   |
++----------------------------------------------------------------------------------------------+
+
+|image126|
+
++----------------------------------------------------------------------------------------------+
+| 3. Use the **Access Profile** drop down to change the **Access Profile** to                  |
+|                                                                                              |
+|    **AzureAD\_OAuth**                                                                        |
+|                                                                                              |
+| 4. Use the **Per-Request Policy** drop down to change the **Per-Request Policy** to          |
+|                                                                                              |
+|    **AzureAD\_oauth\_policy**                                                                |
+|                                                                                              |
+| 5. Scroll to the bottom of the **Virtual Server** configuration and click **Update**         |
++----------------------------------------------------------------------------------------------+
+
+|image127|
 
 TASK 7 – Test app.f5demo.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+--------------------------------------------------------------------------------+--------------+
-| 1. Navigate in your provided browser to **https://app.f5demo.com**             | |image128|   |
-+================================================================================+==============+
-| 1. Authenticate with the following AzureAD account:                            | |image129|   |
-|                                                                                |              |
-| -  Username:                                                                   |              |
-|                                                                                |              |
-|     **demouser@f5agilitydemogmail.onmicrosoft.com**                            |              |
-|                                                                                |              |
-| -  Password: **f5d3m0u$3r**                                                    |              |
-+--------------------------------------------------------------------------------+--------------+
-| 1. Did you successfully redirect to the AzureAD?                               | |image130|   |
-|                                                                                |              |
-| 2. After successful authentication, were you returned to the app.f5demo.com?   |              |
-|                                                                                |              |
-| 3. Did you successfully pass your OAuth Token?                                 |              |
-+--------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------+
+| 1. Navigate in your provided browser to **https://app.f5demo.com**                           |
++----------------------------------------------------------------------------------------------+
+
+|image128|
+
++----------------------------------------------------------------------------------------------+
+| 2. Authenticate with the following AzureAD account:                                          |
+|                                                                                              |
+| -  **Username:** **demouser@f5agilitydemogmail.onmicrosoft.com**                             |
+|                                                                                              |
+| -  **Password:** **f5d3m0u$3r**                                                              |
++----------------------------------------------------------------------------------------------+
+
+|image129|
+
++----------------------------------------------------------------------------------------------+
+| 3. Did you successfully redirect to the AzureAD?                                             |
+|                                                                                              |
+| 4. After successful authentication, were you returned to the app.f5demo.com?                 |
+|                                                                                              |
+| 5. Did you successfully pass your OAuth Token?                                               |
++----------------------------------------------------------------------------------------------+
+
+|image130| 
 
 TASK 8 – Per Request Policy Controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. As in the prior lab, you can experiment with Per Request Policy controls. In the application page for **https://app.f5demo.com** click the ***Admin Link*** shown                                                                               | |image131|   |
-+====================================================================================================================================================================================================================================================+==============+
-| 1. You will receive an ***Access to this page is blocked*** (customizable) message with a reference. You have been blocked because you do not have access on a per request basis                                                                   | |image132|   |
-|                                                                                                                                                                                                                                                    |              |
-| 2. Press the ***Back*** button in your browser to return to ***https://app.f5demo.com***                                                                                                                                                           |              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. Navigate to ***Local Traffic iRules Datagroup List*** and click on the **Allowed\_Users** datagroup                                                                                                                                             | |image133|   |
-|                                                                                                                                                                                                                                                    |              |
-| 2. Enter your **demouser@f5agilitydemogmail.onmicrosoft.com** used for this lab as the ***String*** value                                                                                                                                          |              |
-|                                                                                                                                                                                                                                                    |              |
-| 3. Click ***Add*** then Click ***Update***                                                                                                                                                                                                         |              |
-|                                                                                                                                                                                                                                                    |              |
-|     ***NOTE**: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP Group memberships, Session variables, other user attributes and various other access control mechanisms can be used to achieve similar results *   |              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. You should now be able to successfully to access the Admin Functions by clicking on the Admin Link                                                                                                                                              | |image134|   |
-|                                                                                                                                                                                                                                                    |              |
-|     ***NOTE**: Per Request Policies are dynamic and do not require the same “Apply Policy” action as Per Session Policies *                                                                                                                        |              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. To review the Per Request Policy, navigate to ***Access Profiles/Policies Per Request Policies*** and click on the Edit link for the **AzureAD\_oauth\_policy**                                                                                 | |image135|   |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-| 1. The various Per-Request-Policy actions can be reviewed                                                                                                                                                                                          | |image136|   |
-|                                                                                                                                                                                                                                                    |              |
-|     ***NOTE**: Other actions like Step-Up Authentication controls can be performed in a Per-Request Policy *                                                                                                                                       |              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------+
+| 1. As in the prior lab, you can experiment with Per Request Policy controls. In the          |
+|                                                                                              |
+| application page for **https://app.f5demo.com** click the **Admin Link** shown               |
++----------------------------------------------------------------------------------------------+
+
+|image131|
+
+
++----------------------------------------------------------------------------------------------+
+| 1. You will receive an **Access to this page is blocked** (customizable) message with a      |
+|                                                                                              |
+|    reference. You have been blocked because you do not have access on a per request basis.   |
+|                                                                                              |
+| 2. Press the **Back** button in your browser to return to **https://app.f5demo.com**         |
++----------------------------------------------------------------------------------------------+
+
+|image132|
+
++----------------------------------------------------------------------------------------------+
+| 1. Navigate to **Local Traffic** -> **iRules** -> **Datagroup List** and click on the        |
+|                                                                                              |
+|    **Allowed\_Users** datagroup                                                              |
+|                                                                                              |
+| 2. Enter your **demouser@f5agilitydemogmail.onmicrosoft.com** used for this lab as the       |
+|                                                                                              |
+|    **String** value                                                                          |
+|                                                                                              |
+| 3. Click ***Add*** then Click ***Update***                                                   |
+|                                                                                              |
+| *Note: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP      |
+|                                                                                              |
+| *Group memberships, Session variables, other user attributes and various other access*       |
+|                                                                                              |
+| *control mechanisms can be used to achieve similar results.*                                 |
++----------------------------------------------------------------------------------------------+
+
+|image133|   
+
++----------------------------------------------------------------------------------------------+
+| 1. You should now be able to successfully to access the Admin Functions by clicking on the   |
+|                                                                                              |
+|    Admin Link.                                                                               |
+|                                                                                              |
+| *Note: Per Request Policies are dynamic and do not require the same “Apply Policy” action*   |
+|                                                                                              |
+| *as Per Session Policies*                                                                    |
++----------------------------------------------------------------------------------------------+
+
+|image134| 
+
++----------------------------------------------------------------------------------------------+
+| 1. To review the Per Request Policy, navigate to ***Access Profiles/Policies** ->            |
+|                                                                                              |
+|    **Per Request Policies*** and click on the Edit link for the **AzureAD\_oauth\_policy**   |
++----------------------------------------------------------------------------------------------+
+
+|image135| 
+
++----------------------------------------------------------------------------------------------+
+| 1. The various Per-Request-Policy actions can be reviewed                                    |
+|                                                                                              |
+| *Note: Other actions like Step-Up Auth controls can be performed in a Per-Request Policy*    |
++----------------------------------------------------------------------------------------------+
+
+|image136|
 
 TASK 9 – Review OAuth Results 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
-| 1. Review your Active Sessions (***Access Overview Active Sessions***)                                                                                                                                    | |image137|                |
-|                                                                                                                                                                                                           |                           |
-| 2. You can review Session activity or session variable from this window or kill the selected Session                                                                                                      |                           |
-+===========================================================================================================================================================================================================+===========================+
-| 1. Review your Access Report Logs (***Access Overview Access Reports***)                                                                                                                                  | |image138|                |
-|                                                                                                                                                                                                           |                           |
-| 2. In the ***Report Parameters window*** click ***Run Report***                                                                                                                                           | |image139|                |
-|                                                                                                                                                                                                           |                           |
-| 3. Look at the ***SessionID*** report by clicking the ***Session ID*** Link                                                                                                                               | Session ID Report         |
-|                                                                                                                                                                                                           |                           |
-| 4. Look at the ***Session Variables*** report by clicking the ***View Session Variables*** link. Pay attention to the OAuth Variables.                                                                    | |image140|                |
-|                                                                                                                                                                                                           |                           |
-| ***Note**: Any of these session variables can be used to perform further actions to improve security or constrain access with logic in the Per-Session or Per Request VPE policies or iRules/iRulesLX.*   | Session Variable Report   |
-|                                                                                                                                                                                                           |                           |
-|                                                                                                                                                                                                           | |image141|                |
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
-| 1. Review your Access Report Logs (***Access Overview OAuth Reports Client/Resource Server***)                                                                                                            | |image142|                |
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+
++----------------------------------------------------------------------------------------------+
+| 1. Review your Active Sessions (**Access Overview** -> **Active Sessions**)                  |
+|                                                                                              |
+| 2. You can review Session activity or session variable from this window or kill the          |
+|                                                                                              |
+|    selected Session.                                                                          |
++----------------------------------------------------------------------------------------------+
+
+|image137| 
+
++----------------------------------------------------------------------------------------------+
+| 1. Review your Access Report Logs (**Access Overview** -> **Access Reports**)                | 
++----------------------------------------------------------------------------------------------+
+
+|image138|
+
++----------------------------------------------------------------------------------------------+
+| 2. In the **Report Parameters window** click **Run Report**                                  |
++----------------------------------------------------------------------------------------------+
+
+|image139|
+
++----------------------------------------------------------------------------------------------+
+| 3. Look at the **SessionID** report by clicking the **Session ID** Link                      |
++----------------------------------------------------------------------------------------------+
+
+|image140| 
+
++----------------------------------------------------------------------------------------------+
+| 4. Look at the **Session Variables** report by clicking the **View Session Variables** link. |
+|                                                                                              |
+|    Pay attention to the OAuth Variables.                                                     |
+|                                                                                              |
+| *Note: Any of these session variables can be used to perform further actions to improve*     |
+|                                                                                              |
+| *security or constrain access with logic in the Per-Session or Per Request VPE policies*     |
+|                                                                                              |
+| *or iRules/iRulesLX.*                                                                        |
++----------------------------------------------------------------------------------------------+
+
+|image141| 
+
++----------------------------------------------------------------------------------------------+
+| 1. Review your Access Report Logs (**Access Overview** -> **OAuth Reports** ->               |  
+|                                                                                              |
+|    **Client/Resource Server**)                                                               |
++----------------------------------------------------------------------------------------------+
+
+|image142| 
 
 Conclusion
 ==========
@@ -1829,23 +1956,47 @@ Setting up an AzureAD Developer Account
 
 Refer to the information below:
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
-| 1. Navigate to the following URL to begin the process then follow the prompts as shown *(this may change as dictated by Microsoft)* https://azure.microsoft.com/en-us/free/   | |image143|               |
-|                                                                                                                                                                               |                          |
-| 2. The following images show the general flow to setup a free developer account *(this may change as dictated by Microsoft)*                                                  |                          |
-+===============================================================================================================================================================================+==========================+
-| 1. Initial Setup                                                                                                                                                              | |image144| |image145|   |
-|                                                                                                                                                                               |                          |
-|                                                                                                                                                                               | |image146| |image147|    |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
-| 1. About You                                                                                                                                                                  | |image148|               |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
-| 1. Identity Verification by Phone                                                                                                                                             | |image149|               |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
-| 1. Identity Verification by Card                                                                                                                                              | |image150|               |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
-| 1. Agreement                                                                                                                                                                  | |image151|               |
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
++----------------------------------------------------------------------------------------------+
+| 1. Navigate to the following URL to begin the process then follow the prompts as shown       |
+|                                                                                              |
+|    https://azure.microsoft.com/en-us/free/                                                   |
+|                                                                                              |
+| 2. The following images show the general flow to setup a free developer account              |
+|                                                                                              |
+| *Note: This process may change as dictated by Microsoft*                                     |
++----------------------------------------------------------------------------------------------+
+
+|image143|
+
++----------------------------------------------------------------------------------------------+
+| 1. Initial Setup                                                                             |
++----------------------------------------------------------------------------------------------+
+
+|image144| |image145| |image146| |image147|
+
++----------------------------------------------------------------------------------------------+
+| 1. About You                                                                                 |
++----------------------------------------------------------------------------------------------+
+
+|image148|
+
++----------------------------------------------------------------------------------------------+
+| 1. Identity Verification by Phone                                                            |
++----------------------------------------------------------------------------------------------+
+
+|image149| 
+
++----------------------------------------------------------------------------------------------+
+| 1. Identity Verification by Card                                                             |
++----------------------------------------------------------------------------------------------+
+
+|image150|   
+
++----------------------------------------------------------------------------------------------+
+| 1. Agreement                                                                                 |
++----------------------------------------------------------------------------------------------+
+
+|image151| 
 
 Learn More
 ==========
@@ -1955,13 +2106,37 @@ Links & Guides
 
     Notes:
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| F5 Networks, Inc. \| f5.com                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================+
-| US Headquarters: 401 Elliott Ave W, Seattle, WA 98119 \| 888-882-4447 // Americas: info@f5.com // Asia-Pacific: apacinfo@f5.com // Europe/Middle East/Africa: emeainfo@f5.com // Japan: f5j-info@f5.com                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ©2017 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5 logo are trademarks of F5 Networks, Inc. in the U.S. and in certain other countries. Other F5 trademarks are identified at f5.com. Any other products, services, or company names referenced herein may be trademarks of their respective owners with no endorsement or affiliation, express or implied, claimed by F5. These training materials and documentation are F5 Confidential Information and are subject to the F5 Networks Reseller Agreement. You may not share these training materials and documentation with any third party without the express written permission of F5.   |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------+
+| F5 Networks, Inc. \| f5.com                                                                  |
++----------------------------------------------------------------------------------------------+
 
++----------------------------------------------------------------------------------------------+
+| US Headquarters: 401 Elliott Ave W, Seattle, WA 98119 \| 888-882-4447                        |
+|                                                                                              |
+| // Americas: info@f5.com                                                                     |
+|                                                                                              |
+| // Asia-Pacific: apacinfo@f5.com                                                             |
+|                                                                                              |
+| // Europe/Middle East/Africa: emeainfo@f5.com                                                |
+|                                                                                              |
+| // Japan: f5j-info@f5.com                                                                    |
+|                                                                                              |
+| ©2017 F5 Networks, Inc. All rights reserved. F5, F5 Networks, and the F5 logo are trademarks |
+|                                                                                              |
+| of F5 Networks, Inc. in the U.S. and in certain other countries. Other F5 trademarks are     |
+|                                                                                              |
+| identified at f5.com. Any other products, services, or company names referenced herein may   |
+|                                                                                              |
+| be trademarks of their respective owners with no endorsement or affiliation, express or      |
+|                                                                                              |
+| implied, claimed by F5. These training materials and documentation are F5 Confidential       |
+|                                                                                              |
+| Information and are subject to the F5 Networks Reseller Agreement. You may not share these   |
+|                                                                                              |
+| training materials and documentation with any third party without the express written        |
+|                                                                                              |
+| permission of F5.                                                                            |
++----------------------------------------------------------------------------------------------+
 .. |image0| image:: media/image2.png
    :width: 6.96097in
    :height: 4.46512in
