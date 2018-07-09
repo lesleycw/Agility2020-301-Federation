@@ -20,10 +20,9 @@ What’s inside
 
 `Acknowledgements <#acknowledgements>`__
 
-`Lab 1 – SAML Service Provider (SP) Lab 6 <#lab-1:-saml-service-provider-(sp)-lab>`__
+`Lab 1 – SAML Service Provider (SP) Lab <#lab-1:-saml-service-provider-(sp)-lab>`__
 
-`Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA)
-14 <#_Toc515970476>`__
+`Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA) <#_Toc515970476>`__
 
 `Lab 3 – oAuth and Open ID Connect Lab - Google 24 <#_Toc515970477>`__
 
@@ -69,7 +68,7 @@ If you wish to replicate these labs in your environment you will need to
 perform these steps accordingly. Additional lab resources are provided
 as illustrated in the diagram below:
 
-|image0|
+|image2|
 
 Timing for labs
 ---------------
@@ -83,13 +82,13 @@ take for each lab:
 +-----------------------------------------------------+----------------------+
 | **Lab Description**                                 | **Time Allocated**   |
 +=====================================================+======================+
-| LAB I (SAML Service Provider (SP))                  | 25 minutes           |
+| LAB 1 (SAML Service Provider (SP))                  | 25 minutes           |
 +-----------------------------------------------------+----------------------+
-| LAB II (SaaS SAML Identity Provider (IDP)) (OKTA)   | 25 minutes           |
+| LAB 2 (SaaS SAML Identity Provider (IDP)) (OKTA)    | 25 minutes           |
 +-----------------------------------------------------+----------------------+
-| LAB III (oAuth & OpenID Connect) (Google)           | 25 minutes           |
+| LAB 3 (oAuth & OpenID Connect) (Google)             | 25 minutes           |
 +-----------------------------------------------------+----------------------+
-| LAB IV (oAuth and Azure AD Lab)                     | 25 minutes           |
+| LAB 4 (oAuth and Azure AD Lab)                      | 25 minutes           |
 +-----------------------------------------------------+----------------------+
 
 Authentication – Credentials
@@ -161,7 +160,7 @@ TASK 1 – Configure the SAML Service Provider (SP)
 Refer to the instructions and screen shots below:
 
 +--------------------------------------------------------------------------------------------+----------------------------------------+
-| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 | |image1|                               |
+| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 | .. image:: /media/image10.png                     |
 |                                                                                            |                                        |
 | 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***  |                                        |
 |                                                                                            |                                        |
