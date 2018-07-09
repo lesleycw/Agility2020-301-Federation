@@ -160,7 +160,7 @@ TASK 1 – Configure the SAML Service Provider (SP)
 Refer to the instructions and screen shots below:
 
 +--------------------------------------------------------------------------------------------+----------------------------------------+
-| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 | .. image:: /media/image10.png                     |
+| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                 |  |image10.png|                         |
 |                                                                                            |                                        |
 | 2. Begin by selecting: ***Access Federation -> SAML Service Provider Local SP Services***  |                                        |
 |                                                                                            |                                        |
