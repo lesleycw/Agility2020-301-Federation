@@ -22,17 +22,17 @@ What’s inside
 
 `Lab 1 – SAML Service Provider (SP) Lab <#lab-1-saml-service-provider-lab>`__
 
-`Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA) <#lab-2-saas-saml-identity-provider-lab-with-okta>`__
+`Lab 2 – SaaS SAML Identity Provider (IdP) Lab - OKTA <#lab-2-saas-saml-identity-provider-lab-with-okta>`__
 
-`Lab 3 – oAuth and Open ID Connect Lab - Google 24 <#_Toc515970477>`__
+`Lab 3 – oAuth and Open ID Connect Lab - Google <#_Toc515970477>`__
 
-`Lab 4 – oAuth and Azure AD Lab 33 <#_Toc515970478>`__
+`Lab 4 – oAuth and Azure AD Lab <#_Toc515970478>`__
 
-`Conclusion 44 <#conclusion>`__
+`Conclusion <#conclusion>`__
 
-`Appendix 45 <#appendix>`__
+`Appendix <#appendix>`__
 
-`Learn More 47 <#learn-more>`__
+`Learn More <#learn-more>`__
 
 Welcome
 =======
@@ -173,8 +173,8 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 3. Click the **Create** button (far right)                                                   |
 +----------------------------------------------------------------------------------------------+
-
-|image1|
+| |image1|                                                                                     |
++----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 4. In the **Create New SAML SP Service**  dialogue box click **General Settings** in         |
