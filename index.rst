@@ -268,9 +268,9 @@ Refer to the instructions and screen shots below:
 |image7|
 
 +----------------------------------------------------------------------------------------------+
-| 1. Under the **Access Federation -> SAML Service Provider Local SP Services** menu you should|
+| 1. Under the **Access Federation -> SAML Service Provider Local SP Services** menu you       |
 |                                                                                              |
-|    now show the following (as shown):                                                        |
+|    should now see the following (as shown):                                                  |
 |                                                                                              |
 |    -  **Name**: **app.f5demo.com**                                                           |
 |                                                                                              |
@@ -284,82 +284,135 @@ TASK 4 – Configure the SAML SP Access Policy
 
 Refer to the instructions and screen shots below:
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| 1. Begin by selecting: **Access Profiles/Policies** **Access Profiles (Per-Session Policies)**                                                                                                       | |image9|               |
-|                                                                                                                                                                                                          |                        |
-| 2. Click the ***Create*** button (far right)                                                                                                                                                             |                        |
-+==========================================================================================================================================================================================================+========================+
-| 1. In the ***New Profile*** window, key in the following as shown:                                                                                                                                       | |image10| |image11|    |
-|                                                                                                                                                                                                          |                        |
-|    -  ***Name***: **app.f5demo.com-policy**                                                                                                                                                              |                        |
-|                                                                                                                                                                                                          |                        |
-|    -  ***Profile Type***: **All** (from drop down)                                                                                                                                                       |                        |
-|                                                                                                                                                                                                          |                        |
-|    -  ***Profile Scope***: **Profile** (default)                                                                                                                                                         |                        |
-|                                                                                                                                                                                                          |                        |
-| 2. Scroll to the bottom of the ***New Profile*** window to the ***Language Settings***                                                                                                                   |                        |
-|                                                                                                                                                                                                          |                        |
-| 3. Select **English** from the ***Factory Built-in Languages*** menu on the right and click the ***Double Arrow (<<)***, then click the ***Finished*** button.                                           |                        |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| 1. From the ***Access Profiles/Policies*** ***Access Profiles (Per-Session Policies)***, click the ***Edit*** link on the previously created **app.f5demo.com-policy** line                              | |image12|              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| 1. In the ***Visual Policy Editor*** window for the ***/Common/app.f5demo.com-policy***, click the ***Plus (+) Sign*** between ***Start*** and ***Deny***.                                               | |image13|              |
-|                                                                                                                                                                                                          |                        |
-| 2. In the pop-up dialogue box select the ***Authentication*** tab and then click the ***Radio*** ***Button*** next to ***SAML Auth***. Once selected click the ***Add Item*** button.                    | |image14|              |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| 1. In the ***SAML Auth*** configuration window, select **/Common/app.f5demo.com** from the ***SAML Authentication***, ***AAA Server*** drop down menu.                                                   | |image15|              |
-|                                                                                                                                                                                                          |                        |
-| 2. Click the ***Save*** button at the bottom of the configuration window.                                                                                                                                |                        |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| 1. In the ***Visual Policy Editor*** select the ***Deny*** along the ***Successful*** branch following the ***SAML Auth***                                                                               | |image16|\ |image17|   |
-|                                                                                                                                                                                                          |                        |
-| 2. From the ***Select Ending*** dialogue box select the ***Allow*** ***Radio*** and then click ***Save***                                                                                                |                        |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
-| 1. In the ***Visual Policy Editor*** click the ***Apply Access Policy*** (top left) and close the ***Visual Policy Editor***                                                                             | |image18|              |
-|                                                                                                                                                                                                          |                        |
-|     ***NOTE**: Additional actions can be taken in the Per Session policy (Access Policy). The lab is simply completing authentication. Other access controls can be implemented based on the use case*   |                        |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+
++----------------------------------------------------------------------------------------------+
+| 1. Begin by selecting: **Access Profiles/Policies** -> **Access Profiles**                   |
+|    **(Per-Session Policies)**                                                                |
+|                                                                                              |
+| 2. Click the ***Create*** button (far right)                                                 |
++----------------------------------------------------------------------------------------------+
+
+|image9|
+
++----------------------------------------------------------------------------------------------+
+| 1. In the ***New Profile*** window, key in the following as shown:                           |
+|                                                                                              |
+|    -  **Name***: **app.f5demo.com-policy**                                                   |
+|                                                                                              |
+|    -  **Profile Type**: **All** (from drop down)                                             |
+|                                                                                              |
+|    -  **Profile Scope**: **Profile** (default)                                               |
+|                                                                                              |
+| 2. Scroll to the bottom of the **New Profile** window to the **Language Settings**           |
+|                                                                                              |
+| 3. Select **English** from the **Factory Built-in Languages** menu on the right and click    |
+|                                                                                              |
+|    the **Double Arrow (<<)**, then click the **Finished** button.                            |
++----------------------------------------------------------------------------------------------+
+
+|image10| |image11|
+
++----------------------------------------------------------------------------------------------+
+| 1. From the **Access Profiles/Policies** -> **Access Profiles (Per-Session Policies)**,      |
+|                                                                                              |
+|    click the **Edit** link on the previously created **app.f5demo.com-policy** line.         |
++----------------------------------------------------------------------------------------------+
+
+|image12|
+
++----------------------------------------------------------------------------------------------+
+| 1. In the **Visual Policy Editor** window for the **/Common/app.f5demo.com-policy**, click   |
+|                                                                                              |
+|    the **Plus (+) Sign** between **Start** and **Deny**.                                     |
+|                                                                                              |
+| 2. In the pop-up dialogue box select the **Authentication** tab and then click the **Radio** |
+|                                                                                              | 
+|    **Button** next to **SAML Auth**. Once selected click the **Add Item** button.            |
++----------------------------------------------------------------------------------------------+
+
+|image13| |image14|
+ 
++----------------------------------------------------------------------------------------------+
+| 1. In the **SAML Auth** configuration window, select **/Common/app.f5demo.com** from the     |
+|                                                                                              |
+|    **SAML Authentication**, **AAA Server** drop down menu.                                   |
+|                                                                                              | 
+| 2. Click the ***Save*** button at the bottom of the configuration window.                    |  
++----------------------------------------------------------------------------------------------+
+
+|image15|
+
++----------------------------------------------------------------------------------------------+
+| 1. In the **Visual Policy Editor** select the **Deny** along the **Successful** branch       |
+|                                                                                              |
+|    following the **SAML Auth**                                                               |
+|                                                                                              |
+| 2. From the **Select Ending** dialogue box select the **Allow** Radio Button** and then      |
+|                                                                                              |
+|    click **Save**.                                                                           |
++----------------------------------------------------------------------------------------------+
+
+|image16| |image17|
+
++----------------------------------------------------------------------------------------------+
+| 1. In the **Visual Policy Editor** click the **Apply Access Policy** (top left) and close    |
+|                                                                                              |
+|    the **Visual Policy Editor**                                                              |
+|                                                                                              |
+| *Note: Additional actions can be taken in the Per Session policy (Access Policy). The lab*   |
+|                                                                                              |
+| *is simply completing authentication. Other access controls can be implemented based on the* |
+|                                                                                              |
+| *use case*                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+|image18|
 
 TASK 5 – Create the SP Virtual Server & Apply the SP Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-| 1. Begin by selecting: ***Local Traffic*** ***Virtual Servers***                                                                                  | |image19|             |
-|                                                                                                                                                   |                       |
-| 2. Click the ***Create*** button (far right)                                                                                                      |                       |
-+===================================================================================================================================================+=======================+
-| 1. In the ***New Virtual Server*** window, key in the following as shown:                                                                         | |image20|             |
-|                                                                                                                                                   |                       |
-|    -  ***Name***: **app.f5demo.com**                                                                                                              | |image21| |image22|   |
-|                                                                                                                                                   |                       |
-|    -  ***Destination Address/Mask***: **10.1.10.100**                                                                                             | |image23|             |
-|                                                                                                                                                   |                       |
-|    -  ***Service Port***: **443**                                                                                                                 |                       |
-|                                                                                                                                                   |                       |
-|    -  ***HTTP Profile:*** **http** (drop down)                                                                                                    |                       |
-|                                                                                                                                                   |                       |
-|    -  ***SSL Profile (client):* app.f5demo.com-clientssl**                                                                                        |                       |
-|                                                                                                                                                   |                       |
-|    -  ***Source Address Translation:***                                                                                                           |                       |
-|                                                                                                                                                   |                       |
-|     **Auto Map**                                                                                                                                  |                       |
-|                                                                                                                                                   |                       |
-| 1. Scroll to the ***Access Policy*** section                                                                                                      |                       |
-|                                                                                                                                                   |                       |
-|    -  ***Access Profile***: **app.f5demo.com-policy**                                                                                             |                       |
-|                                                                                                                                                   |                       |
-|    -  ***Per-Request Policy:*** **saml\_policy**                                                                                                  |                       |
-|                                                                                                                                                   |                       |
-| 2. Scroll to the Resource section                                                                                                                 |                       |
-|                                                                                                                                                   |                       |
-|    -  ***Default Pool***: **app.f5demo.com\_pool**                                                                                                |                       |
-|                                                                                                                                                   |                       |
-| 3. Scroll to the bottom of the configuration window and click ***Finished***                                                                      |                       |
-|                                                                                                                                                   |                       |
-|     *Note: The use of the Per-Request Policy is to provide header injection and other controls. These will be more utilized later in the lab. *   |                       |
-+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
++----------------------------------------------------------------------------------------------+
+| 1. Begin by selecting: **Local Traffic** -> **Virtual Servers**                              |
+|                                                                                              |
+| 2. Click the **Create** button (far right)                                                   |   
++----------------------------------------------------------------------------------------------+
+
+|image19|
+
++----------------------------------------------------------------------------------------------+
+| 1. In the **New Virtual Server** window, key in the following as shown:                      |
+|                                                                                              |
+|    -  **Name**: **app.f5demo.com**                                                           |
+|                                                                                              |
+|    -  **Destination Address/Mask**: **10.1.10.100**                                          |
+|                                                                                              |
+|    -  **Service Port**: **443**                                                              |
+|                                                                                              |
+|    -  **HTTP Profile:** **http** (drop down)                                                 |
+|                                                                                              |
+|    -  **SSL Profile (client):** **app.f5demo.com-clientssl**                                 |
+|                                                                                              |
+|    -  **Source Address Translation:**  **Auto Map**                                          |
+|                                                                                              |
+| 1. Scroll to the **Access Policy** section                                                   |
+|                                                                                              |
+|    -  **Access Profile**: **app.f5demo.com-policy**                                          |
+|                                                                                              |
+|    -  **Per-Request Policy:** **saml\_policy**                                               |
+|                                                                                              |
+| 2. Scroll to the Resource section                                                            |
+|                                                                                              |
+|    -  **Default Pool**: **app.f5demo.com\_pool**                                             |
+|                                                                                              |
+| 3. Scroll to the bottom of the configuration window and click **Finished**                   |
+|                                                                                              |
+| *Note: The use of the Per-Request Policy is to provide header injection and other controls.* |
+|                                                                                              |
+| These will be more utilized later in the lab. *                                              |
++----------------------------------------------------------------------------------------------+
+
+|image20| |image21| |image22| |image23|
 
 TASK 6 – Test the SAML SP
 ~~~~~~~~~~~~~~~~~~~~~~~~~
