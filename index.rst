@@ -155,7 +155,7 @@ Lab Requirements:
 Estimated completion time: 25 minutes
 
 TASK 1 – Configure the SAML Service Provider (SP) 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------
 
 Refer to the instructions and screen shots below:
 
@@ -200,7 +200,7 @@ Refer to the instructions and screen shots below:
 |image3|
 
 TASK 2 – Configure the External SAML IDP Connector 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------
 
 Refer to the instructions and screen shots below:
 
