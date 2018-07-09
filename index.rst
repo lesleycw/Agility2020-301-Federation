@@ -22,7 +22,7 @@ What’s inside
 
 `Lab 1 – SAML Service Provider (SP) Lab <#lab-1-saml-service-provider-lab>`__
 
-`Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA) <#_Toc515970476>`__
+`Lab 2 – SaaS SAML Identity Provider (IdP) Lab (OKTA) <#lab-2-saas-saml-identity-provider-lab-with-okta>`__
 
 `Lab 3 – oAuth and Open ID Connect Lab - Google 24 <#_Toc515970477>`__
 
@@ -82,13 +82,13 @@ take for each lab:
 +-----------------------------------------------------+----------------------+
 | **Lab Description**                                 | **Time Allocated**   |
 +=====================================================+======================+
-| LAB 1 (SAML Service Provider (SP))                  | 25 minutes           |
+| LAB 1 - SAML Service Provider (SP)                  | 25 minutes           |
 +-----------------------------------------------------+----------------------+
-| LAB 2 (SaaS SAML Identity Provider (IDP)) (OKTA)    | 25 minutes           |
+| LAB 2 - SaaS SAML Identity Provider (IDP) (OKTA)    | 25 minutes           |
 +-----------------------------------------------------+----------------------+
-| LAB 3 (oAuth & OpenID Connect) (Google)             | 25 minutes           |
+| LAB 3 - oAuth & OpenID Connect (Google)             | 25 minutes           |
 +-----------------------------------------------------+----------------------+
-| LAB 4 (oAuth and Azure AD Lab)                      | 25 minutes           |
+| LAB 4 - oAuth and Azure AD Lab                      | 25 minutes           |
 +-----------------------------------------------------+----------------------+
 
 Authentication – Credentials
@@ -167,7 +167,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Login to your lab provided **Virtual Edition BIG-IP**                                     |
 |                                                                                              |
-| 2. Begin by selecting: **Access Federation -> SAML Service Provider Local SP Services**      |
+| 2. Begin by selecting: **Access Federation -> SAML Service Provider** ->                     |
+|                                                                                              |
+|    **Local SP Services**                                                                     |
 |                                                                                              |
 | 3. Click the **Create** button (far right)                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -189,7 +191,7 @@ Refer to the instructions and screen shots below:
 |image2|
 
 +----------------------------------------------------------------------------------------------+
-| 5. Click on the **Security Settings** in the left navigation menu                            |
+| 5. Click on the **Security Settings** in the left navigation menu.                           |
 |                                                                                              |
 | 6. Check the **Sign Authentication Request** checkbox                                        |
 |                                                                                              |
@@ -210,11 +212,11 @@ TASK 2 – Configure the External SAML IDP Connector
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Click on the **Access Federation SAML Service Provider External IdP Connectors**          |
+| 1. Click on the **Access** -> **Federation** -> **SAML Service Provider** ->                 |
 |                                                                                              |  
-|  or click on the **SAML Service Provider** tab in the horizontal navigation menu and         | 
+|    ** External IdP Connectors** or click on the **SAML Service Provider** tab in the         | 
 |                                                                                              |
-|  select **External IdP Connectors**                                                          |
+|    horizontal navigation menu andselect **External IdP Connectors**.                         |
 |                                                                                              |
 | 2. Click specifically on the **Down Arrow** next to the **Create** button (far right)        |
 |                                                                                              |
@@ -247,11 +249,11 @@ TASK 3 – Bind the External SAML IDP Connector to the SAML SP
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Click on the ***Local SP Services*** from the ***SAML Service Provider*** tab in the      |
+| 1. Click on the **Local SP Services** from the **SAML Service Provider** tab in the          |
 |                                                                                              |
-| horizontal navigation menu.                                                                  |
+|    horizontal navigation menu.                                                               |
 |                                                                                              |
-| 2. Click the ***Checkbox*** next to the previously created **app.f5demo.com** and select     |
+| 2. Click the **Checkbox** next to the previously created **app.f5demo.com** and select       |
 |                                                                                              |
 |    **Bind/Unbind IdP Connectors** button at the bottom of the GUI.                           | 
 +----------------------------------------------------------------------------------------------+
@@ -265,15 +267,15 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    **/Common/idp.partner.com** SAML IdP Connector previously created.                        |
 |                                                                                              |
-| 5. Click the ***Update*** button and the ***OK*** button at the bottom of the dialogue box   |
+| 5. Click the **Update** button and the **OK** button at the bottom of the dialogue box.      |
 +----------------------------------------------------------------------------------------------+
 
 |image7|
 
 +----------------------------------------------------------------------------------------------+
-| 6. Under the **Access Federation -> SAML Service Provider Local SP Services** menu you       |
+| 6. Under the **Access** -> **Federation** -> **SAML Service Provider** ->                    |
 |                                                                                              |
-|    should now see the following (as shown):                                                  |
+|    **Local SP Services** menu youshould now see the following (as shown):                                                  |
 |                                                                                              |
 |    -  **Name**: **app.f5demo.com**                                                           |
 |                                                                                              |
@@ -288,18 +290,18 @@ TASK 4 – Configure the SAML SP Access Policy
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Begin by selecting: **Access Profiles/Policies** -> **Access Profiles**                   |
+| 1. Begin by selecting: **Access** -> **Profiles/Policies** -> **Access Profiles**            |
 |    **(Per-Session Policies)**                                                                |
 |                                                                                              |
-| 2. Click the ***Create*** button (far right)                                                 |
+| 2. Click the **Create** button (far right)                                                   |
 +----------------------------------------------------------------------------------------------+
 
 |image9|
 
 +----------------------------------------------------------------------------------------------+
-| 3. In the ***New Profile*** window, key in the following as shown:                           |
+| 3. In the **New Profile** window, key in the following as shown:                             |
 |                                                                                              |
-|    -  **Name***: **app.f5demo.com-policy**                                                   |
+|    -  **Name**: **app.f5demo.com-policy**                                                   |
 |                                                                                              |
 |    -  **Profile Type**: **All** (from drop down)                                             |
 |                                                                                              |
@@ -315,7 +317,8 @@ Refer to the instructions and screen shots below:
 |image10| |image11|
 
 +----------------------------------------------------------------------------------------------+
-| 6. From the **Access Profiles/Policies** -> **Access Profiles (Per-Session Policies)**,      |
+| 6. From the **Access** -> **Profiles/Policies** -> **Access Profiles**                       |
+|    **(Per-Session Policies)**,                                                               |
 |                                                                                              |
 |    click the **Edit** link on the previously created **app.f5demo.com-policy** line.         |
 +----------------------------------------------------------------------------------------------+
@@ -339,7 +342,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    **SAML Authentication**, **AAA Server** drop down menu.                                   |
 |                                                                                              | 
-| 10. Click the ***Save*** button at the bottom of the configuration window.                   |  
+| 10. Click the **Save** button at the bottom of the configuration window.                     |  
 +----------------------------------------------------------------------------------------------+
 
 |image15|
@@ -349,7 +352,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    following the **SAML Auth**                                                               |
 |                                                                                              |
-| 12. From the **Select Ending** dialogue box select the **Allow** Radio Button** and then     |
+| 12. From the **Select Ending** dialogue box select the **Allow Radio Button** and then       |
 |                                                                                              |
 |    click **Save**.                                                                           |
 +----------------------------------------------------------------------------------------------+
@@ -359,7 +362,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 13. In the **Visual Policy Editor** click the **Apply Access Policy** (top left) and close   |
 |                                                                                              |
-|    the **Visual Policy Editor**                                                              |
+|    the **Visual Policy Editor**.                                                             |
 |                                                                                              |
 | *Note: Additional actions can be taken in the Per Session policy (Access Policy). The lab*   |
 |                                                                                              |
@@ -413,10 +416,13 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | *Note: The use of the Per-Request Policy is to provide header injection and other controls.* |
 |                                                                                              |
-| These will be more utilized later in the lab. *                                              |
+| *These will be more utilized later in the lab.*                                              |
 +----------------------------------------------------------------------------------------------+
 
-|image20| |image21| |image22| |image23|
+|image20| 
+|image21| 
+|image22| 
+|image23|
 
 TASK 6 – Test the SAML SP
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -528,11 +534,11 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. For the purposes of the lab and SAML development, we will be using the OKTA Classic UI    |
 |                                                                                              |
-|   which provides access to SAML configurations.                                              |
+|   which provides access to SAML configurations. *(Note: At lab publication, the Developer*   |
 |                                                                                              |
-| *Note: At lab publication, the Developer Console did not have SAML resources*                |
+|   *Console did not have SAML resources.)*                                                    |
 |                                                                                              |     
-| 2. In the top, left hand corner click the **<>** & select **Classic UI** from the drop down  |
+| 2. In the top, left hand corner click the **<>** & select **Classic UI** from the drop down. |
 +----------------------------------------------------------------------------------------------+
 
 |image29|
@@ -555,7 +561,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 2. Check **OKTA Verify**                                                                     |
 |                                                                                              |
-| 3. Ensure that **Enable Push Verification** & (optionally) that:|                            |
+| 3. Ensure that **Enable Push Verification** & (optionally) that                              |
 |                                                                                              |
 |    **Require TouchID for OKTA Verify** is checked.                                           |
 |                                                                                              |
@@ -570,13 +576,13 @@ TASK 4 – Build SAML Application - OKTA
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the main menu, click ***Applications*** in the top navigation.                         |
+| 1. In the main menu, click **Applications** in the top navigation.                           |
 +----------------------------------------------------------------------------------------------+
 
 |image32|
 
 +----------------------------------------------------------------------------------------------+
-| 2. Click ***Create New App*** in the ***Add Application Menu***                              |
+| 2. Click **Create New App** in the **Add Application Menu**                                  |
 +----------------------------------------------------------------------------------------------+
 
 |image33|
@@ -584,9 +590,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 3. In the **Create a New Application Integration** dialogue box, select **Web** from the     |
 |                                                                                              |
-|    drop down for **Platform**                                                                |
+|    drop down for **Platform**.                                                                |
 |                                                                                              |
-| 4. Select the **SAML 2.0** radio button for **Sign on Method** and click **Create**          |
+| 4. Select the **SAML 2.0** radio button for **Sign on Method** and click **Create**.          |
 +----------------------------------------------------------------------------------------------+
 
 |image34|
@@ -594,7 +600,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 5. In the **Create SAML Integration** screen, enter **app.f5demo.com** for the **App Name**. |
 |                                                                                              |
-| 6. Leave all other values show and click **Next**                                            |
+| 6. Leave all other values show and click **Next**.                                            |
 +----------------------------------------------------------------------------------------------+
 
 |image35|
@@ -604,11 +610,11 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 8. In the **SAML Setting** section                                                           |
 |                                                                                              |
-|    -  **Single Sign on URL:** **https://app.f5demo.com/saml/sp/profile/post/acs**            |
+|   -  **Single Sign on URL:** **https://app.f5demo.com/saml/sp/profile/post/acs**             |
 |                                                                                              |
-| -  **Audience URI (SP Entity ID):** **https://app.f5demo.com**                               |
+|   -  **Audience URI (SP Entity ID):** **https://app.f5demo.com**                             |
 |                                                                                              |
-| 9. Leave all other values as default and click **Next**                                      |
+| 9. Leave all other values as default and click **Next**.                                     |
 +----------------------------------------------------------------------------------------------+
 
 |image36|
@@ -638,7 +644,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 14. Save the **metadata.xml** to your jumphost desktop. We will be using it in a later step  |
 |                                                                                              |
-|    in the Lab                                                                                |
+|    in the Lab.                                                                                |
 +----------------------------------------------------------------------------------------------+
 
 |image38|
@@ -657,7 +663,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 2. In the **Assign app.f5demo.com to People** dialogue box, select your **User ID** and then |
 |                                                                                              |
-|    click ***Done***                                                                          |
+|    click **Done**.                                                                           |
 +----------------------------------------------------------------------------------------------+
 
 |image40|
@@ -686,9 +692,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              | 
-| 3. In the **Add Sign On Rule** dialogue box, enter **MFA** for the **Rule Name**             |
+| 3. In the **Add Sign On Rule** dialogue box, enter **MFA** for the **Rule Name**.             |
 |                                                                                              |
-| 4. Scroll down to the ***Actions*** sections                                                 |
+| 4. Scroll down to the **Actions** section.                                                   |
 +----------------------------------------------------------------------------------------------+
 
 |image43|
@@ -698,9 +704,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 5. In the **Actions** section, under **Access**, check the box for **Prompt for factor**.    |
 |                                                                                              |
-| 6. Ensure **Every Sign On** radio button is selected                                         |
+| 6. Ensure **Every Sign On** radio button is selected.                                         |
 |                                                                                              |
-| 7. Click **Save**                                                                            |
+| 7. Click **Save**.                                                                            |
 +----------------------------------------------------------------------------------------------+
 
 |image44|
@@ -708,7 +714,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              |
-| 8. Review and verify the completed **Sign On Policy**                                        |
+| 8. Review and verify the completed **Sign On Policy**.                                        |
 +----------------------------------------------------------------------------------------------+
 
 |image45| 
@@ -719,7 +725,7 @@ TASK 7 – Create the External IDP Connector
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Login to your lab provided ***Virtual Edition BIG-IP***                                   |
+| 1. Login to your lab provided **Virtual Edition BIG-IP**                                     |
 |                                                                                              |
 | 2. Begin by selecting: **Access** -> **Federation** -> **SAML Service Provider** ->          |
 |                                                                                              |
@@ -733,7 +739,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    **Create** on the **Create** button (right side)                                          |
 |                                                                                              |
-| 4. Select ***From Metadata*** from the drop down menu                                        |
+| 4. Select **From Metadata** from the drop down menu                                          |
 +----------------------------------------------------------------------------------------------+
 
 |image47|
@@ -743,9 +749,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    select the **metadata.xml** from the desktop (created in Task 4).                         | 
 |                                                                                              |
-| 6. Name the ***Identity Provider Name***: **OKTA\_SaaS-iDP**                                 |
+| 6. Name the **Identity Provider Name**: **OKTA\_SaaS-iDP**.                                  |
 |                                                                                              |
-| 7. Click ***OK***                                                                            |
+| 7. Click **OK**.                                                                             |
 +----------------------------------------------------------------------------------------------+
 
 |image48|
@@ -773,9 +779,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    -  **Matching Source:** **%{session.server.landinguri}**                                  |
 |                                                                                              |
-|    -  ***Matching Value:** **/\***                                                           |
+|    -  **Matching Value:** **/\**                                                             |
 |                                                                                              |
-| 5. Click **Update** then **OK**                                                              |
+| 5. Click **Update** then **OK**.                                                             |
 +----------------------------------------------------------------------------------------------+
 
 |image50|
@@ -830,9 +836,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 6. Were you successfully authenticated (SAML)?                                               |
 |                                                                                              |
-| 7. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**)              |
+| 7. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).             |
 |                                                                                              |
-| 8. Review your Access Report Logs (**Access Overview** -> **Access Reports**)                |
+| 8. Review your Access Report Logs (**Access Overview** -> **Access Reports**).               |
 +----------------------------------------------------------------------------------------------+
 
 |image57|
@@ -846,17 +852,17 @@ Refer to the instructions and screen shots below:
 |image58| 
 
 +----------------------------------------------------------------------------------------------+
-| 10. Close your browser and logon to your account. Click on your app.f5demo.com application   |
+| 10. Close your browser and logon to your **https://dev-<Dev-ID>.oktapreview.com** account.   |
 |                                                                                              |
-|    for IDP initiated Access.                                                                 |
+|    Click on your **app.f5demo.com** application for IDP initiated Access.                    |
 |                                                                                              |
 | 11. After successful authentication, were you returned to the SAML SP?                       |
 |                                                                                              |
 | 12. Were you successfully authenticated (SAML)?                                              |
 |                                                                                              |
-| 13. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**)             |
+| 13. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).            |
 |                                                                                              |
-| 14. Review your Access Report Logs (**Access Overview** -> **Access Reports**)               |
+| 14. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
 +----------------------------------------------------------------------------------------------+
 
 |image59|
@@ -899,7 +905,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | *Note: If you do not have Google/gMail account, you will need to set one up. Navigate to:*   |
 |                                                                                              |
-| *https://console.developers.google.com/apis/credentials & follow the directions for setup.*  |
+| * https://console.developers.google.com/apis/credentials & follow the directions for setup.* |
 +----------------------------------------------------------------------------------------------+ 
  
 |image60| |image61|
@@ -911,6 +917,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 |image62|
+
 +----------------------------------------------------------------------------------------------+
 | 2. You will be redirected to the Google API’s screen. If you are previously familiar with    |
 |                                                                                              |
@@ -944,9 +951,9 @@ Refer to the instructions and screen shots below:
 |image66| 
 
 +----------------------------------------------------------------------------------------------+
-| 7. If you have not previously a Consent Screen you may be prompted to do so.                 |
+| 7. If you have not previously accepted a Consent Screen you may be prompted to do so.        |
 |                                                                                              |
-|    Click **Configure Consent Screen**                                                        |
+|    Click **Configure Consent Screen**.                                                        |
 +----------------------------------------------------------------------------------------------+
 
 |image67|              
@@ -954,11 +961,11 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 8. On the **OAuth Consent Screen** tab, enter the **email address** of your developer        |
 |                                                                                              |
-|    account (pre-populated) for the **Email Address**                                         |
+|    account (pre-populated) for the **Email Address**.                                        |
 |                                                                                              |
-| 9. For the **Product Name Shown to Users** enter **app.f5demo.com**                          |
+| 9. For the **Product Name Shown to Users** enter **app.f5demo.com**.                         |
 |                                                                                              |
-| 10. Click **Save**                                                                           |
+| 10. Click **Save**.                                                                          |
 +----------------------------------------------------------------------------------------------+
 
 |image68|              
@@ -974,7 +981,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |  -  **Authorized Redirect URIs:** **https://app.f5demo.com/oauth/client/redirect**           |
 |                                                                                              |
-| 12. Click **Create**                                                                         |
+| 12. Click **Create**.                                                                         |
 +----------------------------------------------------------------------------------------------+
 
 |image69| 
@@ -993,9 +1000,9 @@ TASK 2 – Setup F5 OAuth Provider
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **OAuth Provider** by navigating to **Access Federation** ->                   |
+| 1. Create the **OAuth Provider** by navigating to **Access** -> **Federation** ->            |
 |                                                                                              |
-|   **OAuth Client/Resource Server Provider** and clicking **Create**                          |
+|   **OAuth Client/Resource Server** -> **Provider** and clicking **Create**.                  |
 +----------------------------------------------------------------------------------------------+
 
 |image71|
@@ -1007,17 +1014,17 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Type:** **Google**                                                                      |
 |                                                                                              |
-| -  **Trusted Certificate Authorities:** **ca-bundle.crt **                                   |
+| -  **Trusted Certificate Authorities:** **ca-bundle.crt**                                    |
 |                                                                                              |
 | -  **Allow Self-Signed JWK Config:**  **checked**                                            |
 |                                                                                              |
 | -  **Use Auto-discovered JWT:** **checked**                                                  |
 |                                                                                              |
-| 3. Click **Discover**                                                                        |
+| 3. Click **Discover**.                                                                       |
 |                                                                                              |
-| 4. Accept all other defaults                                                                 |
+| 4. Accept all other defaults.                                                                |
 |                                                                                              |
-| 5. Click **Save**                                                                            |
+| 5. Click **Save**.                                                                           |
 +----------------------------------------------------------------------------------------------+
 
 |image72|
@@ -1029,9 +1036,9 @@ TASK 3 – Setup F5 OAuth Server (Client)
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **OAuth Server (Client)** by navigating to **Access Federation** ->            |
+| 1. Create the **OAuth Server (Client)** by navigating to **Access** -> **Federation** ->     |
 |                                                                                              |
-|    **OAuth Client/Resource Server OAuth Server** and clicking **Create**                     |
+|    **OAuth Client/Resource Server** -> **OAuth Server** and clicking **Create**.             |
 +----------------------------------------------------------------------------------------------+
 
 |image73|
@@ -1055,7 +1062,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Client’s Server SSL Profile Name:** **serverssl**                                       |
 |                                                                                              |
-| 3. Click **Finished**                                                                        |
+| 3. Click **Finished**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image74|
@@ -1084,13 +1091,13 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Language:** **English**                                                                 |
 |                                                                                              |
-| 3. Click **Finished**                                                                        |
+| 3. Click **Finished**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image76|
 
 +----------------------------------------------------------------------------------------------+
-| 4. Click **Edit** link on for the **Google\_OAuth** Access Policy                            |
+| 4. Click **Edit** link on for the **Google\_OAuth** Access Policy.                           |
 +----------------------------------------------------------------------------------------------+
 
 |image77|
@@ -1098,11 +1105,11 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 5. In the **Google\_OAuth** Access Policy, click the “\ **+**\ ” between **Start** & **Deny**|
 |                                                                                              |
-| 6. Click the **Authentication** tab in the events window                                     |
+| 6. Click the **Authentication** tab in the events window.                                    |
 |                                                                                              |
-| 7. Scroll down and click the radio button for **OAuth Client**                               |
+| 7. Scroll down and click the radio button for **OAuth Client**.                              |
 |                                                                                              |
-| 8. Click **Add**                                                                             |
+| 8. Click **Add**.                                                                            |
 +----------------------------------------------------------------------------------------------+
 
 |image78| 
@@ -1130,7 +1137,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Scope:** **openid profile email**                                                       |
 |                                                                                              |
-| 10. Click **Save**                                                                           |
+| 10. Click **Save**.                                                                          |
 +----------------------------------------------------------------------------------------------+
 
 |image79|
@@ -1138,7 +1145,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 11. Click on the **Deny** link, in the **Select Binding**, select the **Allow** radio button |
 |                                                                                              |
-|    and click **Save**                                                                        |
+|    and click **Save**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image80|
@@ -1150,7 +1157,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | *The lab is simply completing authorization. Other access controls can be implemented based* |
 |                                                                                              |
-| *on the use case*                                                                            |
+| *on the use case*.                                                                           |
 +----------------------------------------------------------------------------------------------+
 
 |image81|
@@ -1163,9 +1170,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Navigate to **Local Traffic** -> **Virtual Servers** -> **Virtual Server List** and click |
 |                                                                                              |
-|    on the **app.f5demo.com** Virtual Server link                                             |
+|    on the **app.f5demo.com** Virtual Server link.                                            |
 |                                                                                              |
-| 2. Scroll to the **Access Policy** section                                                   |
+| 2. Scroll to the **Access Policy** section.                                                  |
 +----------------------------------------------------------------------------------------------+
 
 |image82| 
@@ -1225,7 +1232,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    reference. You have been blocked because you do not have access on a per request basis.   |                                                                      
 |                                                                                              |
-| 3. Press the **Back** button in your browser to return to **https://app.f5demo.com**         |
+| 3. Press the **Back** button in your browser to return to **https://app.f5demo.com**.        |
 +----------------------------------------------------------------------------------------------+
 
 |image88|
@@ -1233,11 +1240,11 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 4. Navigate to **Local Traffic** -> **iRules** -> **Datagroup List** and click on the        |
 |                                                                                              |
-|    **Allowed\_Users** datagroup                                                              |
+|    **Allowed\_Users** datagroup.                                                             |
 |                                                                                              |
-| 5. Enter your **Google Account** used for this lab as the **String** value                   |
+| 5. Enter your **Google Account** used for this lab as the **String** value.                  |
 |                                                                                              |
-| 6. Click **Add** then Click **Update**                                                       |
+| 6. Click **Add** then Click **Update**.                                                      |
 |                                                                                              |
 | *Note: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP*     |
 |                                                                                              |
@@ -1251,7 +1258,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 7. You should now be able to successfully to access the Admin Functions by clicking on the   |
 |                                                                                              |
-|    **Admin Link**                                                                            |
+|    **Admin Link**.                                                                           |
 |                                                                                              | 
 | *Note: Per Request Policies are dynamic and do not require the same “Apply Policy” action as*|
 |                                                                                              |
@@ -1263,7 +1270,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 8. To review the Per Request Policy, navigate to **Access Profiles/Policies** ->             |
 |                                                                                              |
-|   **Per Request Policies** and click on the **Edit** link for the **Google\_oauth\_policy**  |
+|   **Per Request Policies** and click on the **Edit** link for the **Google\_oauth\_policy**. |
 +----------------------------------------------------------------------------------------------+
 
 |image91| 
@@ -1282,7 +1289,7 @@ TASK 8 – Review OAuth Results
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Review your Active Sessions (**Access Overview** -> **Active Sessions**)                  |
+| 1. Review your Active Sessions (**Access** -> **Overview** -> **Active Sessions**).          |
 |                                                                                              |
 | 2. You can review Session activity or session variable from this window or kill the          |
 |                                                                                              |
@@ -1292,19 +1299,19 @@ Refer to the instructions and screen shots below:
 |image93|
 
 +----------------------------------------------------------------------------------------------+
-| 3. Review your Access Report Logs (**Access Overview** -> **Access Reports**)                |
+| 3. Review your Access Report Logs (**Access** -> **Overview** -> **Access Reports**).        |
 +----------------------------------------------------------------------------------------------+
 
 |image94|
 
 +----------------------------------------------------------------------------------------------+
-| 4. In the **Report Parameters window** click **Run Report**                                  |
+| 4. In the **Report Parameters window** click **Run Report**.                                 |
 +----------------------------------------------------------------------------------------------+
 
 |image95|
 
 +----------------------------------------------------------------------------------------------+
-| 5. Look at the **SessionID** report by clicking the **Session ID** Link                      |
+| 5. Look at the **SessionID** report by clicking the **Session ID** Link.                     |
 +----------------------------------------------------------------------------------------------+
 
 |image96|  
@@ -1321,11 +1328,12 @@ Refer to the instructions and screen shots below:
 | *iRules/iRulesLX.*                                                                           |
 +----------------------------------------------------------------------------------------------+
 
-|image97| 
+|image97|
+ 
 +----------------------------------------------------------------------------------------------+
-| 7. Review your Access Report Logs (**Access Overview** -> **OAuth Reports** ->               |
+| 7. Review your Access Report Logs (**Access** -> **Overview** -> **OAuth Reports** ->        |
 |                                                                                              |
-|    **Client/Resource Server**)                                                               |
+|    **Client/Resource Server**).                                                              |
 +----------------------------------------------------------------------------------------------+
 
 |image98| 
@@ -1365,20 +1373,20 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | *account requires the entry of billing information, setting up an account and performing the*|
 |                                                                                              |
-| *steps below is an **OPTIONAL** task. For those desiring to set up an account refer to the*  |
+| *steps below is an [OPTIONAL] task. For those desiring to set up an account refer to the*    |
 |                                                                                              |
-| * **APPENDIX: Setting up an Azure Development Account.** For those with existing accounts*   |
+| *"APPENDIX: Setting up an Azure Development Account". For those with existing accounts*      |
 |                                                                                              |
 | *these steps may be followed if desired. For all others, simply review the steps in*         |
 |                                                                                              |
-| * **Task1** and proceed to **Task 2** *                                                      |
+| *Task1 and proceed to Task 2.*                                                               |
 +----------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              |
-| 1. Log into the Microsoft Azure Dashboard and click  ** Azure Active Directory** in the left |
+| 1. Log into the Microsoft Azure Dashboard and click  **Azure Active Directory** in the left |
 |                                                                                              |
 |    navigation menu.                                                                          |
 +----------------------------------------------------------------------------------------------+
@@ -1390,7 +1398,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 2. Click on **App Registration** on the resulting menu and then                              |
 |                                                                                              |
-|    **New Application Registration** on the flyout menu.                                    |
+|    **New Application Registration** on the flyout menu.                                      |
 +----------------------------------------------------------------------------------------------+
 
 |image100| 
@@ -1406,7 +1414,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Sign On URL:** **https://app.f5demo.com**                                               |
 |                                                                                              |
-| 4. Click **Create**                                                                          |
+| 4. Click **Create**.                                                                         |
 +----------------------------------------------------------------------------------------------+
 
 |image101|
@@ -1418,7 +1426,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    **Application ID**. This will be used in a later setup step                               |
 |                                                                                              |
-| 6. Click **Settings**                                                                        |
+| 6. Click **Settings**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image102|
@@ -1432,7 +1440,7 @@ Refer to the instructions and screen shots below:
 |image103|
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL] **                                                                              |
+| **[OPTIONAL]**                                                                               |
 |                                                                                              |
 | 8. In the **Keys** flyout panel, enter the following values                                  |
 |                                                                                              |
@@ -1440,7 +1448,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Expires:** **In 2 Years**                                                               |
 |                                                                                              |
-| 9. Click **Save**                                                                            |
+| 9. Click **Save**.                                                                           |
 +----------------------------------------------------------------------------------------------+
 
 |image104|
@@ -1448,9 +1456,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              |
-| 10. Note the message provided by Azure in the **Keys** panel                                 |
+| 10. Note the message provided by Azure in the **Keys** panel.                                |
 |                                                                                              |
-| 11. Copy the ***Key Value*** for use in a later setup step                                   |
+| 11. Copy the ***Key Value*** for use in a later setup step.                                  |
 +----------------------------------------------------------------------------------------------+
 
 |image105| 
@@ -1458,7 +1466,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              |
-| 12. In the **Settings** flyout panel, click **Reply URL**                                    |
+| 12. In the **Settings** flyout panel, click **Reply URL**.                                   |
 +----------------------------------------------------------------------------------------------+
 
 |image106|
@@ -1470,7 +1478,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |     **https://app.f5demo.com/oauth/client/redirect**                                         |
 |                                                                                              |
-| 14. Click **Save**                                                                           |
+| 14. Click **Save**.                                                                          |
 +----------------------------------------------------------------------------------------------+
 
 |image107| 
@@ -1498,13 +1506,13 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              |
-| 19. In the **Required Permissions** flyout panel, click **Windows Azure Active Directory**   |
+| 19. In the **Required Permissions** flyout panel, click **Windows Azure Active Directory**.  |
 |                                                                                              |
-| 20. In the **Enable Access** flyout panel, ensure the **Sign In and Read User Profile**      |
+| 20. In the **Enable Access** flyout panel, ensure the **Sign In and Read User Profile**.     |
 |                                                                                              |
 |     permission is checked.                                                                   |
 |                                                                                              |
-| 21. Click **Save**                                                                           |
+| 21. Click **Save**.                                                                          |
 +----------------------------------------------------------------------------------------------+
 
 |image110|
@@ -1512,15 +1520,15 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
 |                                                                                              |
-| 22. In the **Registered Application** panel, click **Manifest**                              |
+| 22. In the **Registered Application** panel, click **Manifest**.                              |
 |                                                                                              |
 | 23. In the **Edit Manifest** flyout panel, edit the **groupMembershipClaims** line (line 7)  |
 |                                                                                              |
-|     from **null** to **“All”** (note quotes are required.)                                   |
+|     from **null** to **“All”** (note quotes are required).                                   |
 |                                                                                              |
-| 24. Click **Save**                                                                           |
+| 24. Click **Save**.                                                                          |
 |                                                                                              |
-| *Note: You can also update groupMembershipClaims to be “\ **SecurityGroup**\ ”.*             |
+| *Note: You can also update groupMembershipClaims to be "SecurityGroup".*                     |
 +----------------------------------------------------------------------------------------------+
 
 |image111|
@@ -1531,9 +1539,9 @@ TASK 2 – Create OAuth Request
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **OAuth Request** by navigating to **Access Federation** ->                    |
+| 1. Create the **OAuth Request** by navigating to **Access** -> **Federation** ->             |
 |                                                                                              |
-|    **OAuth Client/Resource Server Request** and clicking **Create**                          |
+|    **OAuth Client/Resource Server** -> **Request** and clicking **Create**                   |
 +----------------------------------------------------------------------------------------------+
 
 |image112|
@@ -1551,19 +1559,19 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Parameter Type:** **client-id**                                                         |
 |                                                                                              |
-| -  **Parameter Value:** **client\_id** (notice \_)                                           |
+| -  **Parameter Value:** **client\_id** (notice \_ )                                          |
 |                                                                                              |
 | -  **Parameter Type:** **client-secret**                                                     |
 |                                                                                              |
-| -  **Parameter Value:** **client\_secret** (notice \_)                                       |
+| -  **Parameter Value:** **client\_secret** (notice \_ )                                      |
 |                                                                                              |
 | -  **Parameter Type:** **grant-type**                                                        |
 |                                                                                              |
-| -  **Parameter Value:** **grant\_type** (notice \_)                                          |
+| -  **Parameter Value:** **grant\_type** (notice \_ )                                         |
 |                                                                                              |
 | -  **Parameter Type:** **redirect-uri**                                                      |
 |                                                                                              |
-| -  **Parameter Value:** **redirect\_uri** (notice \_)                                        |
+| -  **Parameter Value:** **redirect\_uri** (notice \_ )                                       |
 |                                                                                              |
 | -  **Parameter Type:** **custom**                                                            |
 |                                                                                              |
@@ -1571,7 +1579,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Parameter Value:** **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                             |
 |                                                                                              |
-| 4. Click **Finished**                                                                        |
+| 4. Click **Finished**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image113|
@@ -1582,9 +1590,9 @@ TASK 3 – Create OAuth Provider
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **OAuth Provider** by navigating to **Access Federation** ->                   |
+| 1. Create the **OAuth Provider** by navigating to **Access** -> **Federation** ->            |
 |                                                                                              |
-|    **OAuth Client/Resource Server Provider** and clicking **Create**                         |
+|    **OAuth Client/Resource Server** -> **Provider** and clicking **Create**.                 |
 +----------------------------------------------------------------------------------------------+
 
 |image114|
@@ -1598,26 +1606,27 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **OpenID URI:** (replace **\_tennantID\_** with the following tenantID                    |
 |                                                                                              |
-|    **f5agilitydemogmail.onmicrosoft.com**                                                    |
+|    **f5agilitydemogmail.onmicrosoft.com** )                                                  |
 |                                                                                              |
 | Resulting URI should be as follows:                                                          |
 |                                                                                              |
 | https://login.windows.net/f5agilitydemogmail.onmicrosoft.com/.well-known/openid-configuration|
 |                                                                                              |
-| 3. Click **Discover**                                                                        |
+| 3. Click **Discover**.                                                                       |
 |                                                                                              |
-| 4. Click **Finished**                                                                        |
+| 4. Click **Finished**.                                                                       |
 |                                                                                              |
 | *Note: if using another account you can find you TenantID by navigating to the*              |
 |                                                                                              |
-| * **Azure Portal** and clicking **Azure Active Directory**. The tenant ID is the*            |
+| *"Azure Portal" and clicking "Azure Active Directory". The tenant ID is the*                 |
 |                                                                                              |
-| *  “\ **default directory**\ ” as shown. The full name of the TenantID will be your*         |
+| *"default directory" as shown. The full name of the TenantID will be your*                   |
 |                                                                                              |
-| * **TenantID.onmicrosoft.com** *                                                             |
+| *"TenantID.onmicrosoft.com"*                                                                 |
 +----------------------------------------------------------------------------------------------+
 
-|image115| |image116| 
+|image115|
+|image116| 
 
 TASK 4 – Create OAuth Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1625,9 +1634,9 @@ TASK 4 – Create OAuth Server
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **OAuth Server (Client)** by navigating to **Access Federation** ->            |
+| 1. Create the **OAuth Server (Client)** by navigating to **Access** -> **Federation** ->     |
 |                                                                                              |
-|    **OAuth Client/Resource Server** -> **OAuth Server*** and clicking **Create**             |
+|    **OAuth Client/Resource Server** -> **OAuth Server*** and clicking **Create**.            |
 +----------------------------------------------------------------------------------------------+
 
 |image117|
@@ -1651,7 +1660,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Client’s Server SSL Profile Name:** **serverssl-insecure-compatible**                   |
 |                                                                                              |
-| 3. Click **Finished**                                                                        |
+| 3. Click **Finished**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image118| 
@@ -1662,9 +1671,9 @@ TASK 5 – Setup F5 Per Session Policy (Access Policy)
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **Per Session Policy** by navigating to **Access Proflie/Policies** ->         |
+| 1. Create the **Per Session Policy** by navigating to **Access** -> **Profile/Policies** ->  |
 |                                                                                              |
-|    **Access Profiles (Per Session Policies)** and clicking **Create**                        |
+|    **Access Profiles (Per Session Policies)** and clicking **Create**.                       |
 +----------------------------------------------------------------------------------------------+
 
 |image119|
@@ -1680,7 +1689,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Language:** **English**                                                                 |
 |                                                                                              |
-| 3. Click **Finished**                                                                        |
+| 3. Click **Finished**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image120|
@@ -1694,11 +1703,11 @@ Refer to the instructions and screen shots below:
 +-----------------------------------------------------------------------------------------------+
 | 5. In the **AzureAD\_OAuth** Access Policy, click the “\ **+**\ ” between **Start** & **Deny**|
 |                                                                                               |
-| 6. Click the **Authentication** tab in the events window                                      |
+| 6. Click the **Authentication** tab in the events window.                                     |
 |                                                                                               |
-| 7. Scroll down and click the radio button for **OAuth Client**                                |
+| 7. Scroll down and click the radio button for **OAuth Client**.                               |
 |                                                                                               |
-| 8. Click ***Add***                                                                            |
+| 8. Click **Add**.                                                                             |
 +-----------------------------------------------------------------------------------------------+
 
 |image122|
@@ -1724,7 +1733,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Redirection URI:** **https://%{session.server.network.name}/oauth/client/redirect**     |
 |                                                                                              |
-| 10. Click **Save**                                                                            |
+| 10. Click **Save**.                                                                          |
 +----------------------------------------------------------------------------------------------+
 
 |image123| 
@@ -1732,13 +1741,13 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 11. Click on the **Deny** link, in the **Select Binding**, select the **Allow** radio button |
 |                                                                                              |
-|    and click ***Save***                                                                      |
+|    and click **Save**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 
 |image124|
 
 +----------------------------------------------------------------------------------------------+
-| 12. Click on the ***Apply Access Policy*** link in the top left-hand corner.                  |
+| 12. Click on the **Apply Access Policy** link in the top left-hand corner.                   |
 |                                                                                              |
 | *Note: Additional actions can be taken in the Per Session policy (Access Policy). The lab*   |
 |                                                                                              |
@@ -1759,7 +1768,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    click on the **app.f5demo.com** Virtual Server link                                       |
 |                                                                                              |
-| 2. Scroll to the **Access Policy** section                                                   |
+| 2. Scroll to the **Access Policy** section.                                                  |
 +----------------------------------------------------------------------------------------------+
 
 |image126|
@@ -1767,13 +1776,13 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 3. Use the **Access Profile** drop down to change the **Access Profile** to                  |
 |                                                                                              |
-|    **AzureAD\_OAuth**                                                                        |
+|    **AzureAD\_OAuth**.                                                                       |
 |                                                                                              |
 | 4. Use the **Per-Request Policy** drop down to change the **Per-Request Policy** to          |
 |                                                                                              |
-|    **AzureAD\_oauth\_policy**                                                                |
+|    **AzureAD\_oauth\_policy**.                                                               |
 |                                                                                              |
-| 5. Scroll to the bottom of the **Virtual Server** configuration and click **Update**         |
+| 5. Scroll to the bottom of the **Virtual Server** configuration and click **Update**.        |
 +----------------------------------------------------------------------------------------------+
 
 |image127|
@@ -1817,18 +1826,17 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. As in the prior lab, you can experiment with Per Request Policy controls. In the          |
 |                                                                                              |
-| application page for **https://app.f5demo.com** click the **Admin Link** shown               |
+| application page for **https://app.f5demo.com** click the **Admin Link** shown.              |
 +----------------------------------------------------------------------------------------------+
 
 |image131|
-
 
 +----------------------------------------------------------------------------------------------+
 | 1. You will receive an **Access to this page is blocked** (customizable) message with a      |
 |                                                                                              |
 |    reference. You have been blocked because you do not have access on a per request basis.   |
 |                                                                                              |
-| 2. Press the **Back** button in your browser to return to **https://app.f5demo.com**         |
+| 2. Press the **Back** button in your browser to return to **https://app.f5demo.com**.        |
 +----------------------------------------------------------------------------------------------+
 
 |image132|
@@ -1836,13 +1844,13 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Navigate to **Local Traffic** -> **iRules** -> **Datagroup List** and click on the        |
 |                                                                                              |
-|    **Allowed\_Users** datagroup                                                              |
+|    **Allowed\_Users** datagroup.                                                             |
 |                                                                                              |
 | 2. Enter your **demouser@f5agilitydemogmail.onmicrosoft.com** used for this lab as the       |
 |                                                                                              |
-|    **String** value                                                                          |
+|    **String** value.                                                                         |
 |                                                                                              |
-| 3. Click ***Add*** then Click ***Update***                                                   |
+| 3. Click **Add** then Click **Update**.                                                      |
 |                                                                                              |
 | *Note: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP      |
 |                                                                                              |
@@ -1860,21 +1868,21 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | *Note: Per Request Policies are dynamic and do not require the same “Apply Policy” action*   |
 |                                                                                              |
-| *as Per Session Policies*                                                                    |
+| *as Per Session Policies*.                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 |image134| 
 
 +----------------------------------------------------------------------------------------------+
-| 1. To review the Per Request Policy, navigate to ***Access Profiles/Policies** ->            |
+| 1. To review the Per Request Policy, navigate to ***Access** -> **Profiles/Policies** ->     |
 |                                                                                              |
-|    **Per Request Policies*** and click on the Edit link for the **AzureAD\_oauth\_policy**   |
+|    **Per Request Policies** and click on the Edit link for the **AzureAD\_oauth\_policy**.   |
 +----------------------------------------------------------------------------------------------+
 
 |image135| 
 
 +----------------------------------------------------------------------------------------------+
-| 1. The various Per-Request-Policy actions can be reviewed                                    |
+| 1. The various Per-Request-Policy actions can be reviewed.                                   |
 |                                                                                              |
 | *Note: Other actions like Step-Up Auth controls can be performed in a Per-Request Policy*    |
 +----------------------------------------------------------------------------------------------+
@@ -1887,29 +1895,29 @@ TASK 9 – Review OAuth Results
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Review your Active Sessions (**Access Overview** -> **Active Sessions**)                  |
+| 1. Review your Active Sessions (**Access** -> **Overview** -> **Active Sessions**).          |
 |                                                                                              |
 | 2. You can review Session activity or session variable from this window or kill the          |
 |                                                                                              |
-|    selected Session.                                                                          |
+|    selected Session.                                                                         |
 +----------------------------------------------------------------------------------------------+
 
 |image137| 
 
 +----------------------------------------------------------------------------------------------+
-| 1. Review your Access Report Logs (**Access Overview** -> **Access Reports**)                | 
+| 1. Review your Access Report Logs (**Access** -> **Overview** -> **Access Reports**).        | 
 +----------------------------------------------------------------------------------------------+
 
 |image138|
 
 +----------------------------------------------------------------------------------------------+
-| 2. In the **Report Parameters window** click **Run Report**                                  |
+| 2. In the **Report Parameters window** click **Run Report**.                                 |
 +----------------------------------------------------------------------------------------------+
 
 |image139|
 
 +----------------------------------------------------------------------------------------------+
-| 3. Look at the **SessionID** report by clicking the **Session ID** Link                      |
+| 3. Look at the **SessionID** report by clicking the **Session ID** Link.                     |
 +----------------------------------------------------------------------------------------------+
 
 |image140| 
@@ -1929,9 +1937,9 @@ Refer to the instructions and screen shots below:
 |image141| 
 
 +----------------------------------------------------------------------------------------------+
-| 1. Review your Access Report Logs (**Access Overview** -> **OAuth Reports** ->               |  
+| 1. Review your Access Report Logs (**Access** -> **Overview** -> **OAuth Reports** ->        |  
 |                                                                                              |
-|    **Client/Resource Server**)                                                               |
+|    **Client/Resource Server**).                                                              |
 +----------------------------------------------------------------------------------------------+
 
 |image142| 
@@ -1972,7 +1980,10 @@ Refer to the information below:
 | 1. Initial Setup                                                                             |
 +----------------------------------------------------------------------------------------------+
 
-|image144| |image145| |image146| |image147|
+|image144|
+|image145|
+|image146|
+|image147|
 
 +----------------------------------------------------------------------------------------------+
 | 1. About You                                                                                 |
