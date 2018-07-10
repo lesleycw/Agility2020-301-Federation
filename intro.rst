@@ -1,43 +1,7 @@
-Agility 2018 Hands-on Lab Guide
-
-Federation with F5
-
-APM 330 Presented by: Steve Lyons, Chris Miller & Chas Lesley
-
-What’s inside
-
-`Welcome <#welcome>`__
-
-`Lab Network Setup <#lab-network-setup>`__
-
-`Timing for labs <#timing-for-labs>`__
-
-`Authentication – Credentials <#authentication-credentials>`__
-
-`Utilized Browsers <#utilized-browsers>`__
-
-`General Notes <#general-notes>`__
-
-`Acknowledgements <#acknowledgements>`__
-
-`Lab 1 – SAML Service Provider (SP) Lab <#lab-1-saml-service-provider-lab>`__
-
-`Lab 2 – SaaS SAML Identity Provider (IdP) Lab - OKTA <#lab-2-saas-saml-identity-provider-lab-with-okta>`__
-
-`Lab 3 – oAuth and OpenID Connect Lab - Google <#lab-3-oauth-and-openid-connect-lab-with-google>`__
-
-`Lab 4 – oAuth and Azure AD Lab <#lab-4-oauth-and-azuread-lab>`__
-
-`Conclusion <#conclusion>`__
-
-`Appendix <#appendix>`__
-
-`Learn More <#learn-more>`__
-
 Welcome
 =======
 
-Welcome to the 330 Access Policy Manager (APM) Federation Lab. The
+Welcome to the 330 Access Policy Manager (APM) Federation Hands-on Lab Guide. The
 following labs and exercises will instruct you on how to configure and
 troubleshoot federation use cases based on the experience of field
 engineers, support engineers and clients. This guide is intended to
@@ -132,6 +96,11 @@ many individuals behind the scenes in addition the 2018 Agility Lab
 Team. Many thanks to the 2017 Agility Lab Team for the SAML & OAuth
 Federation Labs, Lucas Thompson for his OAuth/OIDC Lab and our lab
 testers Matt Harmon, Dave Lipowsky & Stu McMath.
+
+Presented by
+------------
+
+APM 330 Presented by: Steve Lyons, Chris Miller & Chas Lesley
 
 .. |image0| image:: media/image2.png
    :width: 6.96097in
