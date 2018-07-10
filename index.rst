@@ -644,7 +644,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 14. Save the **metadata.xml** to your jumphost desktop. We will be using it in a later step  |
 |                                                                                              |
-|    in the Lab.                                                                                |
+|     in the Lab.                                                                              |
 +----------------------------------------------------------------------------------------------+
 | |image38|                                                                                    |
 +----------------------------------------------------------------------------------------------+
@@ -779,7 +779,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    -  **Matching Source:** **%{session.server.landinguri}**                                  |
 |                                                                                              |
-|    -  **Matching Value:** /*/\                                                               |
+|    -  **Matching Value:** /*                                                                 |
 |                                                                                              |
 | 5. Click **Update** then **OK**.                                                             |
 +----------------------------------------------------------------------------------------------+
