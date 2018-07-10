@@ -4,7 +4,7 @@ APM 330 Federation Lab
 Welcome
 -------
 
-|Agility2018-APM330-FederationLab|
+Agility2018-APM330-FederationLab
 
 Welcome to the **APM 330 Federation** Lab at F5 Agility 2018
 
