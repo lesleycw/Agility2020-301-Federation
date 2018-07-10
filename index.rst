@@ -628,7 +628,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 11. In the resulting expanded window, select:                                                |
 |                                                                                              |
-|    **“This is an internal app that we have created”** for ***App Type***                     |
+|    **“This is an internal app that we have created”** for **App Type**                       |
 |                                                                                              |
 |    and click **Finish**.                                                                     |
 +----------------------------------------------------------------------------------------------+
@@ -779,7 +779,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    -  **Matching Source:** **%{session.server.landinguri}**                                  |
 |                                                                                              |
-|    -  **Matching Value:** **/\**                                                             |
+|    -  **Matching Value:** /*/\                                                               |
 |                                                                                              |
 | 5. Click **Update** then **OK**.                                                             |
 +----------------------------------------------------------------------------------------------+
