@@ -2154,68 +2154,68 @@ Links & Guides
    :width: 6.96097in
    :height: 4.46512in
 .. |image001| image:: media/image001.png
-   :width: 3.63190in
-   :height: 0.51278in
+   :width: 4.5in
+   :height: 0.74in
 .. |image002| image:: media/image002.png
-   :width: 3.46104in
-   :height: 2.55852in
+   :width: 4.5in
+   :height: 3.37in
 .. |image003| image:: media/image003.png
-   :width: 3.38430in
-   :height: 2.52597in
+   :width: 4.5in
+   :height: 3.38in
 .. |image004| image:: media/image004.png
-   :width: 3.64417in
-   :height: 0.62803in
+   :width: 4.5in
+   :height: 0.73in
 .. |image005| image:: media/image005.png
-   :width: 3.44785in
-   :height: 2.56848in
+   :width: 4.5in
+   :height: 3.37in
 .. |image006| image:: media/image006.png
-   :width: 3.48466in
-   :height: 1.43410in
+   :width: 4.5in
+   :height: 1.15in
 .. |image007| image:: media/image007.png
-   :width: 3.39264in
-   :height: 1.95264in
+   :width: 4.5in
+   :height: 2.28in
 .. |image008| image:: media/image008.png
-   :width: 3.51083in
-   :height: 1.09836in
+   :width: 4.5in
+   :height: 0.96in
 .. |image009| image:: media/image009.png
-   :width: 3.61688in
-   :height: 0.49379in
+   :width: 4.5in
+   :height: 1.69in
 .. |image010| image:: media/image010.png
-   :width: 3.30905in
-   :height: 1.37079in
+   :width: 4.5in
+   :height: 2.94in
 .. |image011| image:: media/image011.png
-   :width: 3.21692in
-   :height: 1.21902in
+   :width: 4.5in
+   :height: 0.80in
 .. |image012| image:: media/image012.png
-   :width: 3.38037in
-   :height: 0.67756in
+   :width: 4.5in
+   :height: 1.12in
 .. |image013| image:: media/image013.png
-   :width: 3.45399in
-   :height: 1.09929in
+   :width: 4.5in
+   :height: 4.00in
 .. |image014| image:: media/image014.png
-   :width: 3.43558in
-   :height: 2.84583in
+   :width: 4.5in
+   :height: 1.48in
 .. |image015| image:: media/image015.png
-   :width: 3.39877in
-   :height: 1.43523in
+   :width: 4.5in
+   :height: 1.12in
 .. |image016| image:: media/image016.png
-   :width: 3.14286in
-   :height: 1.17260in
+   :width: 4.5in
+   :height: 1.54in
 .. |image017| image:: media/image017.png
-   :width: 2.36848in
-   :height: 1.00000in
+   :width: 4.5in
+   :height: 1.29in
 .. |image018| image:: media/image018.png
-   :width: 3.21428in
-   :height: 1.36888in
+   :width: 4.5in
+   :height: 5.46in
 .. |image019| image:: media/image019.png
-   :width: 3.40692in
-   :height: 0.75370in
+   :width: 4.5in
+   :height: 2.13in
 .. |image020| image:: media/image020.png
-   :width: 3.07814in
-   :height: 3.51381in
+   :width: 4.5in
+   :height: 1.01in
 .. |image021| image:: media/image021.png
-   :width: 3.06484in
-   :height: 0.57792in
+   :width: 4.5in
+   :height: 1.93in
 .. |image22| image:: media/image24.png
    :width: 3.12075in
    :height: 1.43714in
