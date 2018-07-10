@@ -1370,11 +1370,11 @@ TASK 1 – Create/Review New Application Registration
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| *Note: The following steps in this task can just be **REVIEWED**. As setting up a free Azure*|
+| *Note: The following steps in this task can just be "REVIEWED". As setting up a free Azure*  |
 |                                                                                              |
 | *account requires the entry of billing information, setting up an account and performing the*|
 |                                                                                              |
-| *steps below is an [OPTIONAL] task. For those desiring to set up an account refer to the*    |
+| *steps below is a [REVIEW] task. For those desiring to set up an account refer to the*       |
 |                                                                                              |
 | *"APPENDIX: Setting up an Azure Development Account". For those with existing accounts*      |
 |                                                                                              |
@@ -1384,9 +1384,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-| 1. Log into the Microsoft Azure Dashboard and click  **Azure Active Directory** in the left |
+| 1. Log into the Microsoft Azure Dashboard and click  **Azure Active Directory** in the left  |
 |                                                                                              |
 |    navigation menu.                                                                          |
 +----------------------------------------------------------------------------------------------+
@@ -1394,7 +1394,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL] **                                                                              |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 2. Click on **App Registration** on the resulting menu and then                              |
 |                                                                                              |
@@ -1404,7 +1404,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 3. In the pop menu for **Create App Registration**, enter the following values               | 
 |                                                                                              |
@@ -1420,7 +1420,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 5. In the resulting **app.f5demo.com Registered App** window, note & copy the                |
 |                                                                                              |
@@ -1432,7 +1432,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 7. In the **Settings** flyout panel, click **Keys**                                          |
 +----------------------------------------------------------------------------------------------+
@@ -1440,7 +1440,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 8. In the **Keys** flyout panel, enter the following values                                  |
 |                                                                                              |
@@ -1454,7 +1454,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 10. Note the message provided by Azure in the **Keys** panel.                                |
 |                                                                                              |
@@ -1464,7 +1464,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 12. In the **Settings** flyout panel, click **Reply URL**.                                   |
 +----------------------------------------------------------------------------------------------+
@@ -1472,7 +1472,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 13. In the **Reply URL** flyout panel, enter                                                 |
 |                                                                                              |
@@ -1484,7 +1484,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 15. In the **Settings** flyout panel, click **Required Permissions**                         |
 |                                                                                              |
@@ -1494,17 +1494,17 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 17. The following **Required Permissions** dialogue box may appear.                          |
 |                                                                                              |
 | 18. Click **Yes** to proceed.                                                                |
 +----------------------------------------------------------------------------------------------+
-| |image109|                                                                                    |
+| |image109|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 19. In the **Required Permissions** flyout panel, click **Windows Azure Active Directory**.  |
 |                                                                                              |
@@ -1518,7 +1518,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
 | 22. In the **Registered Application** panel, click **Manifest**.                             |
 |                                                                                              |
