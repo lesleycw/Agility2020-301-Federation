@@ -3,7 +3,7 @@ Lab 1 - SAML Service Provider (SP) Lab
 
 The purpose of this lab is to configure and test a SAML Service
 Provider (SP). Students will configure the various aspects of a SAML Service
-Provider, import and bind to a SAML Identity Provider (iDP) and test
+Provider, import and bind to a SAML Identity Provider (IdP) and test
 SP-Initiated SAML Federation.
 
 Objective:
@@ -24,7 +24,7 @@ Lab Requirements:
 Lab 1 Tasks:
 -----------------
 
-TASK 1 – Configure the SAML Service Provider (SP) 
+TASK 1: Configure the SAML Service Provider (SP) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -71,7 +71,7 @@ Refer to the instructions and screen shots below:
 | |image003|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 2 – Configure the External SAML IDP Connector 
+TASK 2: Configure the External SAML IdP Connector 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -108,7 +108,7 @@ Refer to the instructions and screen shots below:
 | |image005|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 3 – Bind the External SAML IDP Connector to the SAML SP 
+TASK: 3 – Bind the External SAML IdP Connector to the SAML SP 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
