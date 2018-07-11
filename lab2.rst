@@ -1,15 +1,15 @@
-Lab 2 SaaS SAML Identity Provider Lab with OKTA
+Lab 2 - IDaaS SAML Identity Provider (iDP) Lab (OKTA)
 ====================================================
 
-The purpose of this lab is to configure and test a SaaS SAML Identity
-Provider. Students will configure a SaaS based SAML Identity Provider
+The purpose of this lab is to configure and test a IDaaS SAML Identity
+Provider. Students will configure a IDaaS based SAML Identity Provider
 (in this case OKTA) and import and bind to a SAML Service Provider and
 test IdP-Initiated and SP-Initiated SAML Federation.
 
 Objective:
 ----------
 
--  Gain an understanding of integrating a SaaS SAML Identity
+-  Gain an understanding of integrating a IDaaS SAML Identity
    Provider(IdP)
 
 -  Gain an understanding of the access flow for IdP-Initiated SAML
