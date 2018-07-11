@@ -24,7 +24,7 @@ Lab Requirements:
 Lab 2 Tasks:
 ------------
 
-TASK 1 – Sign Up for OKTA Developer Account 
+TASK 1: Sign Up for OKTA Developer Account 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -65,7 +65,7 @@ Refer to the instructions and screen shots below:
 | |image28|                                                                                    |
 +----------------------------------------------------------------------------------------------+
  
-TASK 2– OKTA Classic UI 
+TASK 2: OKTA Classic UI 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -82,7 +82,7 @@ Refer to the instructions and screen shots below:
 | |image29|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 3 – Enable OKTA Multi-Factor Authentication [OPTIONAL]
+TASK 3: Enable OKTA Multi-Factor Authentication [OPTIONAL]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -109,7 +109,7 @@ Refer to the instructions and screen shots below:
 | |image31|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 4 – Build SAML Application - OKTA 
+TASK 4: Build SAML Application - OKTA 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -188,7 +188,7 @@ Refer to the instructions and screen shots below:
 | |image38|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 5 – Add User to SAML Application 
+TASK 5: Add User to SAML Application 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -207,7 +207,7 @@ Refer to the instructions and screen shots below:
 | |image40|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 6 – Add Multi-Factor Authentication Sign-On Policy [OPTIONAL]
+TASK 6: Add Multi-Factor Authentication Sign-On Policy [OPTIONAL]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -258,7 +258,7 @@ Refer to the instructions and screen shots below:
 | |image45|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 7 – Create the External IDP Connector
+TASK 7: Create the External IDP Connector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -295,7 +295,7 @@ Refer to the instructions and screen shots below:
 | |image48|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 8 – Change the SAML SP Binding
+TASK 8: Change the SAML SP Binding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Refer to the instructions and screen shots below:
 
@@ -325,7 +325,7 @@ Refer to the instructions and screen shots below:
 | |image50|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 9 – Apply Access Policy Changes
+TASK 9: Apply Access Policy Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Refer to the instructions and screen shots below:
 
