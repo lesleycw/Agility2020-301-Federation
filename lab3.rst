@@ -1,4 +1,4 @@
-Lab 3 - oAuth and OpenID Connect Lab (Google)
+Lab 3: oAuth and OpenID Connect Lab (Google)
 ==============================================
 
 The purpose of this lab is to better understand the F5 use cases OAuth2
@@ -27,7 +27,7 @@ Lab Requirements:
 Lab 3 Tasks:
 ------------
 
-TASK 1 – Setup Google’s API Credentials 
+TASK 1: Setup Google’s API Credentials 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -125,7 +125,7 @@ Refer to the instructions and screen shots below:
 | |image70|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 2 – Setup F5 OAuth Provider 
+TASK 2: Setup F5 OAuth Provider 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -160,7 +160,7 @@ Refer to the instructions and screen shots below:
 | |image72|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 3 – Setup F5 OAuth Server (Client) 
+TASK 3: Setup F5 OAuth Server (Client) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -197,7 +197,7 @@ Refer to the instructions and screen shots below:
 | |image74|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 4 – Setup F5 Per Session Policy (Access Policy) 
+TASK 4: Setup F5 Per Session Policy (Access Policy) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -292,7 +292,7 @@ Refer to the instructions and screen shots below:
 | |image81|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 5 – Associate Access Policy to Virtual Server 
+TASK 5: Associate Access Policy to Virtual Server 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -319,7 +319,7 @@ Refer to the instructions and screen shots below:
 | |image83|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 6 – Test app.f5demo.com
+TASK 6: Test app.f5demo.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -346,7 +346,7 @@ Refer to the instructions and screen shots below:
 | |image86|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 7 – Per Request Policy Controls
+TASK 7: Per Request Policy Controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -413,7 +413,7 @@ Refer to the instructions and screen shots below:
 | |image92|                                                                                    |
 +----------------------------------------------------------------------------------------------+
 
-TASK 8 – Review OAuth Results 
+TASK 8: Review OAuth Results 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
