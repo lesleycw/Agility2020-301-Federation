@@ -9,12 +9,12 @@ student to further explore the BIG-IP platform and Access Policy Manager
 (APM), its functions & features.
 
 Appendix
-========
+--------
 
 The following are for informational purposes only
 
 Setting up an AzureAD Developer Account
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the information below:
 
@@ -65,13 +65,13 @@ Refer to the information below:
 +----------------------------------------------------------------------------------------------+
 
 Learn More
-==========
+----------
 
-    The following are additional resources included for reference and
-    assistance with this lab guide and other APM tasks.
+The following are additional resources included for reference and assistance with
+this lab guide and other APM tasks.
 
 Links & Guides
---------------
+~~~~~~~~~~~~~~
 
 -  **Access Policy Manager (APM) Operations Guide:**
        https://support.f5.com/content/kb/en-us/products/big-ip_apm/manuals/product/f5-apm-operations-guide/_jcr_content/pdfAttach/download/file.res/f5-apm-operations-guide.pdf
@@ -169,8 +169,6 @@ Links & Guides
 
    -  **F5 Deployment Guide for Active Directory Federated Services:**
           https://f5.com/solutions/deployment-guides/microsoft-active-directory-federation-services-big-ip-v11-ltm-apm
-
-    Notes:
 
 +----------------------------------------------------------------------------------------------+
 | F5 Networks, Inc. \| f5.com                                                                  |
