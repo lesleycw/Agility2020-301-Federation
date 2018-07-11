@@ -14,7 +14,7 @@ Appendix
 Setting up an AzureAD Developer Account
 ---------------------------------------
 
-The following are is informational purposes only and maybe subject to change based on Microsoft.  
+The following steps are for informational purposes only and maybe subject to change based on Microsoft.  
 
 +----------------------------------------------------------------------------------------------+
 | 1. Navigate to the following URL to begin the process then follow the prompts as shown       |
