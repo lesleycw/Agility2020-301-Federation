@@ -1,4 +1,4 @@
-Lab 1 SAML Service Provider Lab
+Lab 1 - SAML Service Provider (SP) Lab
 ======================================
 
 The purpose of this lab is to configure and test a SAML Service
