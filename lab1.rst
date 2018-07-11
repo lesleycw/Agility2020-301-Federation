@@ -99,9 +99,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 6. Click **OK** on the dialogue box.                                                         |
 |                                                                                              |
-| *Note: The idp.partner.com-app\_metadata.xml was created previously. Oftentimes,*            |
+| ..note:: Note: The idp.partner.com-app\_metadata.xml was created previously. Oftentimes, IdP providers will have a metadata file representing their IdP service. This can be    |
 |                                                                                              |
-| *IdP providers will have a metadata file representing their IdP service. This can be*        | 
+|         | 
 |                                                                                              |
 | *imported to save object creation time as it has been done in this lab*                      |
 +----------------------------------------------------------------------------------------------+
