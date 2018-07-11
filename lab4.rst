@@ -1,4 +1,4 @@
-Lab 4 oAuth and AzureAD Lab
+Lab 4: oAuth and AzureAD Lab
 ==============================
 
 The purpose of this lab is to familiarize the Student with the using APM
@@ -23,7 +23,7 @@ Lab Requirements:
 Lab 4 Tasks:
 ------------
 
-TASK 1 – Create/Review New Application Registration
+TASK 1: Create/Review New Application Registration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -192,7 +192,7 @@ Refer to the instructions and screen shots below:
 | |image111|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 2 – Create OAuth Request
+TASK 2: Create OAuth Request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -243,7 +243,7 @@ Refer to the instructions and screen shots below:
 | |image113|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 3 – Create OAuth Provider
+TASK 3: Create OAuth Provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -288,7 +288,7 @@ Refer to the instructions and screen shots below:
 | |image116|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 4 – Create OAuth Server
+TASK 4: Create OAuth Server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -325,7 +325,7 @@ Refer to the instructions and screen shots below:
 | |image118|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 5 – Setup F5 Per Session Policy (Access Policy) 
+TASK 5: Setup F5 Per Session Policy (Access Policy) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -418,7 +418,7 @@ Refer to the instructions and screen shots below:
 | |image125|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 6 – Associate Access Policy to Virtual Server 
+TASK 6: Associate Access Policy to Virtual Server 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -447,7 +447,7 @@ Refer to the instructions and screen shots below:
 | |image127|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 7 – Test app.f5demo.com
+TASK 7: Test app.f5demo.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -478,7 +478,7 @@ Refer to the instructions and screen shots below:
 | |image130|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 8 – Per Request Policy Controls
+TASK 8: Per Request Policy Controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -549,7 +549,7 @@ Refer to the instructions and screen shots below:
 | |image136|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 9 – Review OAuth Results 
+TASK 9: Review OAuth Results 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
