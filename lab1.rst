@@ -1,4 +1,4 @@
-Lab 1 - SAML Service Provider (SP) Lab
+Lab 1: SAML Service Provider (SP) Lab
 ======================================
 
 The purpose of this lab is to configure and test a SAML Service
@@ -108,7 +108,7 @@ Refer to the instructions and screen shots below:
 | |image005|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK: 3 – Bind the External SAML IdP Connector to the SAML SP 
+TASK: 3: Bind the External SAML IdP Connector to the SAML SP 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -149,7 +149,7 @@ Refer to the instructions and screen shots below:
 | |image008|                                                                                   |
 +----------------------------------------------------------------------------------------------+
  
-TASK 4 – Configure the SAML SP Access Policy
+TASK 4: Configure the SAML SP Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -240,7 +240,7 @@ Refer to the instructions and screen shots below:
 | |image016|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 5 – Create the SP Virtual Server & Apply the SP Access Policy
+TASK 5: Create the SP Virtual Server & Apply the SP Access Policy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -289,7 +289,7 @@ Refer to the instructions and screen shots below:
 | |image019|                                                                                   | 
 +----------------------------------------------------------------------------------------------+
 
-TASK 6 – Test the SAML SP
+TASK 6: Test the SAML SP
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
