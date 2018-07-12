@@ -89,7 +89,7 @@ additional clarification. The intention being that the lab guide truly
 serves as a resource guide for all your future federation deployments.
 
 Acknowledgements 
------------------
+----------------
 
 This lab is built upon the work of prior F5 Agility’s and the work of
 many individuals behind the scenes in addition the 2018 Agility Lab

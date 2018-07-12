@@ -69,10 +69,9 @@ The following are additional resources included for reference and assistance wit
 this lab guide and other APM tasks.
 
 -  **Access Policy Manager (APM) Operations Guide:**
-       https://support.f5.com/content/kb/en-us/products/big-ip_apm/manuals/product/f5-apm-operations-guide/_jcr_content/pdfAttach/download/file.res/f5-apm-operations-guide.pdf
+   https://support.f5.com/content/kb/en-us/products/big-ip_apm/manuals/product/f5-apm-operations-guide/_jcr_content/pdfAttach/download/file.res/f5-apm-operations-guide.pdf
 
--  **Access Policy Manager (APM) Authentication & Single Sign on
-   Concepts:**
+-  **Access Policy Manager (APM) Authentication & Single Sign on Concepts:**
    https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0.html
 
 -  **SAML:**
@@ -124,7 +123,7 @@ this lab guide and other APM tasks.
 -  **Two-factor Integrations/Guides** (**Not a complete list**)
 
    -  **RSA Integration:**
-          https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-single-sign-on-12-1-0/6.html#conceptid
+      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-single-sign-on-12-1-0/6.html#conceptid
 
    -  **DUO Security: **
 
@@ -133,37 +132,36 @@ this lab guide and other APM tasks.
       -  https://duo.com/docs/f5bigip-alt
 
    -  **SafeNet MobilePass:**
-          http://www.safenet-inc.com/resources/integration-guide/data-protection/SafeNet_Authentication_Service/SafeNet_Authentication_Service__RADIUS_Authentication_on_F5_BIG-IP_APM_Integration_Guide
+      http://www.safenet-inc.com/resources/integration-guide/data-protection/SafeNet_Authentication_Service/SafeNet_Authentication_Service__RADIUS_Authentication_on_F5_BIG-IP_APM_Integration_Guide
 
    -  **Google Authenticator:**
-          https://devcentral.f5.com/articles/two-factor-authentication-with-google-authenticator-and-apm
+      https://devcentral.f5.com/articles/two-factor-authentication-with-google-authenticator-and-apm
 
 -  **Access Policy Manager (APM) Deployment Guides:**
 
    -  **F5 Deployment Guide for Microsoft Exchange 2010/2013:**
-          https://f5.com/solutions/deployment-guides/microsoft-exchange-server-2010-and-2013-big-ip-v11
+      https://f5.com/solutions/deployment-guides/microsoft-exchange-server-2010-and-2013-big-ip-v11
 
    -  **F5 Deployment Guide for Microsoft Exchange 2016:**
-          https://f5.com/solutions/deployment-guides/microsoft-exchange-server-2016-big-ip-v11-v12-ltm-apm-afm
+      https://f5.com/solutions/deployment-guides/microsoft-exchange-server-2016-big-ip-v11-v12-ltm-apm-afm
 
    -  **F5 Deployment Guide for Microsoft SharePoint 2010/2013:**
-          https://f5.com/solutions/deployment-guides/microsoft-sharepoint-2010-and-2013-new-supported-iapp-big-ip-v114-ltm-apm-asm-aam
+      https://f5.com/solutions/deployment-guides/microsoft-sharepoint-2010-and-2013-new-supported-iapp-big-ip-v114-ltm-apm-asm-aam
 
    -  **F5 Deployment Guide for Microsoft SharePoint 2016:**
-          https://f5.com/solutions/deployment-guides/microsoft-sharepoint-2016-big-ip-v114-v12-ltm-apm-asm-afm-aam
+      https://f5.com/solutions/deployment-guides/microsoft-sharepoint-2016-big-ip-v114-v12-ltm-apm-asm-afm-aam
 
    -  **F5 Deployment Guide for Citrix XenApp/XenDesktop:**
-          https://f5.com/solutions/deployment-guides/citrix-xenapp-or-xendesktop-release-candidate-big
+      https://f5.com/solutions/deployment-guides/citrix-xenapp-or-xendesktop-release-candidate-big
 
    -  **F5 Deployment Guide for VMWare Horizon View:**
-          https://f5.com/solutions/deployment-guides/vmware-horizon-view-52-53-60-62-70-release-candidate-iapp-big-ip-v11-v12-ltm-apm-afm?tag=VMware
+      https://f5.com/solutions/deployment-guides/vmware-horizon-view-52-53-60-62-70-release-candidate-iapp-big-ip-v11-v12-ltm-apm-afm?tag=VMware
 
-   -  **F5 Deployment Guide for Microsoft Remote Desktop Gateway
-          Services:**
-          https://f5.com/solutions/deployment-guides/microsoft-remote-desktop-gateway-services-big-ip-v114-ltm-afm-apm
+   -  **F5 Deployment Guide for Microsoft Remote Desktop Gateway Services:**
+      https://f5.com/solutions/deployment-guides/microsoft-remote-desktop-gateway-services-big-ip-v114-ltm-afm-apm
 
    -  **F5 Deployment Guide for Active Directory Federated Services:**
-          https://f5.com/solutions/deployment-guides/microsoft-active-directory-federation-services-big-ip-v11-ltm-apm
+      https://f5.com/solutions/deployment-guides/microsoft-active-directory-federation-services-big-ip-v11-ltm-apm
 
 +----------------------------------------------------------------------------------------------+
 | F5 Networks, Inc. \| f5.com                                                                  |
