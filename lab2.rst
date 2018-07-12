@@ -30,12 +30,14 @@ TASK 1: Sign Up for OKTA Developer Account
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| *Note: The following steps provide instruction for setting up an OKTA developer account. If* |
+| *Note: The following steps provide instruction for setting up an OKTA developer account.*    |
 |                                                                                              |
-| *you already have one, you may elect to use that account. Understand, however, that the*     |
+| *If you already have one, you may elect to use that account. Understand, however, that the*  |
 |                                                                                              |
 | *instructions below may need to be modified to match your environment.*                      |
-|                                                                                              |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
 | 1. Sign Up for an OKTA developer account by navigating to:                                   |
 |                                                                                              |
 |  **https://developer.okta.com/signup/** and using a VALID email and click **Get Started**    |
