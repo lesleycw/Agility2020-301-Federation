@@ -32,7 +32,7 @@ If you wish to replicate these labs in your environment you will need to
 perform these steps accordingly. Additional lab resources are provided
 as illustrated in the diagram below:
 
-|image0|
+|image000|
 
 Timing for labs
 ---------------
@@ -102,6 +102,6 @@ Presented by
 
 APM 330 Presented by: Steve Lyons, Chris Miller & Chas Lesley
 
-.. |image0| image:: media/image2.png
+.. |image000| image:: media/image000.png
    :width: 6.96097in
    :height: 4.46512in
