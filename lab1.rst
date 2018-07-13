@@ -79,7 +79,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Click on the **Access** -> **Federation** -> **SAML Service Provider** ->                 |
 |                                                                                              |  
-|    **External IdP Connectors** or click on the **SAML Service Provider** tab in the         | 
+|    **External IdP Connectors** or click on the **SAML Service Provider** tab in the          | 
 |                                                                                              |
 |    horizontal navigation menu andselect **External IdP Connectors**.                         |
 |                                                                                              |
