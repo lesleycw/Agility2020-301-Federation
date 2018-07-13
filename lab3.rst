@@ -203,7 +203,7 @@ TASK 4: Setup F5 Per Session Policy (Access Policy)
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **Per Session Policy** by navigating to **Access Profile/Policies** ->         |
+| 1. Create the **Per Session Policy** by navigating to **Access -> Profile/Policies** ->      |
 |                                                                                              |
 |    **Access Profiles (Per Session Policies)** and clicking **Create**.                       |
 +----------------------------------------------------------------------------------------------+
@@ -239,7 +239,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 7. Scroll down and click the radio button for **OAuth Client**.                              |
 |                                                                                              |
-| 8. Click **Add**.                                                                            |
+| 8. Click **Add Item**.                                                                       |
 +----------------------------------------------------------------------------------------------+
 | |image78|                                                                                    |
 +----------------------------------------------------------------------------------------------+
@@ -308,7 +308,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Use the **Access Profile** drop down to change the **Access Profile** to **Google\_Auth** |
+| 3. Use the **Access Profile** drop down to change the **Access Profile** to **Google\_OAuth**|
 |                                                                                              |
 | 4. Use the **Per-Request Policy** drop down to change the **Per-Request Policy** to          |
 |                                                                                              |
