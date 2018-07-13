@@ -141,7 +141,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 5. In the **Create SAML Integration** screen, enter **app.f5demo.com** for the **App Name**. |
 |                                                                                              |
-| 6. Leave all other values show and click **Next**.                                           |
+| 6. Leave all other values as default and click **Next**.                                     |
 +----------------------------------------------------------------------------------------------+
 | |image35|                                                                                    |
 +----------------------------------------------------------------------------------------------+
@@ -304,7 +304,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Begin by selecting: **Access** -> **Federation** -> **SAML Service Provider** ->          |
 |                                                                                              |
-|    **External IdP Connectors**                                                               |
+|    **Local SP Services**                                                                     |
 |                                                                                              |
 | 2. Select the checkbox next to **app.f5demo.com** and click **Bind\\UnBind IdP Connectors**  |
 +----------------------------------------------------------------------------------------------+
