@@ -32,7 +32,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Login to your lab provided **Virtual Edition BIG-IP**                                     |
 |                                                                                              |
-| 2. Begin by selecting: **Access Federation -> SAML Service Provider** ->                     |
+| 2. Begin by selecting: **Access -> Federation -> SAML Service Provider** ->                  |
 |                                                                                              |
 |    **Local SP Services**                                                                     |
 |                                                                                              |
