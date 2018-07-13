@@ -218,19 +218,19 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | -  **Parameter Type:** **client-id**                                                         |
 |                                                                                              |
-| -  **Parameter Value:** **client\_id** (notice \_ )                                          |
+| -  **Parameter Name:** **client\_id** (notice \_ )                                           |
 |                                                                                              |
 | -  **Parameter Type:** **client-secret**                                                     |
 |                                                                                              |
-| -  **Parameter Value:** **client\_secret** (notice \_ )                                      |
+| -  **Parameter Name:** **client\_secret** (notice \_ )                                       |
 |                                                                                              |
 | -  **Parameter Type:** **grant-type**                                                        |
 |                                                                                              |
-| -  **Parameter Value:** **grant\_type** (notice \_ )                                         |
+| -  **Parameter Name:** **grant\_type** (notice \_ )                                          |
 |                                                                                              |
 | -  **Parameter Type:** **redirect-uri**                                                      |
 |                                                                                              |
-| -  **Parameter Value:** **redirect\_uri** (notice \_ )                                       |
+| -  **Parameter Name:** **redirect\_uri** (notice \_ )                                        |
 |                                                                                              |
 | -  **Parameter Type:** **custom**                                                            |
 |                                                                                              |
@@ -273,7 +273,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 3. Click **Discover**.                                                                       |
 |                                                                                              |
-| 4. Click **Finished**.                                                                       |
+| 4. Click **Save**.                                                                           |
 |                                                                                              |
 | *Note: if using another account you can find you TenantID by navigating to the*              |
 |                                                                                              |
@@ -367,7 +367,7 @@ Refer to the instructions and screen shots below:
 |                                                                                               |
 | 7. Scroll down and click the radio button for **OAuth Client**.                               |
 |                                                                                               |
-| 8. Click **Add**.                                                                             |
+| 8. Click **Add Item**.                                                                             |
 +-----------------------------------------------------------------------------------------------+
 | |image122|                                                                                    |
 +-----------------------------------------------------------------------------------------------+
