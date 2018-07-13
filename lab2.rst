@@ -304,7 +304,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Begin by selecting: **Access** -> **Federation** -> **SAML Service Provider** ->          |
 |                                                                                              |
-|    **Local SP Services**                                                               |
+|    **Local SP Services**                                                                     |
 |                                                                                              |
 | 2. Select the checkbox next to **app.f5demo.com** and click **Bind\\UnBind IdP Connectors**  |
 +----------------------------------------------------------------------------------------------+
