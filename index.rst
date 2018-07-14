@@ -1,15 +1,17 @@
-APM 330 Federation Lab
-======================
+F5 Agility Labs - Index
+=======================
 
 Welcome
 -------
 
-Welcome to the **APM 330 Federation** Lab at F5 Agility 2018.  
+Welcome to the |classbold| lab at F5 Agility |year|
+
+|repoinfo|
 
 .. toctree::
-   :maxdepth: 3
-   :numbered: 
-   :caption: Contents: 
+   :maxdepth: 2
+   :numbered:
+   :caption: Contents:
    :glob:
    
    intro*
