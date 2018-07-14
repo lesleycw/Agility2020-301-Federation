@@ -9,7 +9,7 @@ Welcome to the **APM 330 Federation** Lab at F5 Agility 2018.
 .. toctree::
    :maxdepth: 3
    :numbered: 
-   :caption: 
+   :caption: Contents: 
    :glob:
    
    intro*
