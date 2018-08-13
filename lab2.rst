@@ -75,7 +75,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. For the purposes of the lab and SAML development, we will be using the OKTA Classic UI    |
 |                                                                                              |
-|   which provides access to SAML configurations. *(Note: At lab publication, the Developer*   |
+|    which provides access to SAML configurations. *(Note: At lab publication, the Developer*  |
 |                                                                                              |
 |   *Console did not have SAML resources.)*                                                    |
 |                                                                                              |     
