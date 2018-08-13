@@ -179,7 +179,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 12. In the resulting application screen for **app.f5demo.com**, navigate to the              |
 |                                                                                              |
-|    **SAML 2.0 section**.                                                                     |
+|     **SAML 2.0 section**.                                                                    |
 |                                                                                              |
 | 13. Right Click the **Identity Provider Metadata** hyperlink and click **Save Link As …**    |
 |                                                                                              |
