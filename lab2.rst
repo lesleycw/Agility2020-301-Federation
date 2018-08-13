@@ -151,9 +151,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 8. In the **SAML Setting** section                                                           |
 |                                                                                              |
-|   -  **Single Sign on URL:** **https://app.f5demo.com/saml/sp/profile/post/acs**             |
+|    -  **Single Sign on URL:** **https://app.f5demo.com/saml/sp/profile/post/acs**            |
 |                                                                                              |
-|   -  **Audience URI (SP Entity ID):** **https://app.f5demo.com**                             |
+|    -  **Audience URI (SP Entity ID):** **https://app.f5demo.com**                            |
 |                                                                                              |
 | 9. Leave all other values as default and click **Next**.                                     |
 +----------------------------------------------------------------------------------------------+
