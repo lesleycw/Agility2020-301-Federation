@@ -77,7 +77,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    which provides access to SAML configurations. *(Note: At lab publication, the Developer*  |
 |                                                                                              |
-|    *Console did not have SAML resources.)*                                                    |
+|    *Console did not have SAML resources.)*                                                   |
 |                                                                                              |     
 | 2. In the top, left hand corner click the **<>** & select **Classic UI** from the drop down. |
 +----------------------------------------------------------------------------------------------+
