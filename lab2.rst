@@ -38,9 +38,8 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 1. Sign Up for an OKTA developer account by navigating to                                    |
-|                                                                                              |
-|  **https://developer.okta.com/signup/** and using a VALID email and click **Get Started**    |
+| 1. Sign Up for an OKTA developer account by navigating to:                                   |
+| **https://developer.okta.com/signup/** and using a VALID email and click **Get Started**     |
 |                                                                                              |
 | 2. Additional instructions will be sent to the email address provided.                       |     
 +----------------------------------------------------------------------------------------------+
