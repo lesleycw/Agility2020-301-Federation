@@ -418,8 +418,8 @@ Refer to the instructions and screen shots below:
    :width: 4.5in
    :height: 2.37in
 .. |image024| image:: media/image024.png
-   :width: 2.5in
-   :height: 3.25in
+   :width: 1.75in
+   :height: 2.75in
 .. |image025| image:: media/image025.png
    :width: 2.5in
    :height: 4.5in
