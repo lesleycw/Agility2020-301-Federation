@@ -163,15 +163,15 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 10. In the **Create SAML Integration** screen, select the:                                   |
 |                                                                                              |
-|    **“I’m an OKTA customer adding an internal app”** radio button for                        |
+|     **“I’m an OKTA customer adding an internal app”** radio button for                       |
 |                                                                                              |
-|    **Are you a customer or partner?**                                                        |
+|     **Are you a customer or partner?**                                                       |
 |                                                                                              |
 | 11. In the resulting expanded window, select:                                                |
 |                                                                                              |
-|    **“This is an internal app that we have created”** for **App Type**                       |
+|     **“This is an internal app that we have created”** for **App Type**                      |
 |                                                                                              |
-|    and click **Finish**.                                                                     |
+|     and click **Finish**.                                                                    |
 +----------------------------------------------------------------------------------------------+
 | |image37|                                                                                    |
 +----------------------------------------------------------------------------------------------+
