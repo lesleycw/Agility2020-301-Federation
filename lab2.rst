@@ -93,7 +93,7 @@ Refer to the instructions and screen shots below:
 TASK 3: Enable OKTA Multi-Factor Authentication [OPTIONAL]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Refer to the instructions and screen shots below:
+Refer to the instructions and screen shots below. This task will require a mobile app to enable a second factor.
 
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
@@ -391,7 +391,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    *Note: Those who enabled MFA access will be required to activate their second factor for* |
 |                                                                                              |
-|    *application access.*                                                                     |
+|    *application access. Requires Task 3 & Task be completed.*                                                                     |
 +----------------------------------------------------------------------------------------------+
 | |image054|                                                                                   |
 | |image055|                                                                                   |
