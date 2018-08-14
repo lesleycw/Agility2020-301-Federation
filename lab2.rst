@@ -116,9 +116,9 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 4. Check that:                                                                               |
 |                                                                                              |
-|     - **Enable Push Verification** is checked.                                               |
+|     -  **Enable Push Verification** is checked.                                               |
 |                                                                                              |
-|     - **Require TouchID for OKTA Verify** is checked. (optional)                             |
+|     -  **Require TouchID for OKTA Verify** is checked. (optional)                             |
 |                                                                                              |
 | 5. Click **Save**                                                                            |
 +----------------------------------------------------------------------------------------------+
