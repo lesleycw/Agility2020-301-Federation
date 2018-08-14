@@ -437,7 +437,6 @@ Refer to the instructions and screen shots below:
 | 14. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
 +----------------------------------------------------------------------------------------------+
 | |image059|                                                                                   |
-| |image060|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 .. |image022| image:: media/image022.png
