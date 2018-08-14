@@ -379,27 +379,26 @@ TASK 10 – Test Access to the app.f5demo.com application
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| *Note: Those who enabled MFA access will be required to activate their second factor for*    |
-|                                                                                              |
-| *application access.*                                                                        |
-|                                                                                              |
-| 1. Follow the necessary prompts as directed.                                                 |
-+----------------------------------------------------------------------------------------------+
-| |image053|                                                                                   |
-|                                                                                              |
-| |image054|                                                                                   |
-|                                                                                              |
-| |image055|                                                                                   |'
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 2. Using your browser from the Jump Host click on the provided bookmark or navigate to:      |
+| 1. Using your browser from the Jump Host click on the provided bookmark or navigate to:      |
 |                                                                                              |
 |    https://app.f5demo.com                                                                    |
 +----------------------------------------------------------------------------------------------+
 | |image056|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
++----------------------------------------------------------------------------------------------+
+| 1. Follow the necessary prompts as directed.                                                 |
+|                                                                                              |
+| *Note: Those who enabled MFA access will be required to activate their second factor for*    |
+|                                                                                              |
+| *application access.*                                                                        |
++----------------------------------------------------------------------------------------------+
+| |image053|                                                                                   |
+|                                                                                              |
+| |image054|                                                                                   |
+|                                                                                              |
+| |image055|                                                                                   |
++----------------------------------------------------------------------------------------------+
 +----------------------------------------------------------------------------------------------+
 | 3. Did you successfully redirect to the OKTA SaaS IdP?                                       |
 |                                                                                              |
