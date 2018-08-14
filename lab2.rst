@@ -439,7 +439,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 14. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
 +----------------------------------------------------------------------------------------------+
-| |image056|                                                                                   |
+| |image055|                                                                                   |
 | |image056|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
