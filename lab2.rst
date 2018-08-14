@@ -536,14 +536,14 @@ Refer to the instructions and screen shots below:
    :width: 4.5in
    :height: 1.03in
 .. |image054| image:: media/image054.png
-   :width: 4.5in
-   :height: 3.36in
+   :width: 2.0in
+   :height: 1.75in
 .. |image055| image:: media/image055.png
-   :width: 4.5in
-   :height: 1.08in
+   :width: 2.0in
+   :height: 1.75in
 .. |image056| image:: media/image056.png
-   :width: 4.5in
-   :height: 1.05in
+   :width: 2.0in
+   :height: 1.75in
 .. |image057| image:: media/image057.png
    :width: 4.5in
    :height: 3.03in
