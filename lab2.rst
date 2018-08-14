@@ -393,7 +393,9 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | *application access.*                                                                        |
 +----------------------------------------------------------------------------------------------+
-| |image053|                                                                                   |
+| |image054|                                                                                   |
+| |image055|                                                                                   |
+| |image056|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 +----------------------------------------------------------------------------------------------+
 | 3. Did you successfully redirect to the OKTA SaaS IdP?                                       |
@@ -410,7 +412,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 8. Review your Access Report Logs (**Access Overview** -> **Access Reports**).               |
 +----------------------------------------------------------------------------------------------+
-| |image054|                                                                                   |
+| |image057|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -418,7 +420,7 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    Select the checkbox next to your session and click the **Kill Selected Session** button.  |
 +----------------------------------------------------------------------------------------------+
-| |image056|                                                                                   |
+| |image058|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -434,8 +436,8 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | 14. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
 +----------------------------------------------------------------------------------------------+
-| |image055|                                                                                   |
-| |image056|                                                                                   |
+| |image059|                                                                                   |
+| |image060|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 .. |image022| image:: media/image022.png
@@ -541,5 +543,17 @@ Refer to the instructions and screen shots below:
    :width: 4.5in
    :height: 1.08in
 .. |image056| image:: media/image056.png
+   :width: 4.5in
+   :height: 1.05in
+.. |image057| image:: media/image057.png
+   :width: 4.5in
+   :height: 1.03in
+.. |image058| image:: media/image058.png
+   :width: 4.5in
+   :height: 3.36in
+.. |image059| image:: media/image059.png
+   :width: 4.5in
+   :height: 1.08in
+.. |image060| image:: media/image060.png
    :width: 4.5in
    :height: 1.05in
