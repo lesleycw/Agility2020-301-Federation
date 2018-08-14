@@ -426,7 +426,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 10. Close your browser and logon to your **https://dev-<Dev-ID>.oktapreview.com** account.   |
 |                                                                                              |
-|    Click on your **app.f5demo.com** application for IDP initiated Access.                    |
+|     Click on your **app.f5demo.com** application for IDP initiated Access.                   |
 |                                                                                              |
 | 11. After successful authentication, were you returned to the SAML SP?                       |
 |                                                                                              |
