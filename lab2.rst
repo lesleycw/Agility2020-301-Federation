@@ -96,6 +96,8 @@ TASK 3: Enable OKTA Multi-Factor Authentication [OPTIONAL]
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
+| **[OPTIONAL]**                                                                               |
+|                                                                                              |
 | *Note: Enabling MFA will require a Smart Device with the appropriate OKTA client for your OS*|
 |                                                                                              |
 | *The step can be skipped if you prefer to just use UserID/Password*                          |
@@ -106,6 +108,8 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
+| **[OPTIONAL]**                                                                               |
+|                                                                                              |
 | 2. Under **OKTA Verify**, change the dropdown from **Inactive** to **Active**                |
 |                                                                                              |
 | 3. Click the **Edit** button next to ***OKTA Verify Settings**                               |
@@ -114,6 +118,8 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
+| **[OPTIONAL]**                                                                               |
+|                                                                                              |
 | 4. Check **Enable Push Verification**                                                        |
 |                                                                                              |
 | 5. Check **Require TouchID for OKTA Verify** (optional)                                      |
@@ -246,7 +252,7 @@ Refer to the instructions and screen shots below:
 TASK 6: Add Multi-Factor Authentication Sign-On Policy [OPTIONAL]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Refer to the instructions and screen shots below:
+Refer to the instructions and screen shots below.  This section requires that **Task 3** be completed.
 
 +----------------------------------------------------------------------------------------------+
 | **[OPTIONAL]**                                                                               |
