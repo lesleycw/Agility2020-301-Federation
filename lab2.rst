@@ -547,13 +547,11 @@ Refer to the instructions and screen shots below:
    :height: 1.05in
 .. |image057| image:: media/image057.png
    :width: 4.5in
-   :height: 1.03in
+   :height: 3.03in
 .. |image058| image:: media/image058.png
-   :width: 4.5in
-   :height: 3.36in
+   :width: 2.5in
+   :height: 2.5in
 .. |image059| image:: media/image059.png
    :width: 4.5in
    :height: 1.08in
-.. |image060| image:: media/image060.png
-   :width: 4.5in
-   :height: 1.05in
+
