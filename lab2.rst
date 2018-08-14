@@ -42,7 +42,11 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    **https://developer.okta.com/signup/** and using a VALID email and click **Get Started**  |
 |                                                                                              |
-| 2. Additional instructions will be sent to the email address provided.                       |     
+| 2. Upon registration, you will be directed to a hyperlink (hostname) for your developer      |     
+|                                                                                              |
+|    account. This link should be saved for future use.                                        |     
+|                                                                                              |
+| 3. Additional instructions will be sent to the email address provided during account setup.  |     
 +----------------------------------------------------------------------------------------------+
 | |image022|                                                                                   |
 |                                                                                              |
