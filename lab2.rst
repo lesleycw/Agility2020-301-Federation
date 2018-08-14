@@ -418,7 +418,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 10. Destroy your Active Session by nagivating to **Access Overview** -> **Active Sessions**  |
 |                                                                                              |
-|    Select the checkbox next to your session and click the **Kill Selected Session** button.  |
+|     Select the checkbox next to your session and click the **Kill Selected Session** button. |
 +----------------------------------------------------------------------------------------------+
 | |image058|                                                                                   |
 +----------------------------------------------------------------------------------------------+
