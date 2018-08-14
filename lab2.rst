@@ -129,7 +129,7 @@ TASK 4: Build SAML Application - OKTA
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the main menu, click **Applications**, and **Application** from the dropdown in the    |
+| 1. In the main menu, click **Applications**, and **Applications** from the dropdown in the   |
 |                                                                                              |
 |    top navigation.                                                                           |
 +----------------------------------------------------------------------------------------------+
@@ -137,13 +137,13 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the main menu, click **Applications** in the top navigation.                           |
+| 2. Click **Add Application** in the **Applications** dialogue window.                        |
 +----------------------------------------------------------------------------------------------+
 | |image031|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Click **Create New App** in the **Add Application Menu**                                  |
+| 3. Click **Create New App** in the **Add Application Menu**                                  |
 +----------------------------------------------------------------------------------------------+
 | |image032|                                                                                   |
 +----------------------------------------------------------------------------------------------+
