@@ -54,7 +54,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Following the instructions received from the generated email, sign on to the OKTA         |
+| 3. Following the instructions received from the generated email, sign into the OKTA          |
 |                                                                                              |
 |    development environment with your provided, temporary password.                           |
 +----------------------------------------------------------------------------------------------+
