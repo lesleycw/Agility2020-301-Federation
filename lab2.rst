@@ -54,7 +54,7 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Following the instructions received from the generated email, sign into the OKTA          |
+| 4. Following the instructions received from the generated email, sign into the OKTA          |
 |                                                                                              |
 |    development environment with your provided, temporary password.                           |
 +----------------------------------------------------------------------------------------------+
@@ -62,13 +62,13 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. Enter a **New Password** and the **Repeat New Password**                                  |
+| 5. Enter a **New Password** and the **Repeat New Password**                                  |
 |                                                                                              |
-| 5. Use the drop down to select a **Forgot Password Question** and provide the Answer         |
+| 6. Use the drop down to select a **Forgot Password Question** and provide the Answer         |
 |                                                                                              |
-| 6. Click a **Security Image**                                                                |
+| 7. Click a **Security Image**                                                                |
 |                                                                                              |
-| 7. Click **Create My Account**                                                               |
+| 8. Click **Create My Account**                                                               |
 +----------------------------------------------------------------------------------------------+
 | |image025|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -522,4 +522,3 @@ Refer to the instructions and screen shots below:
 .. |image056| image:: media/image056.png
    :width: 4.5in
    :height: 1.05in
-             
