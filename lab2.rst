@@ -387,36 +387,36 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 1. Follow the necessary prompts as directed.                                                 |
+| 2. Follow the necessary prompts as directed.                                                 |
 |                                                                                              |
-| *Note: Those who enabled MFA access will be required to activate their second factor for*    |
+|    *Note: Those who enabled MFA access will be required to activate their second factor for* |
 |                                                                                              |
-| *application access.*                                                                        |
+|    *application access.*                                                                     |
 +----------------------------------------------------------------------------------------------+
 | |image054|                                                                                   |
 | |image055|                                                                                   |
 | |image056|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 +----------------------------------------------------------------------------------------------+
-| 3. Did you successfully redirect to the OKTA SaaS IdP?                                       |
+| 4. Did you successfully redirect to the OKTA SaaS IdP?                                       |
 |                                                                                              |
-| 4. Login to the iDP, were you successfully authenticated? Were you prompted for MFA          |
+| 5. Login to the iDP, were you successfully authenticated? Were you prompted for MFA          |
 |                                                                                              |
 |    if configured?                                                                            |
 |                                                                                              |
-| 5. After successful authentication, were you returned to the SAML SP?                        |
+| 6. After successful authentication, were you returned to the SAML SP?                        |
 |                                                                                              |
-| 6. Were you successfully authenticated (SAML)?                                               |
+| 7. Were you successfully authenticated (SAML)?                                               |
 |                                                                                              |
-| 7. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).             |
+| 8. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).             |
 |                                                                                              |
-| 8. Review your Access Report Logs (**Access Overview** -> **Access Reports**).               |
+| 9. Review your Access Report Logs (**Access Overview** -> **Access Reports**).               |
 +----------------------------------------------------------------------------------------------+
 | |image057|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 9. Destroy your Active Session by nagivating to **Access Overview** -> **Active Sessions**   |
+| 10. Destroy your Active Session by nagivating to **Access Overview** -> **Active Sessions**  |
 |                                                                                              |
 |    Select the checkbox next to your session and click the **Kill Selected Session** button.  |
 +----------------------------------------------------------------------------------------------+
@@ -424,17 +424,17 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 10. Close your browser and logon to your **https://dev-<Dev-ID>.oktapreview.com** account.   |
+| 11. Close your browser and logon to your **https://dev-<Dev-ID>.oktapreview.com** account.   |
 |                                                                                              |
 |     Click on your **app.f5demo.com** application for IDP initiated Access.                   |
 |                                                                                              |
-| 11. After successful authentication, were you returned to the SAML SP?                       |
+| 12. After successful authentication, were you returned to the SAML SP?                       |
 |                                                                                              |
-| 12. Were you successfully authenticated (SAML)?                                              |
+| 13. Were you successfully authenticated (SAML)?                                              |
 |                                                                                              |
-| 13. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).            |
+| 14. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).            |
 |                                                                                              |
-| 14. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
+| 15. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
 +----------------------------------------------------------------------------------------------+
 | |image059|                                                                                   |
 +----------------------------------------------------------------------------------------------+
