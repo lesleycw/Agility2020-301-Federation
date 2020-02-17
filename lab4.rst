@@ -367,7 +367,7 @@ Refer to the instructions and screen shots below:
 |                                                                                               |
 | 7. Scroll down and click the radio button for **OAuth Client**.                               |
 |                                                                                               |
-| 8. Click **Add Item**.                                                                             |
+| 8. Click **Add Item**.                                                                        |
 +-----------------------------------------------------------------------------------------------+
 | |image122|                                                                                    |
 +-----------------------------------------------------------------------------------------------+
