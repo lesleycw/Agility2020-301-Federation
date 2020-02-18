@@ -403,7 +403,7 @@ TASK 4: Configure External IdP Connector
 +----------------------------------------------------------------------------------------------+
 | 1. In the **External Identity Provider Connector Settings** section, use the first dropdown  |
 |                                                                                              |
-|     to select the **Metadata**.                                                              |
+|    to select the **Metadata**.                                                               |
 |                                                                                              |
 | 2. Click the **Choose File** button and then browse the **Jumphost** desktop and select the  |
 |                                                                                              |
@@ -519,7 +519,7 @@ TASK: 10: Testing the SAML Service Provider (SP)
 +----------------------------------------------------------------------------------------------+
 | 1. Open Firefox from the Jumphost desktop and click on the **AGC-SP (Partner)** link in the  |
 |                                                                                              |
-|  bookmark toolbar.                                                                           |
+|    bookmark toolbar.                                                                         |
 |                                                                                              |
 | **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
 +----------------------------------------------------------------------------------------------+
