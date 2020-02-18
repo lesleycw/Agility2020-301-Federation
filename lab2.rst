@@ -1,18 +1,28 @@
-Lab 2: IDaaS SAML Identity Provider (iDP) Lab (OKTA)
-====================================================
+Lab 2: Extending the SAML Use Case
+==================================
 
-The purpose of this lab is to configure and test a IDaaS SAML Identity
-Provider. Students will configure a IDaaS based SAML Identity Provider
-(in this case OKTA) and import and bind to a SAML Service Provider and
-test IdP-Initiated and SP-Initiated SAML Federation.
+The purpose of this lab is expand a fairly standard SAML use case. In this
+Lab Students will not being using Access Guided Configuration but instead 
+making direct SAML configuration changes to familiarize themselves with the 
+underlying SAML components and menus.  
+
+This lab has an existing SAML configuration for ACME in which an ACME SAML
+IdP is already Federated with an ACME SAML Service Provider. Students will 
+and verify the functionality of IDP-Initiated and SP-Initiated SAML flows.
+
+The lab is in two parts.  In Part 1, Students will extend an ACME SAML SP 
+provided application to a Partner. In Part 2, Students will extend ACME's 
+SAML IdP to a Partner provided SAML SP.
 
 Objective:
 ----------
 
--  Gain an understanding of integrating a IDaaS SAML Identity
-   Provider(IdP)
+-  Gain an understanding of integrating of underlying SAML Configuration
+   objects. 
 
--  Gain an understanding of the access flow for IdP-Initiated SAML
+-  Gain further understanding of IdP-Initiated and SP-Initiated flows.
+   
+-  Rewview looking at SAML troubleshooting tools.
 
 Lab Requirements:
 -----------------
@@ -21,21 +31,11 @@ Lab Requirements:
 
 -  Estimated completion time: 25 minutes
 
-Lab 2 Tasks:
-------------
+Lab 2 Tasks Part 1
+------------------
 
-TASK 1: Sign Up for OKTA Developer Account 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| *Note: The following steps provide instruction for setting up an OKTA developer account.*    |
-|                                                                                              |
-| *If you already have one, you may elect to use that account. Understand, however, that the*  |
-|                                                                                              |
-| *instructions below may need to be modified to match your environment.*                      |
-+----------------------------------------------------------------------------------------------+
+TASK 1: Extend the ACME SAML Service Provider (SP) 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. Sign Up for an OKTA developer account by navigating to:                                   |

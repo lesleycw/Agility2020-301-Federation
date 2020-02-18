@@ -10,7 +10,7 @@ to a SAML Service Provider (SP) and test IdP-Initiated SAML Federation.
 
 In Part 2, Students will leverage Access Guided Configuration (AGC) to 
 configure the various aspects of a SAML Service Provider (SP), import and bind to
-a SAML Idnetity Provider (IdP) and test SP-Initiated SAML Federation.
+a SAML Identity Provider (IdP) and test SP-Initiated SAML Federation.
 
 Objective:
 ----------
