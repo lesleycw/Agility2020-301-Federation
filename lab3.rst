@@ -79,7 +79,7 @@ TASK 1: Create/Review New Application Registration
 |                                                                                              |
 | 5. In the resulting **app.acme.com** Registered App window, note & copy the **Application**  |
 |                                                                                              |
-|    **(client) ID** and **Directory (tenant) ID** as these will be used later in the setup.** |
+|    **(client) ID** and **Directory (tenant) ID** as these will be used later in the setup.   |
 +----------------------------------------------------------------------------------------------+
 | |image037|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -135,7 +135,7 @@ TASK 1: Create/Review New Application Registration
 |                                                                                              |
 | 12. In the **Manifest** panel, edit the **groupMembershipClaims** line (line 12) from        |
 |                                                                                              |
-|     *null** to **“All”** (note quotes are required).                                         |
+|     **null** to **“All”** (note quotes are required).                                        |
 |                                                                                              |
 | 13. Click **Save**.                                                                          |
 |                                                                                              |
@@ -178,7 +178,7 @@ TASK 2: Create OAuth Token Request
 |                                                                                              |
 |    section under **Request Settings** and then clieck the **Edit** button.                   |
 |                                                                                              |
-| 5. The edited row will now populate the *Parameter Type**, **Parameter Name** and            |
+| 5. The edited row will now populate the **Parameter Type**, **Parameter Name** and           |
 |                                                                                              |
 |    **Parameter Value** fields.                                                               |
 |                                                                                              |
@@ -239,7 +239,7 @@ TASK 3: Create OAuth Token Refresh Request
 |                                                                                              |
 |    section under **Request Settings** and then clieck the **Edit** button.                   |
 |                                                                                              |
-| 5. The edited row will now populate the *Parameter Type**, **Parameter Name** and            |
+| 5. The edited row will now populate the **Parameter Type**, **Parameter Name** and           |
 |                                                                                              |
 |    **Parameter Value** fields.                                                               |
 |                                                                                              |
@@ -302,11 +302,11 @@ TASK 4: Create OAuth Provider
 |                                                                                              |
 | 4. Scroll to the bottom of the window and then click **Save**.                               |
 |                                                                                              |
-| **Note:** *If using another account you can find you TenantID by navigating to the "Azure"*  |
+| **Note:** *If using another account you can find you TenantID by navigating to the "Azure*   |
 |                                                                                              |
-| *"Portal" and clicking "Azure Active Directory". The tenant ID is the "default directory"*   |
+| *Portal" and clicking "Azure Active Directory". The tenant ID is the "default directory"*    |
 |                                                                                              |
-| *The full name of the TenantID will be your *"TenantID.onmicrosoft.com".*                    |
+| *The full name of the TenantID will be your "TenantID.onmicrosoft.com".                      |
 +----------------------------------------------------------------------------------------------+
 | |image012|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -396,7 +396,7 @@ TASK 5: Setup F5 Per Session Policy (Access Policy)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 9. In the ***OAuth\_Client*** window enter the following values as shown:                    |
+| 6. In the ***OAuth\_Client** window enter the following values as shown:                     |
 |                                                                                              |
 | -  **Server:** **/Common/azure\_AD\_server** (Select from dropdown)                          |
 |                                                                                              |
