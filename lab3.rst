@@ -1,325 +1,478 @@
-Lab 3: oAuth and OpenID Connect Lab (Google)
-============================================
+Lab 3: OAuth and AzureAD Lab
+============================
 
-The purpose of this lab is to better understand the F5 use cases OAuth2
-and OpenID Connect by deploying a lab based on a popular 3rd party
-login: Google. Google supports OpenID Connect with OAuth2 and JSON Web
-Tokens. This allows a user to securely log in, or to provide a secondary
-authentication factor to log in. Archive files are available for the
-completed Lab 2.
+The purpose of this lab is to familiarize students with using APM in
+conjunction with Microsoft AzureAD. In the lab, Microsoft AzureAD is
+leveraged as an OAuth Authorization Server (AS) while BIG-IP, through
+the APM configuration is leveraged as an OAuth Client/Resource Server. 
+Students will configure various OAuth/OpenID aspects to log in to APM
+front-ended application.
 
 Objective:
 ----------
 
--  Gain a better understanding of the F5 use cases OAuth2 and OpenID
-   Connect.
+-  Gain additional understanding of F5 OAuth features & functionality
 
--  Develop an awareness of the different deployment models that OAuth2,
-   OpenID Connect and JSON Web Tokens (JWT) open up
+-  Deploy a standard configuration using F5 APM and Microsoft AzureAD    
 
 Lab Requirements:
 -----------------
 
--  All Lab requirements will be noted in the tasks that follow
+-  All lab requirements will be noted in the tasks that follow
 
 -  Estimated completion time: 25 minutes
 
 Lab 3 Tasks:
 ------------
 
-TASK 1: Setup Google’s API Credentials 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
+TASK 1: Create/Review New Application Registration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| *Note: If you do not have Google/gMail account, you will need to set one up. Navigate to:*   |
+| **Note:** *The following Task 1 steps are to be "REVIEWED". Setting up a free Azure*         |
 |                                                                                              |
-| * https://console.developers.google.com/apis/credentials & follow the directions for setup.* |
-+----------------------------------------------------------------------------------------------+ 
-| |image60|                                                                                    |
-| |image61|                                                                                    |
-+----------------------------------------------------------------------------------------------+ 
-   
-+----------------------------------------------------------------------------------------------+
-| 1. Navigate to https://console.developers.google.com/apis/credentials and log in with your   |
+| *developer account requires multiple steps (like the entry of billing information) which*    |
 |                                                                                              |
-|    developer account.                                                                        |
-+----------------------------------------------------------------------------------------------+
-| |image62|                                                                                    |
+| *are beyond the need and scope of this lab given the available time.  As such, the AzureAD*  |
+|                                                                                              |
+| *environment has been pre-configured for the lab exercises that follow.*                     |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. You will be redirected to the Google API’s screen. If you are previously familiar with    |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|    Google API’s you can create a new Project.                                                |
+| 1. Log into the Microsoft Azure Dashboard and click  **Azure Active Directory** in the left  |
 |                                                                                              |
-| 3. If you have not been you will be prompted to create a New Project.                        |
-|                                                                                              |
-| 4. Click **Create** in the dialogue box provided.                                            |
+|    navigation menu.                                                                          |
 +----------------------------------------------------------------------------------------------+
-| |image64|                                                                                    |
+| |image001|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. In the **New Project** window, provide a **Project Name**. The suggested value is:        |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|    **F5 Federation oAuth**                                                                   |
+| 2. Click on **App Registration** on the resulting menu and then **New Registration** in the  |
 |                                                                                              |
-| *Note: If you have exceeded your project quota you may have to delete a project or*          |
-|                                                                                              |
-| *create a new account*                                                                       |
+|    horizontal menu.                                                                          |
 +----------------------------------------------------------------------------------------------+
-| |image65|                                                                                    |
+| |image035|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 6. In the next screen, select **OAuth Client ID** for the **Credentials** type and           |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|    click **Create Credentials**                                                              |
+| 3. In the pop-up window for **Register an application**, enter the following values          | 
+|                                                                                              |
+|    * **Name:** **app.acme.com**                                                              |
+|                                                                                              |
+|    * **Supported account types:** **Accounts in this organizational directory only** (radio) | 
+|                                                                                              |
+|    * **Redirect URI:** **https://app.acme.com/oauth/client/redirect**                        |
+|                                                                                              |
+| 4. Click **Register**.                                                                       |
 +----------------------------------------------------------------------------------------------+
-| |image66|                                                                                    |
+| |image036|                                                                                   |
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| 7. If you have not previously accepted a Consent Screen you may be prompted to do so.        |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|    Click **Configure Consent Screen**.                                                       |
+| 5. In the resulting **app.acme.com** Registered App window, note & copy the **Application**  |
+|                                                                                              |
+|    **(client) ID** and **Directory (tenant) ID** as these will be used later in the setup.** |
 +----------------------------------------------------------------------------------------------+
-| |image67|                                                                                    |
+| |image037|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 8. On the **OAuth Consent Screen** tab, enter the **email address** of your developer        |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|    account (pre-populated) for the **Email Address**.                                        |
+| 6. Click **Certificates & Secrets** in the left navigation window and then click **New**     |
 |                                                                                              |
-| 9. For the **Product Name Shown to Users** enter **app.f5demo.com**.                         |
-|                                                                                              |
-| 10. Click **Save**.                                                                          |
+|    **client secret** in the **Client Secrets** section.                                      |
 +----------------------------------------------------------------------------------------------+
-| |image68|                                                                                    |
+| |image038|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 11. In the **Create OAuth Client ID*** screen select or enter the following values:          |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|  -  **Application Type:** **Web Application**                                                |
+| 7. In the **Add a client secret** pop-up window, enter the following values                  |
 |                                                                                              |
-|  -  **Name**: **app.f5demo.com**                                                             |
+| -  **Description:** **app.acme.com-secret**                                                  |
 |                                                                                              |
-|  -  **Authorized JavaScript Engine:** **https://app.f5demo.com**                             |
+| -  **Expires:** **In 2 Years**                                                               |
 |                                                                                              |
-|  -  **Authorized Redirect URIs:** **https://app.f5demo.com/oauth/client/redirect**           |
-|                                                                                              |
-| 12. Click **Create**.                                                                        |
+| 8. Click **Add**.                                                                            |
 +----------------------------------------------------------------------------------------------+
-| |image69|                                                                                    |
+| |image039|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 13. In the **OAuth Client** pop-up window copy and paste your **Client ID** and              |
+| **[REVIEW]**                                                                                 |
 |                                                                                              |
-|    **Client Secret** in Gedit text editor provided on your desktop.                          |
+| 9. In the resulting window, note and copy the **Client Secret** in the **Client secrets**    |
+|                                                                                              |
+|    section of the window. This will be used later in the APM portion of the setup.           |
 +----------------------------------------------------------------------------------------------+
-| |image70|                                                                                    |
+| |image040|                                                                                   |
++----------------------------------------------------------------------------------------------+
+ 
++----------------------------------------------------------------------------------------------+
+| **[REVIEW]**                                                                                 |
+|                                                                                              |
+| 10. In the left navigation menu select **API permissions**. In the updated panel note the    |
+|                                                                                              |
+|     assigned permissions.  These can be altered/expanded as needed based on needs.           |
++----------------------------------------------------------------------------------------------+
+| |image041|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 2: Setup F5 OAuth Provider 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++----------------------------------------------------------------------------------------------+
+| **[REVIEW]**                                                                                 |
+|                                                                                              |
+| 11. In the left navigation window, click **Manifest**.                                       |
+|                                                                                              |
+| 12. In the **Manifest** panel, edit the **groupMembershipClaims** line (line 12) from        |
+|                                                                                              |
+|     *null** to **“All”** (note quotes are required).                                         |
+|                                                                                              |
+| 13. Click **Save**.                                                                          |
+|                                                                                              |
+| **Note:** *You can also update groupMembershipClaims to be "SecurityGroup".*                 |
++----------------------------------------------------------------------------------------------+
+| |image042|                                                                                   |
++----------------------------------------------------------------------------------------------+
 
-Refer to the instructions and screen shots below:
+TASK 2: Create OAuth Token Request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Create the **OAuth Request** by navigating to **Access** -> **Federation** ->             |
+|                                                                                              |
+|    **OAuth Client/Resource Server** -> **Request**.                                          |
++----------------------------------------------------------------------------------------------+
+| |image001|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 2. Find the **AzureADTokenRequestByAuthzCode** row and click the **Copy** link.              |
+|                                                                                              |
+|    **Note:** *This should be the 6th row down.*                                              |
++----------------------------------------------------------------------------------------------+
+| |image002|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 3. In the resulting **Copy Request** window, input **AzureADTokenRequest_ACME** for the      |
+|                                                                                              |
+|    **New Request Name** and then click the **Copy** button.                                  |
++----------------------------------------------------------------------------------------------+
+| |image003|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 4. In the resulting **AzureADTokenRequest_ACME** window, click the                           |
+|                                                                                              |
+|    **custom | resource | <Enter_resource_name_here>** row in the **Request Parameters**      |
+|                                                                                              |
+|    section under **Request Settings** and then clieck the **Edit** button.                   |
+|                                                                                              |
+| 5. The edited row will now populate the *Parameter Type**, **Parameter Name** and            |
+|                                                                                              |
+|    **Parameter Value** fields.                                                               |
+|                                                                                              |
+| 6. Ensure the following values are in the indicated fields:                                  |
+|                                                                                              |
+|    * **Parameter Type:** **custom**                                                          |
+|                                                                                              |
+|    * **Parameter Name:** **resource**                                                        |
+|                                                                                              |
+|    * **Parameter Value:** **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                           |
++----------------------------------------------------------------------------------------------+
+| |image004|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 7. Once the value a verified correct, click the **Add** button which will move the values    |
+|                                                                                              |
+|    back to the **Request Parameters** section.                                               |
+|                                                                                              |
+| 8. Scroll to the bootom of the window and click the **Update** button.                       |
++----------------------------------------------------------------------------------------------+
+| |image005|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 3: Create OAuth Token Refresh Request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Return to the **OAuth Client/Resouce Server Request** list by navigating to **Access**    |
+|                                                                                              |
+|    -> **Federation** -> **OAuth Client/Resource Server** -> **Request**.                     |
+|                                                                                              |
+| **Note:** *You may still be at this window if you did not navigate away.*                    |
++----------------------------------------------------------------------------------------------+
+| |image001|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 2. Find the **AzureADTokenRefreshRequest** row and click the **Copy** link.                  |
+|                                                                                              |
+|    **Note:** *This should be the 5th row down.*                                              |
++----------------------------------------------------------------------------------------------+
+| |image006|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 3. In the resulting **Copy Request** window, input **AzureADTokenRefreshRequest_ACME** for   |
+|                                                                                              |
+|    the **New Request Name** and then click the **Copy** button.                              |
++----------------------------------------------------------------------------------------------+
+| |image007|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 4. In the resulting **AzureADTokenRefreshRequest_ACME** window, click the                    |
+|                                                                                              |
+|    **custom | resource | <Enter_resource_name_here>** row in the **Request Parameters**      |
+|                                                                                              |
+|    section under **Request Settings** and then clieck the **Edit** button.                   |
+|                                                                                              |
+| 5. The edited row will now populate the *Parameter Type**, **Parameter Name** and            |
+|                                                                                              |
+|    **Parameter Value** fields.                                                               |
+|                                                                                              |
+| 6. Ensure the following values are in the indicated fields:                                  |
+|                                                                                              |
+|    * **Parameter Type:** **custom**                                                          |
+|                                                                                              |
+|    * **Parameter Name:** **resource**                                                        |
+|                                                                                              |
+|    * **Parameter Value:** **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                           |
++----------------------------------------------------------------------------------------------+
+| |image008|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 7. Once the value a verified correct, click the **Add** button which will move the values    |
+|                                                                                              |
+|    back to the **Request Parameters** section.                                               |
+|                                                                                              |
+| 8. Scroll to the bootom of the window and click the **Update** button.                       |
++----------------------------------------------------------------------------------------------+
+| |image009|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 9. In the **OAuth Client/Resouce Server Request** list both the newly created requests       |
+|                                                                                              |
+|    should now be listed. **AzureADTokenRequest_ACME** & **AzureADTokenRefreshRequest_ACME**. |
++----------------------------------------------------------------------------------------------+
+| |image010|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 4: Create OAuth Provider
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. Create the **OAuth Provider** by navigating to **Access** -> **Federation** ->            |
 |                                                                                              |
-|   **OAuth Client/Resource Server** -> **Provider** and clicking **Create**.                  |
+|    **OAuth Client/Resource Server** -> **Provider** and clicking **Create**.                 |
 +----------------------------------------------------------------------------------------------+
-| |image71|                                                                                    |
+| |image011|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Using the following values to complete the OAuth Provider                                 |
+| 2. In the resulting window, input the following values to create the Provider:               |
 |                                                                                              |
-| -  **Name:** **Google\_Provider**                                                            |
+| -  **Name**: **azure\_AD\_provider**                                                         |
 |                                                                                              |
-| -  **Type:** **Google**                                                                      |
+| -  **Type**: **AzureAD**  (select from dropdown)                                             |
 |                                                                                              |
-| -  **Trusted Certificate Authorities:** **ca-bundle.crt**                                    |
+| -  **OpenID URI:** (replace **\_tennantID\_** with the following tenantID                    |
 |                                                                                              |
-| -  **Allow Self-Signed JWK Config:**  **checked**                                            |
+|    **f5agilitydemogmail.onmicrosoft.com** )                                                  |
 |                                                                                              |
-| -  **Use Auto-discovered JWT:** **checked**                                                  |
+| Resulting URI should be as follows:                                                          |
+|                                                                                              |
+| https://login.windows.net/f5agilitydemogmail.onmicrosoft.com/.well-known/openid-configuration|
 |                                                                                              |
 | 3. Click **Discover**.                                                                       |
 |                                                                                              |
-| 4. Accept all other defaults.                                                                |
+| 4. Scroll to the bottom of the window and then click **Save**.                               |
 |                                                                                              |
-| 5. Click **Save**.                                                                           |
+| **Note:** *If using another account you can find you TenantID by navigating to the "Azure"*  |
+|                                                                                              |
+| *"Portal" and clicking "Azure Active Directory". The tenant ID is the "default directory"*   |
+|                                                                                              |
+| *The full name of the TenantID will be your *"TenantID.onmicrosoft.com".*                    |
 +----------------------------------------------------------------------------------------------+
-| |image72|                                                                                    |
+| |image012|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 3: Setup F5 OAuth Server (Client) 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++----------------------------------------------------------------------------------------------+
+| 9. In the **OAuth Client/Resouce Server Provider** list the newly created provider should    |
+|                                                                                              |
+|    now be listed. **azure_AD_provider**.                                                     |
++----------------------------------------------------------------------------------------------+
+| |image013|                                                                                   |
++----------------------------------------------------------------------------------------------+
 
-Refer to the instructions and screen shots below:
+TASK 4: Create OAuth Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
 | 1. Create the **OAuth Server (Client)** by navigating to **Access** -> **Federation** ->     |
 |                                                                                              |
-|    **OAuth Client/Resource Server** -> **OAuth Server** and clicking **Create**.             |
+|    **OAuth Client/Resource Server** -> **OAuth Server** and clicking the **+ (Plus Symbol)** |
+|                                                                                              |
+| **Note:** *If you miss clicking the plus sign, simply click the create button on the right.* |
 +----------------------------------------------------------------------------------------------+
-| |image73|                                                                                    |
+| |image014|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Using the following values to complete the OAuth Provider                                 |
+| 2. In the resulting window, input the following values to create the Server:                 |
 |                                                                                              |
-| -  **Name:** **Google\_Server**                                                              |
+| -  **Name:** **azure\_AD\_Server**                                                           |
 |                                                                                              |
-| -  **Mode:** **Client**                                                                      |
+| -  **Mode:** **Client** (Select from dropdown)                                               |  
 |                                                                                              |
-| -  **Type:** **Google**                                                                      |
+| -  **Type:** **AzureAD** (Select from dropdown)                                              |
 |                                                                                              |
-| -  **OAuth Provider:** **Google\_Provider**                                                  |
+| -  **OAuth Provider:** **azure\_AD\_provider** (Select from dropdown)                  |
 |                                                                                              |
-| -  **DNS Resolver:** **proxy\_dns\_resolver**                                                |
+| -  **DNS Resolver:** **prebuilt\_dns\_resolver** (Select from dropdown)                      |
 |                                                                                              |
-| -  **Client ID:** **<your client id>**                                                       |
+| -  **Client ID:** **dd4bc4c7-2e90-41c9-9c41-b7eab5ab68b7**                                   |
 |                                                                                              |
-| -  **Client Secret:** **<your client secret>**                                               |
+| -  **Client Secret:** **:RbLK?50]:aVZvomaZ6IC61_j/D=tXet**                                   |
 |                                                                                              |
-| -  **Client’s Server SSL Profile Name:** **serverssl**                                       |
+| -  **Client’s Server SSL Profile Name:** **serverssl** (Select from dropdown)                |
 |                                                                                              |
 | 3. Click **Finished**.                                                                       |
 +----------------------------------------------------------------------------------------------+
-| |image74|                                                                                    |
+| |image015|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 4: Setup F5 Per Session Policy (Access Policy) 
++----------------------------------------------------------------------------------------------+
+| 9. In the **OAuth Client/Resouce Server - OAuth Server** list the newly created provider     |
+|                                                                                              |
+|    should now be listed. **azure_AD_server**.                                                |
++----------------------------------------------------------------------------------------------+
+| |image016|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 5: Setup F5 Per Session Policy (Access Policy) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Refer to the instructions and screen shots below:
-
 +----------------------------------------------------------------------------------------------+
-| 1. Create the **Per Session Policy** by navigating to **Access -> Profile/Policies** ->      |
+| 1. Edit the existing **azure_oauth** Per Session Policy by navigating to **Access** ->       |
 |                                                                                              |
-|    **Access Profiles (Per Session Policies)** and clicking **Create**.                       |
+|    **Profile/Policies** -> **Access Profiles (Per Session Policies)**.                       |
+|                                                                                              |
+| 2. Locate the **azure_oauth** policy row (should be 4th row) and click the **Edit** link.    |
 +----------------------------------------------------------------------------------------------+
-| |image75|                                                                                    |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 2. In the **New Profile** dialogue window enter the following values                         |
-|                                                                                              |
-| -  **Name:** **Google\_OAuth**                                                               |
-|                                                                                              |
-| -  **Profile Type:** **All**                                                                 |
-|                                                                                              |
-| -  **Profile Scope:** **Profile**                                                            |
-|                                                                                              |
-| -  **Language:** **English**                                                                 |
-|                                                                                              |
-| 3. Click **Finished**.                                                                       |
-+----------------------------------------------------------------------------------------------+
-| |image76|                                                                                    |
+| |image017|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. Click **Edit** link on for the **Google\_OAuth** Access Policy.                           |
+| 3. In the resulting Visual Policy Editor window for the **azure_oauth** policy, click the    |
+|                                                                                              |
+|    **+ (Plus Symbol)** on the **fallback** branch between **Start** and **Allow**.           |
 +----------------------------------------------------------------------------------------------+
-| |image77|                                                                                    |
+| |image018|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. In the **Google\_OAuth** Access Policy, click the “\ **+**\ ” between **Start** & **Deny**|
+| 4. In the resulting pop-up window, click the **Authentication** tab and then click the radio |
 |                                                                                              |
-| 6. Click the **Authentication** tab in the events window.                                    |
+|    button for **OAuth Client**.                                                              |
 |                                                                                              |
-| 7. Scroll down and click the radio button for **OAuth Client**.                              |
-|                                                                                              |
-| 8. Click **Add Item**.                                                                       |
+| 5. Scroll to the bottom of the window and click **Add Item**.                                |
 +----------------------------------------------------------------------------------------------+
-| |image78|                                                                                    |
+| |image019|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 9. In the ***OAuth\_Client*** window enter the following values as shown:                    |
 |                                                                                              |
-| -  **Server:** **/Common/Google\_Server**                                                    |
+| -  **Server:** **/Common/azure\_AD\_server** (Select from dropdown)                          |
 |                                                                                              |
-| -  **Grant Type:** **Authorization code**                                                    |
+| -  **Grant Type:** **Authorization code** (Select from dropdown)                             |
 |                                                                                              |
-| -  **OpenID Connect:** **Enabled**                                                           |
+| -  **OpenID Connect:** **Enabled** (Select from dropdown)                                    |
 |                                                                                              |
-| -  **OpenID Connect Flow Type:** **Authorization code**                                      |
+| -  **OpenID Connect Flow Type:** **Authorization code** (Select from dropdown)               |
 |                                                                                              |
-| -  **Authentication Redirect Request:** **/Common/GoogleAuthRedirectRequest**                |
+| -  **Authentication Redirect Request:** **/Common/AzureADAuthRedirectRequest**  (dropdown)   |
 |                                                                                              |
-| -  **Token Request:** **/Common/GoogleTokenRequest**                                         |
+| -  **Token Request:** **/Common/AzureADTokenRequest_ACME**                                   |
 |                                                                                              |
-| -  **Refresh Token Request:** **/Common/GoogleTokenRefreshRequest**                          |
+| -  **Refresh Token Request:** **/Common/AzureADTokenRefreshRequest_ACME** (dropdown)         |
 |                                                                                              |
-| -  **OpenID Connect UserInfo Request:** **/Common/GoogleUserinfoRequest**                    |
+| -  **OpenID Connect UserInfo Request:** **None** (Select from dropdown)                      |
 |                                                                                              |
 | -  **Redirection URI:** **https://%{session.server.network.name}/oauth/client/redirect**     |
 |                                                                                              |
-| -  **Scope:** **openid profile email**                                                       |
-|                                                                                              |
 | 10. Click **Save**.                                                                          |
 +----------------------------------------------------------------------------------------------+
-| |image79|                                                                                    |
+| |image020|                                                                                   |
 +----------------------------------------------------------------------------------------------+
+
+YOU ARE HERE ....
 
 +----------------------------------------------------------------------------------------------+
 | 11. Click on the **Deny** link, in the **Select Binding**, select the **Allow** radio button |
 |                                                                                              |
 |    and click **Save**.                                                                       |
 +----------------------------------------------------------------------------------------------+
-| |image80|                                                                                    |
+| |image124|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 12. Click on the ***Apply Access Policy*** link in the top left-hand corner.                 |
+| 12. Click on the **Apply Access Policy** link in the top left-hand corner.                   |
 |                                                                                              |
-| *Note: Additional actions can be taken in the Per Session policy (Access Policy).*           |
+| *Note: Additional actions can be taken in the Per Session policy (Access Policy). The lab*   |
 |                                                                                              |
-| *The lab is simply completing authorization. Other access controls can be implemented based* |
+| *is simply completing authorization. Other access controls can be implemented based*         |
 |                                                                                              |
-| *on the use case*.                                                                           |
+| *on the use case.*                                                                           |
 +----------------------------------------------------------------------------------------------+
-| |image81|                                                                                    |
+| |image125|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 5: Associate Access Policy to Virtual Server 
+TASK 6: Associate Access Policy to Virtual Server 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. Navigate to **Local Traffic** -> **Virtual Servers** -> **Virtual Server List** and click |
+| 1. Navigate to **Local Traffic** -> **Virtual Servers** -> **Virtual Server List** and       |
 |                                                                                              |
-|    on the **app.f5demo.com** Virtual Server link.                                            |
+|    click on the **app.f5demo.com** Virtual Server link                                       |
 |                                                                                              |
 | 2. Scroll to the **Access Policy** section.                                                  |
 +----------------------------------------------------------------------------------------------+
-| |image82|                                                                                    |
+| |image126|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Use the **Access Profile** drop down to change the **Access Profile** to **Google\_OAuth**|
+| 3. Use the **Access Profile** drop down to change the **Access Profile** to                  |
+|                                                                                              |
+|    **AzureAD\_OAuth**.                                                                       |
 |                                                                                              |
 | 4. Use the **Per-Request Policy** drop down to change the **Per-Request Policy** to          |
 |                                                                                              |
-|    **Google\_oauth\_policy**                                                                 |
+|    **AzureAD\_oauth\_policy**.                                                               |
 |                                                                                              |
-| 5. Scroll to the bottom of the **Virtual Server** configuration and click **Update**         |
+| 5. Scroll to the bottom of the **Virtual Server** configuration and click **Update**.        |
 +----------------------------------------------------------------------------------------------+
-| |image83|                                                                                    |
+| |image127|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 6: Test app.f5demo.com
+TASK 7: Test app.f5demo.com
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -327,44 +480,50 @@ Refer to the instructions and screen shots below:
 +----------------------------------------------------------------------------------------------+
 | 1. Navigate in your provided browser to **https://app.f5demo.com**                           |
 +----------------------------------------------------------------------------------------------+
-| |image84|                                                                                    |
+| |image128|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Authenticate with the account you established your Google Developer account with.         |
+| 2. Authenticate with the following AzureAD account:                                          |
+|                                                                                              |
+| -  **Username:** **demouser@f5agilitydemogmail.onmicrosoft.com**                             |
+|                                                                                              |
+| -  **Password:** **f5d3m0u$3r**                                                              |
 +----------------------------------------------------------------------------------------------+
-| |image85|                                                                                    |
+| |image129|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Did you successfully redirect to the Google?                                              |
+| 3. Did you successfully redirect to the AzureAD?                                             |
 |                                                                                              |
 | 4. After successful authentication, were you returned to the app.f5demo.com?                 |
 |                                                                                              |
 | 5. Did you successfully pass your OAuth Token?                                               |
 +----------------------------------------------------------------------------------------------+
-| |image86|                                                                                    |
+| |image130|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 7: Per Request Policy Controls
+TASK 8: Per Request Policy Controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the application page for **https://app.f5demo.com** click the **Admin Link** shown     |
+| 1. As in the prior lab, you can experiment with Per Request Policy controls. In the          |
+|                                                                                              |
+| application page for **https://app.f5demo.com** click the **Admin Link** shown.              |
 +----------------------------------------------------------------------------------------------+
-| |image87|                                                                                    |
+| |image131|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 2. You will receive an **Access to this page is blocked** (customizable) message with a      |
 |                                                                                              |
-|    reference. You have been blocked because you do not have access on a per request basis.   |                                                                      
+|    reference. You have been blocked because you do not have access on a per request basis.   |
 |                                                                                              |
 | 3. Press the **Back** button in your browser to return to **https://app.f5demo.com**.        |
 +----------------------------------------------------------------------------------------------+
-| |image88|                                                                                    |
+| |image132|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -372,48 +531,50 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    **Allowed\_Users** datagroup.                                                             |
 |                                                                                              |
-| 5. Enter your **Google Account** used for this lab as the **String** value.                  |
+| 5. Enter your **demouser@f5agilitydemogmail.onmicrosoft.com** used for this lab as the       |
+|                                                                                              |
+|    **String** value.                                                                         |
 |                                                                                              |
 | 6. Click **Add** then Click **Update**.                                                      |
 |                                                                                              |
-| *Note: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP*     |
+| *Note: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP      |
 |                                                                                              |
 | *Group memberships, Session variables, other user attributes and various other access*       |
 |                                                                                              |
 | *control mechanisms can be used to achieve similar results.*                                 |
 +----------------------------------------------------------------------------------------------+
-| |image89|                                                                                    |
+| |image133|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 7. You should now be able to successfully to access the Admin Functions by clicking on the   |
 |                                                                                              |
-|    **Admin Link**.                                                                           |
-|                                                                                              | 
-| *Note: Per Request Policies are dynamic and do not require the same “Apply Policy” action as*|
+|    Admin Link.                                                                               |
 |                                                                                              |
-| *Per Session Policies.*                                                                      |
+| *Note: Per Request Policies are dynamic and do not require the same “Apply Policy” action*   |
+|                                                                                              |
+| *as Per Session Policies*.                                                                   |
 +----------------------------------------------------------------------------------------------+
-| |image90|                                                                                    |
+| |image134|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 8. To review the Per Request Policy, navigate to **Access Profiles/Policies** ->             |
+| 8. To review the Per Request Policy, navigate to ***Access** -> **Profiles/Policies** ->     |
 |                                                                                              |
-|   **Per Request Policies** and click on the **Edit** link for the **Google\_oauth\_policy**. |
+|    **Per Request Policies** and click on the Edit link for the **AzureAD\_oauth\_policy**.   |
 +----------------------------------------------------------------------------------------------+
-| |image91|                                                                                    |
+| |image135|                                                                                   |
++----------------------------------------------------------------------------------------------+
+ 
++----------------------------------------------------------------------------------------------+
+| 9. The various Per-Request-Policy actions can be reviewed.                                   |
+|                                                                                              |
+| *Note: Other actions like Step-Up Auth controls can be performed in a Per-Request Policy*    |
++----------------------------------------------------------------------------------------------+
+| |image136|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-+----------------------------------------------------------------------------------------------+
-| 9. The various Per-Request-Policy actions can be reviewed                                    |
-|                                                                                              |
-| *Note: Other actions like Step-Up Auth controls can be performed in a Per-Request Policy.*   |
-+----------------------------------------------------------------------------------------------+
-| |image92|                                                                                    |
-+----------------------------------------------------------------------------------------------+
-
-TASK 8: Review OAuth Results 
+TASK 9: Review OAuth Results 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Refer to the instructions and screen shots below:
@@ -425,25 +586,25 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 |    selected Session.                                                                         |
 +----------------------------------------------------------------------------------------------+
-| |image93|                                                                                    |
+| |image137|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Review your Access Report Logs (**Access** -> **Overview** -> **Access Reports**).        |
+| 3. Review your Access Report Logs (**Access** -> **Overview** -> **Access Reports**).        | 
 +----------------------------------------------------------------------------------------------+
-| |image94|                                                                                    |
+| |image138|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 4. In the **Report Parameters window** click **Run Report**.                                 |
 +----------------------------------------------------------------------------------------------+
-| |image95|                                                                                    |
+| |image139|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
 | 5. Look at the **SessionID** report by clicking the **Session ID** Link.                     |
 +----------------------------------------------------------------------------------------------+
-| |image96|                                                                                    |
+| |image140|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -453,142 +614,169 @@ Refer to the instructions and screen shots below:
 |                                                                                              |
 | *Note: Any of these session variables can be used to perform further actions to improve*     |
 |                                                                                              |
-| *security or constrain access with logic in the Per-Session or Per Request VPE policies or*  |
+| *security or constrain access with logic in the Per-Session or Per Request VPE policies*     |
 |                                                                                              |
-| *iRules/iRulesLX.*                                                                           |
+| *or iRules/iRulesLX.*                                                                        |
 +----------------------------------------------------------------------------------------------+
-| |image97|                                                                                    |
+| |image141|                                                                                   |
 +----------------------------------------------------------------------------------------------+
- 
+
 +----------------------------------------------------------------------------------------------+
-| 7. Review your Access Report Logs (**Access** -> **Overview** -> **OAuth Reports** ->        |
+| 7. Review your Access Report Logs (**Access** -> **Overview** -> **OAuth Reports** ->        |  
 |                                                                                              |
 |    **Client/Resource Server**).                                                              |
 +----------------------------------------------------------------------------------------------+
-| |image98|                                                                                    |
+| |image142|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 
-.. |image58| image:: media/image60.png
-   :width: 2.23039in
-   :height: 2.36979in
-.. |image59| image:: media/image61.png
-   :width: 3.49268in
-   :height: 1.22650in
-.. |image60| image:: media/image62.png
-   :width: 1.37500in
-   :height: 1.42298in
-.. |image61| image:: media/image63.png
-   :width: 1.83333in
-   :height: 1.44662in
-.. |image62| image:: media/image64.png
-   :width: 3.61350in
-   :height: 0.25904in
-.. |image63| image:: media/image65.png
-   :width: 1.32012in
-   :height: 1.27746in
-.. |image64| image:: media/image66.png
-   :width: 3.45577in
-   :height: 1.25767in
-.. |image65| image:: media/image67.png
-   :width: 3.08125in
-   :height: 1.94452in
-.. |image66| image:: media/image68.png
-   :width: 3.16458in
-   :height: 1.63370in
-.. |image67| image:: media/image69.png
-   :width: 3.18021in
-   :height: 1.10982in
-.. |image68| image:: media/image70.png
-   :width: 2.88720in
-   :height: 2.00521in
-.. |image69| image:: media/image71.png
-   :width: 3.28125in
-   :height: 2.26534in
-.. |image70| image:: media/image72.png
-   :width: 3.33125in
-   :height: 1.39217in
-.. |image71| image:: media/image73.png
-   :width: 3.43558in
-   :height: 1.07255in
-.. |image72| image:: media/image74.png
-   :width: 3.49738in
-   :height: 4.78430in
-.. |image73| image:: media/image75.png
-   :width: 3.58125in
-   :height: 0.63905in
-.. |image74| image:: media/image76.png
-   :width: 3.38575in
-   :height: 2.95455in
-.. |image75| image:: media/image77.png
-   :width: 3.59729in
-   :height: 0.47370in
-.. |image76| image:: media/image78.png
-   :width: 3.58653in
-   :height: 2.84049in
-.. |image77| image:: media/image79.png
-   :width: 3.55864in
-   :height: 0.65031in
-.. |image78| image:: media/image80.png
-   :width: 3.64514in
-   :height: 1.52147in
-.. |image79| image:: media/image81.png
-   :width: 3.59509in
-   :height: 1.58711in
-.. |image80| image:: media/image82.png
-   :width: 3.55215in
-   :height: 1.16329in
-.. |image81| image:: media/image83.png
-   :width: 3.53374in
-   :height: 1.34193in
-.. |image82| image:: media/image84.png
-   :width: 3.50234in
-   :height: 2.68712in
-.. |image83| image:: media/image85.png
-   :width: 3.49738in
-   :height: 1.72209in
-.. |image84| image:: media/image86.png
-   :width: 3.57570in
-   :height: 0.25694in
-.. |image85| image:: media/image87.png
-   :width: 3.24109in
-   :height: 2.82822in
-.. |image86| image:: media/image88.png
-   :width: 3.16168in
-   :height: 2.42702in
-.. |image87| image:: media/image89.png
-   :width: 2.86751in
-   :height: 2.21224in
-.. |image88| image:: media/image90.png
-   :width: 2.80941in
-   :height: 1.35399in
-.. |image89| image:: media/image91.png
-   :width: 3.15971in
-   :height: 2.33461in
-.. |image90| image:: media/image92.png
-   :width: 3.40586in
-   :height: 1.10658in
-.. |image91| image:: media/image93.png
-   :width: 3.42307in
-   :height: 1.50171in
-.. |image92| image:: media/image94.png
-   :width: 3.45192in
-   :height: 1.33345in
-.. |image93| image:: media/image95.png
-   :width: 3.59450in
-   :height: 1.52876in
-.. |image94| image:: media/image96.png
-   :width: 2.06848in
-   :height: 1.53438in
-.. |image95| image:: media/image97.png
-   :width: 3.52761in
-   :height: 0.80655in
-.. |image96| image:: media/image98.png
-   :width: 3.64074in
-   :height: 1.05961in
 .. |image97| image:: media/image99.png
    :width: 3.62160in
    :height: 1.84971in
 .. |image98| image:: media/image100.png
    :width: 3.60694in
    :height: 2.16776in
+.. |image99| image:: media/image101.png
+   :width: 3.53540in
+   :height: 2.21472in
+.. |image100| image:: media/image102.png
+   :width: 3.57743in
+   :height: 1.86503in
+.. |image101| image:: media/image103.png
+   :width: 3.51729in
+   :height: 1.82209in
+.. |image102| image:: media/image104.png
+   :width: 3.50084in
+   :height: 1.84049in
+.. |image103| image:: media/image105.png
+   :width: 3.46012in
+   :height: 2.15172in
+.. |image104| image:: media/image106.png
+   :width: 3.44880in
+   :height: 1.32496in
+.. |image105| image:: media/image107.png
+   :width: 3.48404in
+   :height: 1.95989in
+.. |image106| image:: media/image108.png
+   :width: 3.42975in
+   :height: 1.95950in
+.. |image107| image:: media/image109.png
+   :width: 3.40893in
+   :height: 1.22224in
+.. |image108| image:: media/image110.png
+   :width: 3.34969in
+   :height: 1.17463in
+.. |image109| image:: media/image111.png
+   :width: 3.10354in
+   :height: 1.37929in
+.. |image110| image:: media/image112.png
+   :width: 3.21285in
+   :height: 2.38037in
+.. |image111| image:: media/image113.png
+   :width: 3.49868in
+   :height: 1.73941in
+.. |image112| image:: media/image114.png
+   :width: 3.57223in
+   :height: 0.49387in
+.. |image113| image:: media/image115.png
+   :width: 3.51822in
+   :height: 4.58896in
+.. |image114| image:: media/image116.png
+   :width: 3.50920in
+   :height: 1.09553in
+.. |image115| image:: media/image117.png
+   :width: 3.48005in
+   :height: 4.92024in
+.. |image116| image:: media/image118.png
+   :width: 3.39641in
+   :height: 2.21472in
+.. |image117| image:: media/image119.png
+   :width: 3.58282in
+   :height: 0.63933in
+.. |image118| image:: media/image120.png
+   :width: 3.52761in
+   :height: 3.06445in
+.. |image119| image:: media/image77.png
+   :width: 3.74792in
+   :height: 0.49354in
+.. |image120| image:: media/image121.png
+   :width: 3.52888in
+   :height: 2.83435in
+.. |image121| image:: media/image122.png
+   :width: 3.52578in
+   :height: 0.74560in
+.. |image122| image:: media/image123.png
+   :width: 3.50738in
+   :height: 1.47828in
+.. |image123| image:: media/image124.png
+   :width: 3.56442in
+   :height: 1.69631in
+.. |image124| image:: media/image125.png
+   :width: 3.46736in
+   :height: 1.11639in
+.. |image125| image:: media/image126.png
+   :width: 3.55208in
+   :height: 1.27646in
+.. |image126| image:: media/image84.png
+   :width: 3.50234in
+   :height: 2.68712in
+.. |image127| image:: media/image127.png
+   :width: 3.54283in
+   :height: 0.94203in
+.. |image128| image:: media/image86.png
+   :width: 3.57570in
+   :height: 0.25694in
+.. |image129| image:: media/image128.jpeg
+   :width: 3.53525in
+   :height: 1.87225in
+.. |image130| image:: media/image129.png
+   :width: 2.93452in
+   :height: 2.37741in
+.. |image131| image:: media/image130.png
+   :width: 2.82477in
+   :height: 2.26623in
+.. |image132| image:: media/image90.png
+   :width: 2.80941in
+   :height: 1.35399in
+.. |image133| image:: media/image91.png
+   :width: 3.15971in
+   :height: 2.33461in
+.. |image134| image:: media/image92.png
+   :width: 3.40586in
+   :height: 1.10658in
+.. |image135| image:: media/image131.png
+   :width: 3.47790in
+   :height: 1.47860in
+.. |image136| image:: media/image132.png
+   :width: 3.44664in
+   :height: 0.99351in
+.. |image137| image:: media/image133.png
+   :width: 3.08095in
+   :height: 1.31035in
+.. |image138| image:: media/image134.png
+   :width: 2.18483in
+   :height: 1.62069in
+.. |image139| image:: media/image135.png
+   :width: 1.99074in
+   :height: 0.45516in
+.. |image140| image:: media/image136.png
+   :width: 1.98052in
+   :height: 0.89862in
+.. |image141| image:: media/image137.png
+   :width: 2.64361in
+   :height: 2.43384in
+.. |image142| image:: media/image138.png
+   :width: 3.56993in
+   :height: 1.64660in
+.. |image143| image:: media/image139.png
+   :width: 2.84352in
+   :height: 1.33129in
+.. |image144| image:: media/image140.png
+   :width: 1.65644in
+   :height: 1.35621in
+.. |image145| image:: media/image141.png
+   :width: 1.53374in
+   :height: 1.34629in
+.. |image146| image:: media/image142.png
+   :width: 1.55828in
+   :height: 1.56560in
