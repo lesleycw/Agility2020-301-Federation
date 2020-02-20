@@ -669,4 +669,6 @@ TASK 3: Review SAML Tracer Logs
 .. |image047| image:: media/lab2-047.png
    :width: 4.5in
    :height: 3.38in
-
+.. |image000| image:: media/image-000.png
+   :width: 4.5in
+   :height: 2.13in
