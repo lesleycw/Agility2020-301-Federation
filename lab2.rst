@@ -82,7 +82,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 7. Click the checkboxes in the first column and click the **Kill Seleected Sessions**        |
+| 7. Click the checkboxes in the first column and click the **Kill Selected Sessions**         |
 |                                                                                              |
 |    button.                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -199,7 +199,7 @@ TASK 2: Extend the ACME SAML Service Provider (SP)
 +----------------------------------------------------------------------------------------------+
 | 14. In the resulting window for **Access Profiles (Per-Session Policies)**, ensure the       |
 |                                                                                              |
-|    **sp.acme.com** row is checked and click the **Apply** button.                            |
+|     **sp.acme.com** row is checked and click the **Apply** button.                           |
 +----------------------------------------------------------------------------------------------+
 | |image018|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -207,7 +207,7 @@ TASK 2: Extend the ACME SAML Service Provider (SP)
 +----------------------------------------------------------------------------------------------+
 | 15. The **Apply Access Policy** link should now disappear in the top left corner.            |
 |                                                                                              |
-|    **Note:** *May take a few seconds to update.*                                             |
+|     **Note:** *May take a few seconds to update.*                                            |
 +----------------------------------------------------------------------------------------------+
 | |image019|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -232,7 +232,7 @@ TASK 3: Testing Partner Access to SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
 | 3. The **ACME Application 1** will now open if successfully configured. This concludes       |
 |                                                                                              |
-|     Lab 2 Tasks / Part 1.                                                                    |
+|    Lab 2 Tasks / Part 1.                                                                     |
 |                                                                                              |
 | **Note:** *This was a SAML SP-Initiated flow for the Partner.*                               |
 +----------------------------------------------------------------------------------------------+
@@ -342,7 +342,7 @@ TASK 1: Extend the ACME SAML Identity Provider (IdP)
 +----------------------------------------------------------------------------------------------+
 | 18. In the resulting pop-up window for **Edit SAML SPs that use this IdP**, check the        |
 |                                                                                              |
-|    checkbox in the **/Common/sp.partner.com** row and then click the **OK** button.          |
+|     checkbox in the **/Common/sp.partner.com** row and then click the **OK** button.         |
 +----------------------------------------------------------------------------------------------+
 | |image030|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -358,7 +358,7 @@ TASK 1: Extend the ACME SAML Identity Provider (IdP)
 +----------------------------------------------------------------------------------------------+
 | 14. In the resulting window for **New SAML Resource**, input the following values in the     |
 |                                                                                              |
-|    indicated fields.                                                                         |
+|     indicated fields.                                                                        |
 |                                                                                              |
 |     * **Name:** **sp.partner.com**                                                           |
 |                                                                                              |
@@ -410,7 +410,7 @@ TASK 1: Extend the ACME SAML Identity Provider (IdP)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 21. Click on the *Apply Access Policy** link in the top left-hand corner of the Visual       |
+| 21. Click on the **Apply Access Policy** link in the top left-hand corner of the Visual      |
 |                                                                                              |
 |     Policy Editor.                                                                           |
 +----------------------------------------------------------------------------------------------+
@@ -503,9 +503,9 @@ TASK 3: Review SAML Tracer Logs
 |                                                                                              |
 |    **https://sp.partner.com/saml/sp/profile/post/acs**.                                      |
 |                                                                                              |
-| **Note:** *The links used by both the IdP and SP were exchnaged when the XML metadata was    |
+|    **Note:** *The links used by both the IdP and SP were exchnaged when the XML metadata*    |
 |                                                                                              |
-| imported.                                                                                    |
+|    *was imported.*                                                                           |
 |                                                                                              |
 | 8. In the bottom pane of the **SAML Tracer** window on the **HTTP** tab, details about the   |
 |                                                                                              |
@@ -520,6 +520,12 @@ TASK 3: Review SAML Tracer Logs
 |    found the relevant data for the SAML Response. Good for troubleshooting.                  |
 +----------------------------------------------------------------------------------------------+
 | |image045|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 4. This concludes Part 2 of Lab2. This concludes Lab2.                                       |
++----------------------------------------------------------------------------------------------+
+| |image000|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 .. |image001| image:: media/lab2-001.png
