@@ -12,7 +12,7 @@ and verify the functionality of IDP-Initiated and SP-Initiated SAML flows.
 
 The lab is in two parts.  In Part 1, Students will extend an ACME SAML SP 
 provided application to a Partner. In Part 2, Students will extend ACME's 
-SAML IdP to a Partner provided SAML SP.
+SAML IdP to include a Partner provided SAML SP.
 
 Objective:
 ----------
@@ -34,100 +34,156 @@ Lab Requirements:
 Lab 2 Tasks Part 1
 ------------------
 
-TASK 1: Extend the ACME SAML Service Provider (SP) 
+TASK 1: Review the configured SAML IdP and SAML SP (ACME) 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Open Firefox from the Jumphost desktop and click on the **ACME-IDP** link in the bookmark |
+|                                                                                              |
+|    toolbar.                                                                                  |
+|                                                                                              |
+| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
++----------------------------------------------------------------------------------------------+
+| |image001|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 2. Once the page loads, enter **user1** for username and **user1** for password  in the      |
+|                                                                                              |
+|    logon form and click the logon button.                                                    |
++----------------------------------------------------------------------------------------------+
+| |image002|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 3. On the presented webtop, click the **sp.acme.com** link in the **Applications and**       |
+|                                                                                              |
+|    **Links** section.                                                                        |
++----------------------------------------------------------------------------------------------+
+| |image003|                                                                                   |
++----------------------------------------------------------------------------------------------+
+ 
++----------------------------------------------------------------------------------------------+
+| 4. The **ACME Application 1** will now open if successfully configured.                      |
+|                                                                                              |
+| **Note:** *This was a SAML IdP-Initiated flow.*                                              |
++----------------------------------------------------------------------------------------------+
+| |image004|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 5. Navigate to **Access -> Overview -> Active Sessions** on your **big-ip1**                 |
+|                                                                                              |
+| 6. Note the two active sessions created by the access of **https://idp.acme.com**            |
+|                                                                                              |
+| **Question:** Why are there two sessions?                                                    |
++----------------------------------------------------------------------------------------------+
+| |image005|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 7. Click the checkboxes in the first column and click the **Kill Seleected Sessions **       |
+|                                                                                              |
+|    button.                                                                                   |
++----------------------------------------------------------------------------------------------+
+| |image006|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 8. In the resulting window make sure both Session ID's are checked and click the **Delete**  |
+|                                                                                              |
+|    button.                                                                                   |
++----------------------------------------------------------------------------------------------+
+| |image007|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 9. Open Firefox from the Jumphost desktop and click on the **ACME-SP (ACME)** link in the    |
+|                                                                                              |
+|    bookmark toolbar.                                                                         |
+|                                                                                              |
+| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
++----------------------------------------------------------------------------------------------+
+| |image008|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 10. Once the page loads, enter **user1** for username and **user1** for password  in the     |
+|                                                                                              |
+|     logon form and click the logon button.                                                   |
++----------------------------------------------------------------------------------------------+
+| |image009|                                                                                   |
++----------------------------------------------------------------------------------------------+
+ 
++----------------------------------------------------------------------------------------------+
+| 11. The **ACME Application 1** will now open if successfully configured.                     |
+|                                                                                              |
+| **Note:** *This was a SAML SP-Initiated flow.*                                               |
++----------------------------------------------------------------------------------------------+
+| |image010|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 2: Extend the ACME SAML Service Provider (SP) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Sign Up for an OKTA developer account by navigating to:                                   |
+| 1. Navigate to **Access -> Federation -> SAML Service Provider -> External IdP Connection**  |
 |                                                                                              |
-|    **https://developer.okta.com/signup/** and using a VALID email and click **Get Started**  |
+| 2. In the resulting main window update, click the small **down arrow** beside the **create** |
 |                                                                                              |
-| 2. Upon registration, you will be directed to a hyperlink (hostname) for your developer      |     
+|    button.                                                                                   |
 |                                                                                              |
-|    account. This link should be saved for future use.                                        |     
-|                                                                                              |
-| 3. Additional instructions will be sent to the email address provided during account setup.  |     
+| 3. From the displayed dropdown menu, select **From Metadata**                                |
 +----------------------------------------------------------------------------------------------+
-| |image022|                                                                                   |
-|                                                                                              |
-| |image023|                                                                                   |
+| |image011|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. Following the instructions received from the generated email, sign into the OKTA          |
+| 4. In the resulting pop-up window for **Create New SAML IdP Connector**, click the           |
 |                                                                                              |
-|    development environment with your provided, temporary password.                           |
+|    **browse** button.                                                                        |
+|                                                                                              |
+| 5. From the Jumphost desktop seleect the **idp_partner_com_metadata.xml** file               |
+|                                                                                              |
+| 6. In the **Identity Provider Name** field input **idp.partner.com** and click **OK**        |
 +----------------------------------------------------------------------------------------------+
-| |image024|                                                                                   |
+| |image012|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. Enter a **New Password** and the **Repeat New Password**                                  |
+| 7. Navigate to the horizontal navgination menu and from the **SAML Service Provider**        |
 |                                                                                              |
-| 6. Use the drop down to select a **Forgot Password Question** and provide the Answer         |
-|                                                                                              |
-| 7. Click a **Security Image**                                                                |
-|                                                                                              |
-| 8. Click **Create My Account**                                                               |
+|    dropdown select **Local SP Services**                                                     |
 +----------------------------------------------------------------------------------------------+
-| |image025|                                                                                   |
-+----------------------------------------------------------------------------------------------+
- 
-TASK 2: OKTA Classic UI 
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. For the purposes of the lab and SAML development, we will be using the OKTA Classic UI    |
-|                                                                                              |
-|    which provides access to SAML configurations. *(Note: At lab publication, the Developer*  |
-|                                                                                              |
-|    *Console did not have SAML resources.)*                                                   |
-|                                                                                              |     
-| 2. In the top, left hand corner click the **<>** & select **Classic UI** from the drop down. |
-+----------------------------------------------------------------------------------------------+
-| |image026|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-TASK 3: Enable OKTA Multi-Factor Authentication [OPTIONAL]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below. This task will require a mobile app to enable a second factor.
-
-+----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
-|                                                                                              |
-| *Note: Enabling MFA will require a Smart Device with the appropriate OKTA client for your OS*|
-|                                                                                              |
-| *The step can be skipped if you prefer to just use UserID/Password*                          |
-|                                                                                              |
-| 1. Click **Security** from the top navigation, then click **Multifactor**                    |
-+----------------------------------------------------------------------------------------------+
-| |image027|                                                                                   |
+| |image013|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| 8. In the resulting main window update, check the checkbox on the **sp.acme.com** row and    |
 |                                                                                              |
-| 2. Under **OKTA Verify**, change the dropdown from **Inactive** to **Active**                |
-|                                                                                              |
-| 3. Click the **Edit** button next to ***OKTA Verify Settings**                               |
+|    click the **Bind/Unbind IdP Connectors** button.                                          |
 +----------------------------------------------------------------------------------------------+
-| |image028|                                                                                   |
+| |image014|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| 9. In the resulting pop-up window for **Edit SAML IdPs that use this SP**, click the **Add** |
 |                                                                                              |
-| 4. Check **Enable Push Verification**                                                        |
+|    **New Row** button.                                                                       |
 |                                                                                              |
-| 5. Check **Require TouchID for OKTA Verify** (optional)                                      |
+| 10. In the newly added row select or input the follwoing values:                             |
 |                                                                                              |
-| 6. Click **Save**                                                                            |
+|     * **SAML IdP Connectors:** **/Common/idp.partner.com** (select from dropdown)            |
+|                                                                                              |
+|     * **Matching Source:** **%{session.server.landinguri}** (select from dropdown)           |
+|                                                                                              |
+|     * **Matching Value:** **/partner\*** (select from dropdown)                              |
+|                                                                                              |
+| 11. Click the **Update** button and then click **OK**                                        |
 +----------------------------------------------------------------------------------------------+
-| |image029|                                                                                   |
+| |image012|                                                                                   |
 +----------------------------------------------------------------------------------------------+
+
 
 TASK 4: Build SAML Application - OKTA 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
