@@ -50,7 +50,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
 | 2. Once the page loads, enter **user1** for username and **user1** for password  in the      |
 |                                                                                              |
-|    logon form and click the logon button.                                                    |
+|    logon form and click the **Logon** button.                                                |
 +----------------------------------------------------------------------------------------------+
 | |image002|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -72,7 +72,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. Navigate to **Access -> Overview -> Active Sessions** on your **big-ip1**                 |
+| 5. Navigate to **Access -> Overview -> Active Sessions** on your **bigip1**                  |
 |                                                                                              |
 | 6. Note the two active sessions created by the access of **https://idp.acme.com**            |
 |                                                                                              |
@@ -82,7 +82,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 7. Click the checkboxes in the first column and click the **Kill Seleected Sessions **       |
+| 7. Click the checkboxes in the first column and click the **Kill Seleected Sessions**        |
 |                                                                                              |
 |    button.                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -110,7 +110,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
 | 10. Once the page loads, enter **user1** for username and **user1** for password  in the     |
 |                                                                                              |
-|     logon form and click the logon button.                                                   |
+|     logon form and click the **Logon** button.                                               |
 +----------------------------------------------------------------------------------------------+
 | |image009|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -177,436 +177,490 @@ TASK 2: Extend the ACME SAML Service Provider (SP)
 |                                                                                              |
 |     * **Matching Source:** **%{session.server.landinguri}** (select from dropdown)           |
 |                                                                                              |
-|     * **Matching Value:** **/partner\*** (select from dropdown)                              |
+|     * **Matching Value:** **/partner\*** (input value)                                       |
 |                                                                                              |
-| 11. Click the **Update** button and then click **OK**                                        |
+| 11. Click the **Update** button.                                                             |
 +----------------------------------------------------------------------------------------------+
-| |image012|                                                                                   |
+| |image015|                                                                                   |
 +----------------------------------------------------------------------------------------------+
-
-
-TASK 4: Build SAML Application - OKTA 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the main menu, click **Applications**, and **Applications** from the dropdown in the   |
+| 12. Review the configuration and then click **OK**                                           |
++----------------------------------------------------------------------------------------------+
+| |image016|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 13. In the **bigip1** GUI, look to the top left and click the **Apply Access Policy** link.  |
++----------------------------------------------------------------------------------------------+
+| |image017|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 14. In the resulting window for **Access Profiles (Per-Session Policies)**, ensure the       |
 |                                                                                              |
-|    top navigation.                                                                           |
+|    **sp.acme.com** row is checked and click the **Apply** button.                            |
++----------------------------------------------------------------------------------------------+
+| |image018|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 15. The **Apply Access Policy** link should now disappear in the top left corner.            |
+|                                                                                              |
+|    **Note:** *May take a few seconds to update.*                                             |
++----------------------------------------------------------------------------------------------+
+| |image019|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 3: Testing Partner Access to SAML SP (ACME)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Open Firefox from the Jumphost desktop and click on the **ACME-SP (Partner)** link in the |
+|                                                                                              |
+|    bookmark toolbar.                                                                         |
+|                                                                                              |
+| 2. Notice now that the **Partner Secure Logon** page loads, enter **user1** for username and |
+|                                                                                              |
+|    **user1** for password  in the logon form and click the **Logon** button.                 |
+|                                                                                              |
+| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
++----------------------------------------------------------------------------------------------+
+| |image020|                                                                                   |
++----------------------------------------------------------------------------------------------+
+ 
++----------------------------------------------------------------------------------------------+
+| 3. The **ACME Application 1** will now open if successfully configured. This concludes       |
+|                                                                                              |
+|     Lab 2 Tasks / Part 1.                                                                    |
+|                                                                                              |
+| **Note:** *This was a SAML SP-Initiated flow for the Partner.*                               |
++----------------------------------------------------------------------------------------------+
+| |image021|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+Lab 2 Tasks Part 2
+------------------
+
+TASK 1: Extend the ACME SAML Identity Provider (IdP) 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Navigate to **Access -> Federation -> SAML Identity Provider -> External IdP Connection** |
+|                                                                                              |
+| 2. In the resulting main window update, click the small **down arrow** beside the **create** |
+|                                                                                              |
+|    button.                                                                                   |
+|                                                                                              |
+| 3. From the displayed dropdown menu, select **From Metadata**                                |
++----------------------------------------------------------------------------------------------+
+| |image022|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 4. In the resulting pop-up window for **Create New SAML Service Provider**, click the        |
+|                                                                                              |
+|    **browse** button.                                                                        |
+|                                                                                              |
+| 5. From the Jumphost desktop seleect the **sp_partner_com_metadata.xml** file                |
+|                                                                                              |
+| 6. In the **Service Provider Name** field input **sp.partner.com** and click **OK**          |
++----------------------------------------------------------------------------------------------+
+| |image023|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 7. Navigate to the horizontal navgination menu and from the **SAML Identity Provider**       |
+|                                                                                              |
+|    dropdown select **Local IdP Services**                                                    |
++----------------------------------------------------------------------------------------------+
+| |image024|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 8. In the resulting main window update, click the **Create** button on the right-hand side.  |
++----------------------------------------------------------------------------------------------+
+| |image025|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 9. In the resulting pop-up window for **Create New IdP Service**, click the **General**      |
+|                                                                                              |
+|    **Settings** menu link.                                                                   |
+|                                                                                              |
+| 10. In the updated window input the following values:                                        |
+|                                                                                              |
+|     * **IdP Service Name:** **idp.acme.com_Partner**                                         |
+|                                                                                              |
+|     * **IdP Entity ID:** **https://idp.acme.com**                                            |
++----------------------------------------------------------------------------------------------+
+| |image026|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 11. Click the **Assertion Settings** menu link.                                              |
+|                                                                                              |
+| 12. In the updated window input the follwoing values:                                        |
+|                                                                                              |
+|     * **Assertion Subject Value:** **%{session.logon.last.username}** (select from dropdown) |
++----------------------------------------------------------------------------------------------+
+| |image027|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 13. Click the **Security Settings** menu link.                                               |
+|                                                                                              |
+| 14. In the updated window input the follwoing values:                                        |
+|                                                                                              |
+|     * **Signing Key:** **/Common/saml-idp.acme.com** (select from dropdown)                  |
+|                                                                                              |
+|     * **Signing Certificate:** **/Common/saml-idp.acme.com** (select from dropdown)          |
+|                                                                                              |
+| 15. Click the **OK** button.                                                                 |
++----------------------------------------------------------------------------------------------+
+| |image028|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 16. In the resulting window for **Local IdP Services**, check only the checkbox on the       |
+|                                                                                              |
+|     **idp.acme.com_Partner** row.                                                            |
+|                                                                                              |
+| 17. Click the **Bind/Unbind SP Connectors** button.                                          |
+|                                                                                              |
+| **Note:** *The idp.acme.com_ACME & the idp.acme.com_Partner objects have the exact same*     |
+|                                                                                              |
+| *settings in terms of basic configurations for this lab. In an actual configuration,*        |
+|                                                                                              |
+| *setting specific security and certificates configurations will provide additional layers*   |
+|                                                                                              |
+| *of security.*                                                                               |
++----------------------------------------------------------------------------------------------+
+| |image029|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------------------------+
+| 18. In the resulting pop-up window for **Edit SAML SPs that use this IdP**, check the        |
+|                                                                                              |
+|    checkbox in the **/Common/sp.partner.com** row and then click the **OK** button.          |
 +----------------------------------------------------------------------------------------------+
 | |image030|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Click **Add Application** in the **Applications** dialogue window.                        |
+| 19. Navigate to **Access -> Federation -> SAML Resources** and click the **+ (Plus Sign)**   |
+|                                                                                              |
+| **Note:** *If you miss clicking the plus sign, simply click the create button on the right.* |
 +----------------------------------------------------------------------------------------------+
 | |image031|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Click **Create New App** in the **Add Application Menu**                                  |
+| 14. In the resulting window for **New SAML Resource**, input the following values in the     |
+|                                                                                              |
+|    indicated fields.                                                                         |
+|                                                                                              |
+|     * **Name:** **sp.partner.com**                                                           |
+|                                                                                              |
+|     * **SSO Configuration:** **idp.acme.com_Partner**                                        |
+|                                                                                              |
+|     * **Caption:** **sp.partner.com**                                                        |
+|                                                                                              |
+| 15. Click the **Finished** button.                                                           |
 +----------------------------------------------------------------------------------------------+
 | |image032|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. In the **Create a New Application Integration** dialogue box, select **Web** from the     |
+| 16. Navigate to **Access -> Profiles/Policies -> Access Profiles (Per-Session Policies)**    |
 |                                                                                              |
-|    drop down for **Platform**.                                                               |
-|                                                                                              |
-| 4. Select the **SAML 2.0** radio button for **Sign on Method** and click **Create**.         |
+|     and then click the **Edit** link for the **idp.acme.com** Per Session Policy.            |
 +----------------------------------------------------------------------------------------------+
 | |image033|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. In the **Create SAML Integration** screen, enter **app.f5demo.com** for the **App Name**. |
+| 17. In the resulting Visual Policy Editor window, click on the **Advanced Resource Assign**  |
 |                                                                                              |
-| 6. Leave all other values as default and click **Next**.                                     |
+|     agent.                                                                                   |
 +----------------------------------------------------------------------------------------------+
 | |image034|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 7. In the **Create SAML Integration** screen, enter the following values                     |
+| 18. In the **Advanced Resource Assign** window click on the **Add/Delete** link in the first |
 |                                                                                              |
-| 8. In the **SAML Setting** section                                                           |
-|                                                                                              |
-|    -  **Single Sign on URL:** **https://app.f5demo.com/saml/sp/profile/post/acs**            |
-|                                                                                              |
-|    -  **Audience URI (SP Entity ID):** **https://app.f5demo.com**                            |
-|                                                                                              |
-| 9. Leave all other values as default and click **Next**.                                     |
+|     assignment row.                                                                          |
 +----------------------------------------------------------------------------------------------+
 | |image035|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 10. In the **Create SAML Integration** screen, select the:                                   |
+| 19. In the resulting window, click on the **SAML** tab and check the checbox on the          |
 |                                                                                              |
-|     **“I’m an OKTA customer adding an internal app”** radio button for                       |
-|                                                                                              |
-|     **Are you a customer or partner?**                                                       |
-|                                                                                              |
-| 11. In the resulting expanded window, select:                                                |
-|                                                                                              |
-|     **“This is an internal app that we have created”** for **App Type**                      |
-|                                                                                              |
-|     and click **Finish**.                                                                    |
+|     **/Common/sp.partner.com** row and then click update.                                    |
 +----------------------------------------------------------------------------------------------+
 | |image036|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 12. In the resulting application screen for **app.f5demo.com**, navigate to the              |
-|                                                                                              |
-|     **SAML 2.0 section**.                                                                    |
-|                                                                                              |
-| 13. Right Click the **Identity Provider Metadata** hyperlink and click **Save Link As …**    |
-|                                                                                              |
-| 14. Save the **metadata.xml** to your jumphost desktop. We will be using it in a later step  |
-|                                                                                              |
-|     in the Lab.                                                                              |
+| 20. Click on the **Save** button in the **Advanced Resource Assign** window.                 |
 +----------------------------------------------------------------------------------------------+
 | |image037|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 5: Add User to SAML Application 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
 +----------------------------------------------------------------------------------------------+
-| 1. Within the **app.f5demo.com** application screen, Click **Assignments** then **Assign**   |
+| 21. Click on the *Apply Access Policy** link in the top left-hand corner of the Visual       |
 |                                                                                              |
-|    and then **Assign to People** from the dropdown.                                          |
+|     Policy Editor.                                                                           |
 +----------------------------------------------------------------------------------------------+
 | |image038|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
+TASK 2: Testing Access to the Partner SAML SP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 +----------------------------------------------------------------------------------------------+
-| 2. In the **Assign app.f5demo.com to People** dialogue box, select your **User ID**, click   |
+| 1. Open Firefox from the Jumphost desktop and click on the **SAML Tracer** icon on the       |
 |                                                                                              |
-|    **Assign**, then **Done**.                                                                |
+|    right-hand side of the Firefox toolbar as indicated.                                      |
+|                                                                                              |
+| **Note:** *This is setting up testing tools to be used later in the lab.*                    |
 +----------------------------------------------------------------------------------------------+
 | |image039|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Click **Save and Go Back**.                                                               |
+| 2. The **SAML Tracer** extension window will launch. Simply leave it running and return to   |
+|                                                                                              |
+|    open Firefox browser.                                                                     |
 +----------------------------------------------------------------------------------------------+
 | |image040|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. Click **Done**.                                                                           |
+| 3. Click on the **Partner-SP (ACME)** link in the open Firefox brwoser.                      |
+|                                                                                              |
+| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
 +----------------------------------------------------------------------------------------------+
 | |image041|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 6: Add Multi-Factor Authentication Sign-On Policy [OPTIONAL]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below.  This section requires that **Task 3** be completed.
-
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| 4. Once the page loads, enter **user1** for username and **user1** for password  in the      |
 |                                                                                              |
-| 1. Within the **app.f5demo.com** application screen, Click **Sign On**                       |
+|    logon form and click the **Logon** button.                                                |
 +----------------------------------------------------------------------------------------------+
 | |image042|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
+| 5. The **Partner Application** will now open if successfully configured.                     |
 |                                                                                              |
-| 2. Scroll down to the **Sign On Policy** section and click **Add Rule**                      |
+| **Note:** *This is a SP-Initiated flow to the Partner's SAML SP.*                            |
 +----------------------------------------------------------------------------------------------+
 | |image043|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
+
+TASK 3: Review SAML Tracer Logs 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 +----------------------------------------------------------------------------------------------+
-| **[OPTIONAL]**                                                                               |
-|                                                                                              | 
-| 3. In the **Add Sign On Rule** dialogue box, enter **MFA** for the **Rule Name**.            |
+| 1. Locate the **SAML Tracer** window on the Jumphost desktop.                                |
 |                                                                                              |
-| 4. Scroll down to the **Actions** section.                                                   |
+| 2. Click the **Pause** button to keep the log flow from scrolling.                           |
 |                                                                                              |
-| 5. In the **Actions** section, under **Access**, check the box for **Prompt for factor**.    |
+| 3. Locate the first, **SAML** tagged log event. Note that just a few lines above a **GET**   |
 |                                                                                              |
-| 6. Ensure **Every Sign On** radio button is selected.                                        |
+|    was made to **https://sp.partner.com/acme** (The bookmarked clicked on in Task 2 Step 3   |
 |                                                                                              |
-| 7. Click **Save**.                                                                           |
+|    above.                                                                                    |
+|                                                                                              |
+| 4. The first **SAML** tagged log event was a **POST** to the ACME IdP located at             |
+|                                                                                              |
+|    **https://idp.acme.com/saml/idp/profile/redirectorpost/sso**                              |
+|                                                                                              |
+| 5. In the bottom pane of the **SAML Tracer** window on the **HTTP** tab, details about the   |
+|                                                                                              |
+|    SAML POST can be identified.                                                              |
 +----------------------------------------------------------------------------------------------+
 | |image044|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 7: Create the External IDP Connector
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
 +----------------------------------------------------------------------------------------------+
-| 1. Login to your lab provided **Virtual Edition BIG-IP**                                     |
+| 6. Click on **SAML** tab in the bottom pane of the **SAML Tracer** window.  Here can be      |
 |                                                                                              |
-| 2. Begin by selecting: **Access** -> **Federation** -> **SAML Service Provider** ->          |
-|                                                                                              |
-|    **External IdP Connectors**.                                                              |
+|    found the relevant data for the SAML AuthnRequest. Good for troubleshooting.              |
 +----------------------------------------------------------------------------------------------+
 | |image045|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. In the **External IdP Connectors** screen, click the **downward arrow** next to the word  |
+| 7. Locate the second, **SAML** tagged log event. Note that this tagged log line is a         |
 |                                                                                              |
-|    **Create** on the **Create** button (right side)                                          |
+|    **POST** back to the Partner's SAML SP Assesrtion Consumer Service located at             |
 |                                                                                              |
-| 4. Select **From Metadata** from the drop down menu                                          |
+|    **https://sp.partner.com/saml/sp/profile/post/acs**.                                      |
+|                                                                                              |
+| **Note:** *The links used by both the IdP and SP were exchnaged when the XML metadata was    |
+|                                                                                              |
+| imported.                                                                                    |
+|                                                                                              |
+| 8. In the bottom pane of the **SAML Tracer** window on the **HTTP** tab, details about the   |
+|                                                                                              |
+|    SAML POST can be identified.                                                              |
 +----------------------------------------------------------------------------------------------+
 | |image046|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 5. In the **Create New SAML IdP Connector** dialogue box, use the **Browse** button to       |
+| 9. Click on **SAML** tab in the bottom pane of the **SAML Tracer** window.  Here can be      |
 |                                                                                              |
-|    select the **metadata.xml** from the desktop (created in Task 4).                         | 
-|                                                                                              |
-| 6. Name the **Identity Provider Name**: **OKTA\_SaaS-iDP**.                                  |
-|                                                                                              |
-| 7. Click **OK**.                                                                             |
+|    found the relevant data for the SAML Response. Good for troubleshooting.                  |
 +----------------------------------------------------------------------------------------------+
-| |image047|                                                                                   |
+| |image045|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 8: Change the SAML SP Binding
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. Begin by selecting: **Access** -> **Federation** -> **SAML Service Provider** ->          |
-|                                                                                              |
-|    **Local SP Services**                                                                     |
-|                                                                                              |
-| 2. Select the checkbox next to **app.f5demo.com** and click **Bind\\UnBind IdP Connectors**  |
-+----------------------------------------------------------------------------------------------+
-| |image048|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 3. Check the existing binding and click **Delete**.                                          |
-+----------------------------------------------------------------------------------------------+
-| |image049|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 4. Click **Add New Row** and use the following values                                        |
-|                                                                                              |
-|    -  **SAML IdP Connectors:** **/Common/OKTA\_SaaS-iDP**                                    |
-|                                                                                              |
-|    -  **Matching Source:** **%{session.server.landinguri}**                                  |
-|                                                                                              |
-|    -  **Matching Value:** /*                                                                 |
-|                                                                                              |
-| 5. Click **Update** then **OK**.                                                             |
-+----------------------------------------------------------------------------------------------+
-| |image050|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-TASK 9: Apply Access Policy Changes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. Click the **Apply Access Policy** link in the top left corner of the Admin GUI            |
-+----------------------------------------------------------------------------------------------+
-| |image051|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 2. Ensure **app.f5demo.com-policy** is checked and click **Apply**                           |
-+----------------------------------------------------------------------------------------------+
-| |image052|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-TASK 10 – Test Access to the app.f5demo.com application
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. Using your browser from the Jump Host click on the provided bookmark or navigate to:      |
-|                                                                                              |
-|    https://app.f5demo.com                                                                    |
-+----------------------------------------------------------------------------------------------+
-| |image053|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 2. Follow the necessary prompts as directed.                                                 |
-|                                                                                              |
-|    *Note: Those who enabled MFA access will be required to activate their second factor for* |
-|                                                                                              |
-|    *application access. Requires Task 3 & Task be completed.*                                                                     |
-+----------------------------------------------------------------------------------------------+
-| |image054|                                                                                   |
-| |image055|                                                                                   |
-| |image056|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-+----------------------------------------------------------------------------------------------+
-| 4. Did you successfully redirect to the OKTA SaaS IdP?                                       |
-|                                                                                              |
-| 5. Login to the iDP, were you successfully authenticated? Were you prompted for MFA          |
-|                                                                                              |
-|    if configured?                                                                            |
-|                                                                                              |
-| 6. After successful authentication, were you returned to the SAML SP?                        |
-|                                                                                              |
-| 7. Were you successfully authenticated (SAML)?                                               |
-|                                                                                              |
-| 8. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).             |
-|                                                                                              |
-| 9. Review your Access Report Logs (**Access Overview** -> **Access Reports**).               |
-+----------------------------------------------------------------------------------------------+
-| |image057|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 10. Destroy your Active Session by nagivating to **Access Overview** -> **Active Sessions**  |
-|                                                                                              |
-|     Select the checkbox next to your session and click the **Kill Selected Session** button. |
-+----------------------------------------------------------------------------------------------+
-| |image058|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 11. Close your browser and logon to your **https://dev-<Dev-ID>.oktapreview.com** account.   |
-|                                                                                              |
-|     Click on your **app.f5demo.com** application for IDP initiated Access.                   |
-|                                                                                              |
-| 12. After successful authentication, were you returned to the SAML SP?                       |
-|                                                                                              |
-| 13. Were you successfully authenticated (SAML)?                                              |
-|                                                                                              |
-| 14. Review your **Active Sessions** (**Access Overview** -> **Active Sessions**).            |
-|                                                                                              |
-| 15. Review your Access Report Logs (**Access Overview** -> **Access Reports**).              |
-+----------------------------------------------------------------------------------------------+
-| |image059|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-.. |image022| image:: media/image022.png
-   :width: 4.5in
-   :height: 2.32in
-.. |image023| image:: media/image023.png
-   :width: 4.5in
-   :height: 2.37in
-.. |image024| image:: media/image024.png
-   :width: 1.75in
-   :height: 2.75in
-.. |image025| image:: media/image025.png
-   :width: 2.5in
-   :height: 4.5in
-.. |image026| image:: media/image026.png
+.. |image001| image:: media/lab2-001.png
    :width: 4.5in
    :height: 0.74in
-.. |image027| image:: media/image027.png
+.. |image002| image:: media/lab2-002.png
    :width: 4.5in
-   :height: 1.03in
-.. |image028| image:: media/image028.png
-   :width: 4.5in
-   :height: 2.58in
-.. |image029| image:: media/image029.png
-   :width: 4.5in
-   :height: 2.56in
-.. |image030| image:: media/image030.png
-   :width: 4.5in
-   :height: 0.80in
-.. |image031| image:: media/image031.png
-   :width: 4.5in
-   :height: 1.66in
-.. |image032| image:: media/image032.png
-   :width: 4.5in
-   :height: 1.64in
-.. |image033| image:: media/image033.png
-   :width: 4.5in
-   :height: 2.64in
-.. |image034| image:: media/image034.png
-   :width: 4.5in
-   :height: 2.71in
-.. |image035| image:: media/image035.png
-   :width: 4.0in
-   :height: 3.75in
-.. |image036| image:: media/image036.png
-   :width: 4.5in
-   :height: 2.56in
-.. |image037| image:: media/image037.png
-   :width: 4.5in
-   :height: 3.40in
-.. |image038| image:: media/image038.png
-   :width: 4.5in
-   :height: 1.89in
-.. |image039| image:: media/image039.png
-   :width: 4.5in
-   :height: 1.72in
-.. |image040| image:: media/image040.png
-   :width: 4.5in
-   :height: 1.69in
-.. |image041| image:: media/image041.png
-   :width: 4.5in
-   :height: 1.73in
-.. |image042| image:: media/image042.png
-   :width: 4.5in
-   :height: 1.22in
-.. |image043| image:: media/image043.png
-   :width: 4.5in
-   :height: 1.68in
-.. |image044| image:: media/image044.png
-   :width: 2.5in
-   :height: 3.25in
-.. |image045| image:: media/image045.png
-   :width: 4.5in
-   :height: 2.30in
-.. |image046| image:: media/image046.png
-   :width: 4.5in
-   :height: 0.77in
-.. |image047| image:: media/image047.png
+   :height: 3.37in
+.. |image003| image:: media/lab2-003.png
    :width: 4.5in
    :height: 3.38in
-.. |image048| image:: media/image048.png
+.. |image004| image:: media/lab2-004.png
+   :width: 4.5in
+   :height: 0.73in
+.. |image005| image:: media/lab2-005.png
+   :width: 4.5in
+   :height: 3.37in
+.. |image006| image:: media/lab2-006.png
    :width: 4.5in
    :height: 1.15in
-.. |image049| image:: media/image049.png
+.. |image007| image:: media/lab2-007.png
    :width: 4.5in
-   :height: 2.04in
-.. |image050| image:: media/image050.png
+   :height: 2.28in
+.. |image008| image:: media/lab2-008.png
    :width: 4.5in
-   :height: 2.33in
-.. |image051| image:: media/image051.png
+   :height: 0.96in
+.. |image009| image:: media/lab2-009.png
    :width: 4.5in
-   :height: 1.10in
-.. |image052| image:: media/image052.png
+   :height: 1.69in
+.. |image010| image:: media/lab2-010.png
    :width: 4.5in
-   :height: 1.66in
-.. |image053| image:: media/image053.png
+   :height: 2.94in
+.. |image011| image:: media/lab2-011.png
    :width: 4.5in
-   :height: 1.03in
-.. |image054| image:: media/image054.png
-   :width: 2.0in
-   :height: 1.75in
-.. |image055| image:: media/image055.png
-   :width: 2.0in
-   :height: 1.75in
-.. |image056| image:: media/image056.png
-   :width: 2.0in
-   :height: 1.75in
-.. |image057| image:: media/image057.png
+   :height: 0.80in
+.. |image012| image:: media/lab2-012.png
    :width: 4.5in
-   :height: 3.03in
-.. |image058| image:: media/image058.png
+   :height: 1.12in
+.. |image013| image:: media/lab2-013.png
+   :width: 4.5in
+   :height: 4.00in
+.. |image014| image:: media/lab2-014.png
+   :width: 4.5in
+   :height: 1.48in
+.. |image015| image:: media/lab2-015.png
+   :width: 4.5in
+   :height: 1.12in
+.. |image016| image:: media/lab2-016.png
+   :width: 4.5in
+   :height: 1.54in
+.. |image017| image:: media/lab2-017.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image018| image:: media/lab2-018.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image019| image:: media/lab2-019.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image020| image:: media/lab2-020.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image021| image:: media/lab2-021.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image022| image:: media/lab2-022.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image023| image:: media/lab2-023.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image024| image:: media/lab2-024.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image025| image:: media/lab2-025.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image026| image:: media/lab2-026.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image027| image:: media/lab2-027.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image028| image:: media/lab2-028.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image029| image:: media/lab2-029.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image030| image:: media/lab2-030.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image031| image:: media/lab2-031.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image032| image:: media/lab2-032.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image033| image:: media/lab2-033.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image034| image:: media/lab2-034.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image035| image:: media/lab2-035.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image036| image:: media/lab2-036.png
+   :width: 4.5in
+   :height: 1.93in 
+.. |image037| image:: media/lab2-037.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image038| image:: media/lab2-038.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image039| image:: media/lab2-039.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image040| image:: media/lab2-040.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image041| image:: media/lab2-041.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image042| image:: media/lab2-042.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image043| image:: media/lab2-043.png
+   :width: 4.5in
+   :height: 1.68in
+.. |image044| image:: media/lab2-044.png
    :width: 2.5in
-   :height: 2.5in
-.. |image059| image:: media/image059.png
+   :height: 3.25in
+.. |image045| image:: media/lab2-045.png
    :width: 4.5in
-   :height: 1.08in
+   :height: 2.30in
+.. |image046| image:: media/lab2-046.png
+   :width: 4.5in
+   :height: 0.77in
+.. |image047| image:: media/lab2-047.png
+   :width: 4.5in
+   :height: 3.38in
 
