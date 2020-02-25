@@ -697,6 +697,3 @@ TASK 9: End of Lab3
 .. |image047| image:: media/lab3-047.png
    :width: 4.5in
    :height: 3.38in
-.. |image000| image:: media/image-000.png
-   :width: 4.5in
-   :height: 2.13in
