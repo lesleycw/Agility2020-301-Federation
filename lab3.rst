@@ -306,7 +306,7 @@ TASK 4: Create OAuth Provider
 |                                                                                              |
 | *Portal" and clicking "Azure Active Directory". The tenant ID is the "default directory"*    |
 |                                                                                              |
-| *The full name of the TenantID will be your "TenantID.onmicrosoft.com".                      |
+| *The full name of the TenantID will be your "TenantID.onmicrosoft.com".*                     |
 +----------------------------------------------------------------------------------------------+
 | |image012|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -314,7 +314,7 @@ TASK 4: Create OAuth Provider
 +----------------------------------------------------------------------------------------------+
 | 9. In the **OAuth Client/Resouce Server Provider** list the newly created provider should    |
 |                                                                                              |
-|    now be listed. **azure_AD_provider**.                                                     |
+|    now be listed **azure_AD_provider**.                                                      |
 +----------------------------------------------------------------------------------------------+
 | |image013|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -396,7 +396,7 @@ TASK 5: Setup F5 Per Session Policy (Access Policy)
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 6. In the ***OAuth\_Client** window enter the following values as shown:                     |
+| 6. In the **OAuth\_Client** window enter the following values as shown:                      |
 |                                                                                              |
 | -  **Server:** **/Common/azure\_AD\_server** (Select from dropdown)                          |
 |                                                                                              |
@@ -544,8 +544,11 @@ TASK 8: Review OAuth Reports
 | |image033|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
+TASK 9: End of Lab3
+~~~~~~~~~~~~~~~~~~~
+
 +----------------------------------------------------------------------------------------------+
-| 4. This concludes Lab3.                                                                      |
+| 1. This concludes Lab3, feel free to review and test the configuration.                      |
 +----------------------------------------------------------------------------------------------+
 | |image000|                                                                                   |
 +----------------------------------------------------------------------------------------------+
