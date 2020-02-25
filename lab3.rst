@@ -45,7 +45,7 @@ TASK 1: Create/Review New Application Registration
 |                                                                                              |
 |    navigation menu.                                                                          |
 +----------------------------------------------------------------------------------------------+
-| |image001|                                                                                   |
+| |image034|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -421,362 +421,276 @@ TASK 5: Setup F5 Per Session Policy (Access Policy)
 | |image020|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-YOU ARE HERE ....
-
 +----------------------------------------------------------------------------------------------+
-| 11. Click on the **Deny** link, in the **Select Binding**, select the **Allow** radio button |
+| 11. In the Visual Policy Editor window for the **azure_oauth** policy, click the             |
 |                                                                                              |
-|    and click **Save**.                                                                       |
-+----------------------------------------------------------------------------------------------+
-| |image124|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 12. Click on the **Apply Access Policy** link in the top left-hand corner.                   |
+|     **+ (Plus Symbol)** on the **Successful** branch following the **OAuth Client** action.  |
 |                                                                                              |
-| *Note: Additional actions can be taken in the Per Session policy (Access Policy). The lab*   |
+| 12. In the resulting pop-up window, click the **Assignment** tab and then click the radio    |
 |                                                                                              |
-| *is simply completing authorization. Other access controls can be implemented based*         |
+|     button for **Variable Assign**.                                                          |
 |                                                                                              |
-| *on the use case.*                                                                           |
+| 13. Scroll to the bottom of the window and click **Add Item**.                               |
 +----------------------------------------------------------------------------------------------+
-| |image125|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-TASK 6: Associate Access Policy to Virtual Server 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. Navigate to **Local Traffic** -> **Virtual Servers** -> **Virtual Server List** and       |
-|                                                                                              |
-|    click on the **app.f5demo.com** Virtual Server link                                       |
-|                                                                                              |
-| 2. Scroll to the **Access Policy** section.                                                  |
-+----------------------------------------------------------------------------------------------+
-| |image126|                                                                                   |
+| |image021|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Use the **Access Profile** drop down to change the **Access Profile** to                  |
-|                                                                                              |
-|    **AzureAD\_OAuth**.                                                                       |
-|                                                                                              |
-| 4. Use the **Per-Request Policy** drop down to change the **Per-Request Policy** to          |
-|                                                                                              |
-|    **AzureAD\_oauth\_policy**.                                                               |
-|                                                                                              |
-| 5. Scroll to the bottom of the **Virtual Server** configuration and click **Update**.        |
+| 14. In the **Variable Assign** window click the **Add new entry** button.                    |
 +----------------------------------------------------------------------------------------------+
-| |image127|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-TASK 7: Test app.f5demo.com
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. Navigate in your provided browser to **https://app.f5demo.com**                           |
-+----------------------------------------------------------------------------------------------+
-| |image128|                                                                                   |
+| |image022|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. Authenticate with the following AzureAD account:                                          |
+| 15. In the resulting window click the, input **session.logon.last.username** into the left   |
 |                                                                                              |
-| -  **Username:** **demouser@f5agilitydemogmail.onmicrosoft.com**                             |
+|     pane.                                                                                    |
 |                                                                                              |
-| -  **Password:** **f5d3m0u$3r**                                                              |
+| 16. For the right pane, use the top dropdown to select **Session Variable**.                 |
+|                                                                                              |
+| 17. In the **Session Variable** field presented input the following variable value:          |
+|                                                                                              |
+|     **session.oauth.client.last.id_token.upn**.                                              |
+|                                                                                              |
+| 18. Click the **Finished** button.                                                           |
 +----------------------------------------------------------------------------------------------+
-| |image129|                                                                                   |
+| |image023|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 3. Did you successfully redirect to the AzureAD?                                             |
-|                                                                                              |
-| 4. After successful authentication, were you returned to the app.f5demo.com?                 |
-|                                                                                              |
-| 5. Did you successfully pass your OAuth Token?                                               |
+| 19. In the resulting window, review the Assignment expression and click the **Save** button. |
 +----------------------------------------------------------------------------------------------+
-| |image130|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-TASK 8: Per Request Policy Controls
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Refer to the instructions and screen shots below:
-
-+----------------------------------------------------------------------------------------------+
-| 1. As in the prior lab, you can experiment with Per Request Policy controls. In the          |
-|                                                                                              |
-| application page for **https://app.f5demo.com** click the **Admin Link** shown.              |
-+----------------------------------------------------------------------------------------------+
-| |image131|                                                                                   |
+| |image024|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. You will receive an **Access to this page is blocked** (customizable) message with a      |
-|                                                                                              |
-|    reference. You have been blocked because you do not have access on a per request basis.   |
-|                                                                                              |
-| 3. Press the **Back** button in your browser to return to **https://app.f5demo.com**.        |
+| 20. Click on the **Apply Access Policy** link in the top left-hand corner.                   |
 +----------------------------------------------------------------------------------------------+
-| |image132|                                                                                   |
+| |image025|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 6: Testing the OAuth Configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Open Firefox from the Jumphost desktop and click on the **app.acme.com** link in the      |
+|                                                                                              |
+|    bookmark toolbar.                                                                         |
++----------------------------------------------------------------------------------------------+
+| |image026|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. Navigate to **Local Traffic** -> **iRules** -> **Datagroup List** and click on the        |
+| 2. Once redeirected to **https://login.microsoftonline.com** sign in with                    |
 |                                                                                              |
-|    **Allowed\_Users** datagroup.                                                             |
-|                                                                                              |
-| 5. Enter your **demouser@f5agilitydemogmail.onmicrosoft.com** used for this lab as the       |
-|                                                                                              |
-|    **String** value.                                                                         |
-|                                                                                              |
-| 6. Click **Add** then Click **Update**.                                                      |
-|                                                                                              |
-| *Note: We are using a DataGroup control to minimize lab resources and steps. AD or LDAP      |
-|                                                                                              |
-| *Group memberships, Session variables, other user attributes and various other access*       |
-|                                                                                              |
-| *control mechanisms can be used to achieve similar results.*                                 |
+|    **demouser@f5agilitydemogmail.onmicrosoft.com**, and then click **Next                    |
 +----------------------------------------------------------------------------------------------+
-| |image133|                                                                                   |
+| |image027|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 7. You should now be able to successfully to access the Admin Functions by clicking on the   |
-|                                                                                              |
-|    Admin Link.                                                                               |
-|                                                                                              |
-| *Note: Per Request Policies are dynamic and do not require the same “Apply Policy” action*   |
-|                                                                                              |
-| *as Per Session Policies*.                                                                   |
+| 3. In the updated browser window, input **F5!2020!** and click **Sign in**.                  |
 +----------------------------------------------------------------------------------------------+
-| |image134|                                                                                   |
+| |image028|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 8. To review the Per Request Policy, navigate to ***Access** -> **Profiles/Policies** ->     |
+| 4. In the updated browser window, check the checkbox for **Don't show this again** and click |
 |                                                                                              |
-|    **Per Request Policies** and click on the Edit link for the **AzureAD\_oauth\_policy**.   |
+|    the **Yes** button.                                                                       |
 +----------------------------------------------------------------------------------------------+
-| |image135|                                                                                   |
-+----------------------------------------------------------------------------------------------+
- 
-+----------------------------------------------------------------------------------------------+
-| 9. The various Per-Request-Policy actions can be reviewed.                                   |
-|                                                                                              |
-| *Note: Other actions like Step-Up Auth controls can be performed in a Per-Request Policy*    |
-+----------------------------------------------------------------------------------------------+
-| |image136|                                                                                   |
+| |image029|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-TASK 9: Review OAuth Results 
++----------------------------------------------------------------------------------------------+
+| 5. The browser window should now update, and return successfully the application portal for  |
+|                                                                                              |
+|    **https://app.acme.com**.                                                                 |
++----------------------------------------------------------------------------------------------+
+| |image030|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 7: Review OAuth Session 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Refer to the instructions and screen shots below:
-
 +----------------------------------------------------------------------------------------------+
-| 1. Review your Active Sessions (**Access** -> **Overview** -> **Active Sessions**).          |
+| 1. Navigate to **Access -> Overview -> Active Sessions** on **bigip1**                       |
 |                                                                                              |
-| 2. You can review Session activity or session variable from this window or kill the          |
+| 2. Click on the **View** link for the currently active session row.                          |
 |                                                                                              |
-|    selected Session.                                                                         |
+| **Note:** *If mutiple sessions are present, delete all sessions and restart testing.*        |
 +----------------------------------------------------------------------------------------------+
-| |image137|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 3. Review your Access Report Logs (**Access** -> **Overview** -> **Access Reports**).        | 
-+----------------------------------------------------------------------------------------------+
-| |image138|                                                                                   |
+| |image031|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. In the **Report Parameters window** click **Run Report**.                                 |
-+----------------------------------------------------------------------------------------------+
-| |image139|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 5. Look at the **SessionID** report by clicking the **Session ID** Link.                     |
-+----------------------------------------------------------------------------------------------+
-| |image140|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| 6. Look at the **Session Variables** report by clicking the **View Session Variables** link. |
+| 3. In the resulting **Session Variable** window, review all the vailable **oauth.client**    |
 |                                                                                              |
-|    Pay attention to the OAuth Variables.                                                     |
-|                                                                                              |
-| *Note: Any of these session variables can be used to perform further actions to improve*     |
-|                                                                                              |
-| *security or constrain access with logic in the Per-Session or Per Request VPE policies*     |
-|                                                                                              |
-| *or iRules/iRulesLX.*                                                                        |
+|    variables resulting from the access just performed.                                       |
 +----------------------------------------------------------------------------------------------+
-| |image141|                                                                                   |
+| |image032|                                                                                   |
++----------------------------------------------------------------------------------------------+
+
+TASK 8: Review OAuth Reports 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++----------------------------------------------------------------------------------------------+
+| 1. Navigate to **Access -> Overview -> OAuth Reports -> Client/Resource Server** on          |
+|                                                                                              |
+|    **bigip1**.                                                                               |
+|                                                                                              |
+| 2. Review and hover over the available reports.                                              |
++----------------------------------------------------------------------------------------------+
+| |image033|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 7. Review your Access Report Logs (**Access** -> **Overview** -> **OAuth Reports** ->        |  
-|                                                                                              |
-|    **Client/Resource Server**).                                                              |
+| 4. This concludes Lab3.                                                                      |
 +----------------------------------------------------------------------------------------------+
-| |image142|                                                                                   |
+| |image000|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
-
-.. |image97| image:: media/image99.png
-   :width: 3.62160in
-   :height: 1.84971in
-.. |image98| image:: media/image100.png
-   :width: 3.60694in
-   :height: 2.16776in
-.. |image99| image:: media/image101.png
-   :width: 3.53540in
-   :height: 2.21472in
-.. |image100| image:: media/image102.png
-   :width: 3.57743in
-   :height: 1.86503in
-.. |image101| image:: media/image103.png
-   :width: 3.51729in
-   :height: 1.82209in
-.. |image102| image:: media/image104.png
-   :width: 3.50084in
-   :height: 1.84049in
-.. |image103| image:: media/image105.png
-   :width: 3.46012in
-   :height: 2.15172in
-.. |image104| image:: media/image106.png
-   :width: 3.44880in
-   :height: 1.32496in
-.. |image105| image:: media/image107.png
-   :width: 3.48404in
-   :height: 1.95989in
-.. |image106| image:: media/image108.png
-   :width: 3.42975in
-   :height: 1.95950in
-.. |image107| image:: media/image109.png
-   :width: 3.40893in
-   :height: 1.22224in
-.. |image108| image:: media/image110.png
-   :width: 3.34969in
-   :height: 1.17463in
-.. |image109| image:: media/image111.png
-   :width: 3.10354in
-   :height: 1.37929in
-.. |image110| image:: media/image112.png
-   :width: 3.21285in
-   :height: 2.38037in
-.. |image111| image:: media/image113.png
-   :width: 3.49868in
-   :height: 1.73941in
-.. |image112| image:: media/image114.png
-   :width: 3.57223in
-   :height: 0.49387in
-.. |image113| image:: media/image115.png
-   :width: 3.51822in
-   :height: 4.58896in
-.. |image114| image:: media/image116.png
-   :width: 3.50920in
-   :height: 1.09553in
-.. |image115| image:: media/image117.png
-   :width: 3.48005in
-   :height: 4.92024in
-.. |image116| image:: media/image118.png
-   :width: 3.39641in
-   :height: 2.21472in
-.. |image117| image:: media/image119.png
-   :width: 3.58282in
-   :height: 0.63933in
-.. |image118| image:: media/image120.png
-   :width: 3.52761in
-   :height: 3.06445in
-.. |image119| image:: media/image77.png
-   :width: 3.74792in
-   :height: 0.49354in
-.. |image120| image:: media/image121.png
-   :width: 3.52888in
-   :height: 2.83435in
-.. |image121| image:: media/image122.png
-   :width: 3.52578in
-   :height: 0.74560in
-.. |image122| image:: media/image123.png
-   :width: 3.50738in
-   :height: 1.47828in
-.. |image123| image:: media/image124.png
-   :width: 3.56442in
-   :height: 1.69631in
-.. |image124| image:: media/image125.png
-   :width: 3.46736in
-   :height: 1.11639in
-.. |image125| image:: media/image126.png
-   :width: 3.55208in
-   :height: 1.27646in
-.. |image126| image:: media/image84.png
-   :width: 3.50234in
-   :height: 2.68712in
-.. |image127| image:: media/image127.png
-   :width: 3.54283in
-   :height: 0.94203in
-.. |image128| image:: media/image86.png
-   :width: 3.57570in
-   :height: 0.25694in
-.. |image129| image:: media/image128.jpeg
-   :width: 3.53525in
-   :height: 1.87225in
-.. |image130| image:: media/image129.png
-   :width: 2.93452in
-   :height: 2.37741in
-.. |image131| image:: media/image130.png
-   :width: 2.82477in
-   :height: 2.26623in
-.. |image132| image:: media/image90.png
-   :width: 2.80941in
-   :height: 1.35399in
-.. |image133| image:: media/image91.png
-   :width: 3.15971in
-   :height: 2.33461in
-.. |image134| image:: media/image92.png
-   :width: 3.40586in
-   :height: 1.10658in
-.. |image135| image:: media/image131.png
-   :width: 3.47790in
-   :height: 1.47860in
-.. |image136| image:: media/image132.png
-   :width: 3.44664in
-   :height: 0.99351in
-.. |image137| image:: media/image133.png
-   :width: 3.08095in
-   :height: 1.31035in
-.. |image138| image:: media/image134.png
-   :width: 2.18483in
-   :height: 1.62069in
-.. |image139| image:: media/image135.png
-   :width: 1.99074in
-   :height: 0.45516in
-.. |image140| image:: media/image136.png
-   :width: 1.98052in
-   :height: 0.89862in
-.. |image141| image:: media/image137.png
-   :width: 2.64361in
-   :height: 2.43384in
-.. |image142| image:: media/image138.png
-   :width: 3.56993in
-   :height: 1.64660in
-.. |image143| image:: media/image139.png
-   :width: 2.84352in
-   :height: 1.33129in
-.. |image144| image:: media/image140.png
-   :width: 1.65644in
-   :height: 1.35621in
-.. |image145| image:: media/image141.png
-   :width: 1.53374in
-   :height: 1.34629in
-.. |image146| image:: media/image142.png
-   :width: 1.55828in
-   :height: 1.56560in
+.. |image001| image:: media/lab3-001.png
+   :width: 4.5in
+   :height: 0.74in
+.. |image002| image:: media/lab3-002.png
+   :width: 4.5in
+   :height: 3.37in
+.. |image003| image:: media/lab3-003.png
+   :width: 4.5in
+   :height: 3.38in
+.. |image004| image:: media/lab3-004.png
+   :width: 4.5in
+   :height: 0.73in
+.. |image005| image:: media/lab3-005.png
+   :width: 4.5in
+   :height: 3.37in
+.. |image006| image:: media/lab3-006.png
+   :width: 4.5in
+   :height: 1.15in
+.. |image007| image:: media/lab3-007.png
+   :width: 4.5in
+   :height: 2.28in
+.. |image008| image:: media/lab3-008.png
+   :width: 4.5in
+   :height: 0.96in
+.. |image009| image:: media/lab3-009.png
+   :width: 4.5in
+   :height: 1.69in
+.. |image010| image:: media/lab3-010.png
+   :width: 4.5in
+   :height: 2.94in
+.. |image011| image:: media/lab3-011.png
+   :width: 4.5in
+   :height: 0.80in
+.. |image012| image:: media/lab3-012.png
+   :width: 4.5in
+   :height: 1.12in
+.. |image013| image:: media/lab3-013.png
+   :width: 4.5in
+   :height: 4.00in
+.. |image014| image:: media/lab3-014.png
+   :width: 4.5in
+   :height: 1.48in
+.. |image015| image:: media/lab3-015.png
+   :width: 4.5in
+   :height: 1.12in
+.. |image016| image:: media/lab3-016.png
+   :width: 4.5in
+   :height: 1.54in
+.. |image017| image:: media/lab3-017.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image018| image:: media/lab3-018.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image019| image:: media/lab3-019.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image020| image:: media/lab3-020.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image021| image:: media/lab3-021.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image022| image:: media/lab3-022.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image023| image:: media/lab3-023.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image024| image:: media/lab3-024.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image025| image:: media/lab3-025.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image026| image:: media/lab3-026.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image027| image:: media/lab3-027.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image028| image:: media/lab3-028.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image029| image:: media/lab3-029.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image030| image:: media/lab3-030.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image031| image:: media/lab3-031.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image032| image:: media/lab3-032.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image033| image:: media/lab3-033.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image034| image:: media/lab3-034.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image035| image:: media/lab3-035.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image036| image:: media/lab3-036.png
+   :width: 4.5in
+   :height: 1.93in 
+.. |image037| image:: media/lab3-037.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image038| image:: media/lab3-038.png
+   :width: 4.5in
+   :height: 5.46in
+.. |image039| image:: media/lab3-039.png
+   :width: 4.5in
+   :height: 2.13in
+.. |image040| image:: media/lab3-040.png
+   :width: 4.5in
+   :height: 1.01in
+.. |image041| image:: media/lab3-041.png
+   :width: 4.5in
+   :height: 1.93in
+.. |image042| image:: media/lab3-042.png
+   :width: 4.5in
+   :height: 1.29in
+.. |image043| image:: media/lab3-043.png
+   :width: 4.5in
+   :height: 1.68in
+.. |image044| image:: media/lab3-044.png
+   :width: 2.5in
+   :height: 3.25in
+.. |image045| image:: media/lab3-045.png
+   :width: 4.5in
+   :height: 2.30in
+.. |image046| image:: media/lab3-046.png
+   :width: 4.5in
+   :height: 0.77in
+.. |image047| image:: media/lab3-047.png
+   :width: 4.5in
+   :height: 3.38in
+.. |image000| image:: media/image-000.png
+   :width: 4.5in
+   :height: 2.13in
