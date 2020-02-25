@@ -39,7 +39,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 1. Log into the Microsoft Azure Dashboard and click  **Azure Active Directory** in the left  |
 |                                                                                              |
@@ -49,7 +49,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 2. Click on **App Registration** on the resulting menu and then **New Registration** in the  |
 |                                                                                              |
@@ -59,7 +59,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 3. In the pop-up window for **Register an application**, enter the following values          | 
 |                                                                                              |
@@ -75,7 +75,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 5. In the resulting **app.acme.com** Registered App window, note & copy the **Application**  |
 |                                                                                              |
@@ -85,7 +85,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 6. Click **Certificates & Secrets** in the left navigation window and then click **New**     |
 |                                                                                              |
@@ -95,7 +95,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 7. In the **Add a client secret** pop-up window, enter the following values                  |
 |                                                                                              |
@@ -109,7 +109,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 9. In the resulting window, note and copy the **Client Secret** in the **Client secrets**    |
 |                                                                                              |
@@ -119,7 +119,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 10. In the left navigation menu select **API permissions**. In the updated panel note the    |
 |                                                                                              |
@@ -129,7 +129,7 @@ TASK 1: Create/Review New Application Registration
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| **[REVIEW]** *This is provided for review purposes only as the was pre-built for the lab*.   |
+| **[REVIEW ONLY]**                                                                            |
 |                                                                                              |
 | 11. In the left navigation window, click **Manifest**.                                       |
 |                                                                                              |
