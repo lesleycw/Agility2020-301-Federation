@@ -1,7 +1,7 @@
 Conclusion
 ==========
 
-Thank you for your participation in the 330 Access Policy Manager (APM)
+Thank you for your participation in the 301 Access Policy Manager (APM)
 Federation Lab. This Lab Guide has highlighted several notable features
 of SAML Federation. It does not attempt to review all F5 APM Federation
 features and configurations but serves as an introduction to allow the
@@ -130,9 +130,6 @@ this lab guide and other APM tasks.
       -  https://duo.com/docs/f5bigip
 
       -  https://duo.com/docs/f5bigip-alt
-
-   -  **SafeNet MobilePass:**
-      http://www.safenet-inc.com/resources/integration-guide/data-protection/SafeNet_Authentication_Service/SafeNet_Authentication_Service__RADIUS_Authentication_on_F5_BIG-IP_APM_Integration_Guide
 
    -  **Google Authenticator:**
       https://devcentral.f5.com/articles/two-factor-authentication-with-google-authenticator-and-apm

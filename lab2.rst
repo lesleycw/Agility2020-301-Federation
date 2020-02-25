@@ -533,6 +533,9 @@ TASK 4: End of Lab2
 | |image000|                                                                                   |
 +----------------------------------------------------------------------------------------------+
 
+.. |image000| image:: media/image001.png
+   :width: 4.5in
+   :height: 3.37in
 .. |image001| image:: media/lab2-001.png
    :width: 4.5in
    :height: 0.74in
@@ -674,6 +677,4 @@ TASK 4: End of Lab2
 .. |image047| image:: media/lab2-047.png
    :width: 4.5in
    :height: 3.38in
-.. |image000| image:: media/image-000.png
-   :width: 4.5in
-   :height: 2.13in
+
