@@ -554,146 +554,100 @@ TASK 9: End of Lab3
 +----------------------------------------------------------------------------------------------+
 
 .. |image000| image:: media/image001.png
-   :width: 4.5in
-   :height: 3.37in
+   :width: 800px
 .. |image001| image:: media/lab3-001.png
-   :width: 4.5in
-   :height: 0.74in
+   :width: 800px
 .. |image002| image:: media/lab3-002.png
-   :width: 4.5in
-   :height: 3.37in
+   :width: 800px
 .. |image003| image:: media/lab3-003.png
-   :width: 4.5in
-   :height: 3.38in
+   :width: 800px
 .. |image004| image:: media/lab3-004.png
-   :width: 4.5in
-   :height: 0.73in
+   :width: 800px
 .. |image005| image:: media/lab3-005.png
-   :width: 4.5in
-   :height: 3.37in
+   :width: 800px
 .. |image006| image:: media/lab3-006.png
-   :width: 4.5in
-   :height: 1.15in
+   :width: 800px
 .. |image007| image:: media/lab3-007.png
-   :width: 4.5in
-   :height: 2.28in
+   :width: 800px
 .. |image008| image:: media/lab3-008.png
-   :width: 4.5in
-   :height: 0.96in
+   :width: 800px
 .. |image009| image:: media/lab3-009.png
-   :width: 4.5in
-   :height: 1.69in
+   :width: 800px
 .. |image010| image:: media/lab3-010.png
-   :width: 4.5in
-   :height: 2.94in
+   :width: 800px
 .. |image011| image:: media/lab3-011.png
-   :width: 4.5in
-   :height: 0.80in
+   :width: 800px
 .. |image012| image:: media/lab3-012.png
-   :width: 4.5in
-   :height: 1.12in
+   :width: 800px
 .. |image013| image:: media/lab3-013.png
-   :width: 4.5in
-   :height: 4.00in
+   :width: 800px
 .. |image014| image:: media/lab3-014.png
-   :width: 4.5in
-   :height: 1.48in
+   :width: 800px
 .. |image015| image:: media/lab3-015.png
-   :width: 4.5in
-   :height: 1.12in
+   :width: 800px
 .. |image016| image:: media/lab3-016.png
-   :width: 4.5in
-   :height: 1.54in
+   :width: 800px
 .. |image017| image:: media/lab3-017.png
-   :width: 4.5in
-   :height: 1.29in
+   :width: 800px
 .. |image018| image:: media/lab3-018.png
-   :width: 4.5in
-   :height: 5.46in
+   :width: 800px
 .. |image019| image:: media/lab3-019.png
-   :width: 4.5in
-   :height: 2.13in
+   :width: 800px
 .. |image020| image:: media/lab3-020.png
-   :width: 4.5in
-   :height: 1.01in
+   :width: 800px
 .. |image021| image:: media/lab3-021.png
-   :width: 4.5in
-   :height: 1.93in
+   :width: 800px
 .. |image022| image:: media/lab3-022.png
-   :width: 4.5in
-   :height: 1.29in
+   :width: 800px
 .. |image023| image:: media/lab3-023.png
-   :width: 4.5in
-   :height: 5.46in
+   :width: 800px
 .. |image024| image:: media/lab3-024.png
-   :width: 4.5in
-   :height: 2.13in
+   :width: 800px
 .. |image025| image:: media/lab3-025.png
-   :width: 4.5in
-   :height: 1.01in
+   :width: 800px
 .. |image026| image:: media/lab3-026.png
-   :width: 4.5in
-   :height: 1.93in
+   :width: 800px
 .. |image027| image:: media/lab3-027.png
-   :width: 4.5in
-   :height: 1.29in
+   :width: 800px
 .. |image028| image:: media/lab3-028.png
-   :width: 4.5in
-   :height: 5.46in
+   :width: 800px
 .. |image029| image:: media/lab3-029.png
-   :width: 4.5in
-   :height: 2.13in
+   :width: 800px
 .. |image030| image:: media/lab3-030.png
-   :width: 4.5in
-   :height: 1.01in
+   :width: 800px
 .. |image031| image:: media/lab3-031.png
-   :width: 4.5in
-   :height: 1.93in
+   :width: 800px
 .. |image032| image:: media/lab3-032.png
-   :width: 4.5in
-   :height: 1.29in
+   :width: 800px
 .. |image033| image:: media/lab3-033.png
-   :width: 4.5in
-   :height: 5.46in
+   :width: 800px
 .. |image034| image:: media/lab3-034.png
-   :width: 4.5in
-   :height: 2.13in
+   :width: 800px
 .. |image035| image:: media/lab3-035.png
-   :width: 4.5in
-   :height: 1.01in
+   :width: 800px
 .. |image036| image:: media/lab3-036.png
-   :width: 4.5in
-   :height: 1.93in 
+   :width: 800px
 .. |image037| image:: media/lab3-037.png
-   :width: 4.5in
-   :height: 1.29in
+   :width: 800px
 .. |image038| image:: media/lab3-038.png
-   :width: 4.5in
-   :height: 5.46in
+   :width: 800px
 .. |image039| image:: media/lab3-039.png
-   :width: 4.5in
-   :height: 2.13in
+   :width: 800px
 .. |image040| image:: media/lab3-040.png
-   :width: 4.5in
-   :height: 1.01in
+   :width: 800px
 .. |image041| image:: media/lab3-041.png
-   :width: 4.5in
-   :height: 1.93in
+   :width: 800px
 .. |image042| image:: media/lab3-042.png
-   :width: 4.5in
-   :height: 1.29in
+   :width: 800px
 .. |image043| image:: media/lab3-043.png
-   :width: 4.5in
-   :height: 1.68in
+   :width: 800px
 .. |image044| image:: media/lab3-044.png
-   :width: 2.5in
-   :height: 3.25in
+   :width: 800px
 .. |image045| image:: media/lab3-045.png
-   :width: 4.5in
-   :height: 2.30in
+   :width: 800px
 .. |image046| image:: media/lab3-046.png
-   :width: 4.5in
-   :height: 0.77in
+   :width: 800px
 .. |image047| image:: media/lab3-047.png
-   :width: 4.5in
-   :height: 3.38in
+   :width: 800px
+
+

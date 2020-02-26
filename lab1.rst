@@ -36,15 +36,13 @@ TASK 1: Configure a SAML Identity Provider (IdP) via AGC
 +----------------------------------------------------------------------------------------------+
 | 1. Login to your lab provided **Virtual Edition BIG-IP**  by clicking **bigip1** in the      |
 |                                                                                              |
-|    shortcut toolbar.                                                                         |
+|    shortcut toolbar from the Jumphost.                                                       |
+|                                                                                              |
+| **Note:** *Many of the lab tasks will need to be run from the Jumphost. This is to support*  |
+|                                                                                              |
+| *file imports and various other tasks.)*                                                     |
 +----------------------------------------------------------------------------------------------+
 | |image001|                                                                                   |
-+----------------------------------------------------------------------------------------------+
-
-+----------------------------------------------------------------------------------------------+
-| **Note:** *Many of the lab tasks will be required to be run from the jumphost. (To support*  |
-|                                                                                              |
-| *file imports and varisou other tasks.)*                                                     |
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
@@ -409,7 +407,7 @@ TASK 4: Configure External IdP Connector
 |                                                                                              |
 |    file **idp_partner_com_metadata.xml**.                                                    |
 |                                                                                              |
-| 4. In the **Name** field, input **idp.partner.com**                                          |
+| 3. In the **Name** field, input **idp.partner.com**                                          |
 |                                                                                              |
 | 4. Click **Save & Next**.                                                                    |
 +----------------------------------------------------------------------------------------------+
