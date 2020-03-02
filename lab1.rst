@@ -1,7 +1,7 @@
 Lab 1: SAML Access Guided Configuration (AGC) Lab
 =================================================
 
-The purpose of this lab is to configure and test a SAML Federation Services.
+The purpose of this lab is to configure and test SAML Federation Services.
 This lab will be configured in two parts.  
 
 In Part 1, Students will leverage Access Guided Configuration (AGC) to 
@@ -36,11 +36,11 @@ TASK 1: Configure a SAML Identity Provider (IdP) via AGC
 +----------------------------------------------------------------------------------------------+
 | 1. Login to your lab provided **Virtual Edition BIG-IP**  by clicking **bigip1** in the      |
 |                                                                                              |
-|    shortcut toolbar from the Jumphost.                                                       |
+|    shortcut toolbar from the Jumphost.  Username: **admin**, Password: **admin**.            |
 |                                                                                              |
-| **Note:** *Many of the lab tasks will need to be run from the Jumphost. This is to support*  |
+| **Note:** *Many of the lab steps will need to be run from the Jumphost. This is to support*  |
 |                                                                                              |
-| *file imports and various other tasks.)*                                                     |
+| *file imports and various other tasks.*                                                      |
 +----------------------------------------------------------------------------------------------+
 | |image001|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -118,7 +118,7 @@ TASK 3: Configure the Virtual Server
 |                                                                                              |
 | 2. In the **Client SSL Profile** section, use the arrows to move only the                    |
 |                                                                                              |
-|    **wilcard.acme.com** profile to the right-hand column as shown.                           |
+|    **wildcard.acme.com** profile to the right-hand column as shown.                          |
 |                                                                                              |
 | 3. Click **Save & Next**.                                                                    |
 +----------------------------------------------------------------------------------------------+
@@ -137,13 +137,15 @@ TASK 4: Configure Authentication
 |                                                                                              |
 | 2. **Check** the **Active Directory Query Properties** checkbox.                             |
 |                                                                                              |
-| 3. Input **%{session.logon.last.username}** in **Search Filter** field.                      |
+| 3. Input **%{session.logon.last.username}** in **Search Filter** field. Your cursor will be  |
+|                                                                                              |
+|    next to the existing **sAMAccountName=**.                                                 |
 |                                                                                              |
 | 4. In the **Required Attributes** section, use the arrows to move only the                   |
 |                                                                                              |
 |    **memberOf** attribute to the right-hand column as shown.                                 |
 |                                                                                              |
-| 5. Click **Save & Next**.                                                                    |
+| 5. Scroll to the bottom of the window and click **Save & Next**.                             |
 +----------------------------------------------------------------------------------------------+
 | |image009|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -152,7 +154,7 @@ TASK 5: Configure MFA
 ~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Click **Save & Next**.                                                                    |
+| 1. In the Multi Factor Authentication winodw, click **Save & Next**.                         |
 |                                                                                              |
 | **Note:** *Multiple MFA options can be easily integrated with TMOS.*                         |
 +----------------------------------------------------------------------------------------------+
@@ -163,9 +165,9 @@ TASK 6: Configure Applications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. In the **Application Properties** section, use the dropdown to select **Metadata** for    |
+| 1. In the **Application Properties** section, use the **Select method to configure your**    |
 |                                                                                              |
-|    **Select method to configure your application**.                                          |
+|    **application** dropdown to choose **Metadata**.                                          |
 |                                                                                              |
 | **Note:** *Multiple applications are available to be configured with more continually added* |
 +----------------------------------------------------------------------------------------------+
@@ -173,15 +175,15 @@ TASK 6: Configure Applications
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. In the **Application Properties** section, click the **Choose File** button,  browse the  |
+| 2. In the updated **Application Properties** window, click the **Choose File** button, browse|
 |                                                                                              |
-|    **Jumphost** desktop and select the **sp_partner_com_metadata.xml** file.                 |
+|    the **Jumphost** desktop and select the **sp_partner_com_metadata.xml** file.             |
 |                                                                                              |
 | 3. For the **Application Name**, input **sp.partner.com**                                    |
 |                                                                                              |
 | 4. For the **Webtop Caption**, make sure the value is **sp.partner.com**                     |
 |                                                                                              |
-| 5. Click **Save & Next**.                                                                    |
+| 5. Scroll to the bottom of the window and click **Save**.                                    |
 +----------------------------------------------------------------------------------------------+
 | |image012|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -196,7 +198,7 @@ TASK 7: Configure Endpoint Checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Click **Save & Next**.                                                                    |
+| 1. In the **Endpoints Checks Properties** window, click **Save & Next**.                     |
 |                                                                                              |
 | **Note:** *Endpoints checks can also be configured to protect application access.  The*      |
 |                                                                                              |
@@ -223,11 +225,11 @@ TASK 9: Configure Logon Protection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Click **Save & Next**.                                                                    |
+| 1. In the **Logon Protection Properties** window, click **Save & Next**.                                                                    |
 |                                                                                              |
 | **Note:** *Logon Page Protection enables Datasafe to further protect logon pages and*        |
 |                                                                                              |
-| *protect against malicious in-browser attacks*.                                              |
+| *defend against malicious in-browser attacks*.                                               |
 +----------------------------------------------------------------------------------------------+
 | |image016|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -236,9 +238,9 @@ TASK 10: Configure Session Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Review the Session Managment settings, then scroll to the bottom of the window and click  |
+| 1. Review the Session Managment settings, in the **Timeout Settings** section then scroll to |
 |                                                                                              |
-|    **Save & Next**.                                                                          |
+|    the bottom of the window and click **Save & Next**.                                       |
 +----------------------------------------------------------------------------------------------+
 | |image017|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -253,7 +255,7 @@ TASK 11: Review the Summary and Deploy
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 2. The application is now deployed click **Finish**.                                         |
+| 2. Once the application is deployed, scroll to the bottom and click **Finish**.              |
 +----------------------------------------------------------------------------------------------+
 | |image019|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -274,7 +276,7 @@ TASK: 12: Testing the SAML Identity Provider (IdP)
 |                                                                                              |
 | toolbar.                                                                                     |
 |                                                                                              |
-| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
+| **Note:** *If you have issues, open Firefox in a New Private Window (Incognito/Safe Mode)*   |
 +----------------------------------------------------------------------------------------------+
 | |image021|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -296,9 +298,9 @@ TASK: 12: Testing the SAML Identity Provider (IdP)
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| 4. The **Partner Application** will now open if successfully configured.  Navigate back to   |
+| 4. The **Partner Application** will now open if successfully configured.  Close the Partner  |
 |                                                                                              |
-|    **F5 Dynamic Webtop** tab and click logout.                                               |
+|    Application window, navigate to the **F5 Dynamic Webtop** tab/window and click **Logout**.|                                               |
 +----------------------------------------------------------------------------------------------+
 | |image024|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -330,7 +332,7 @@ TASK 1: Configure a SAML Service Provider (SP) via AGC
 +----------------------------------------------------------------------------------------------+
 
 +----------------------------------------------------------------------------------------------+
-| 4. In the resulting **SAML Service Provider** window, review the **{SP-Initiated) flow**     |
+| 4. In the resulting **SAML Service Provider** window, review the **{SP-Initiated)** flow     |
 |                                                                                              |
 |    and then click the **right arrow**.                                                       |
 +----------------------------------------------------------------------------------------------+
@@ -361,13 +363,17 @@ TASK 2: Configure the Service Provider
 |                                                                                              |
 |    * In the **Entity ID** field input **https://agc-sp.acme.com**.                           |
 |                                                                                              |
-| 2. In the **Security Settings** section, use the dropdowns to select the following:          |
+| 2. In the **Security Settings** section, check the checkbox next to **Sign Authentication**  |
 |                                                                                              |
-|    * For the **Signing Key** select **saml-agc-sp.acme.com**.                                |
+|    **Requests**.                                                                             |
 |                                                                                              |
-|    * For the **Signing Certificate** select **saml-agc-sp.acme.com**.                        |
+| 3. In the updated **Security Settings** section, use the dropdowns to select the following:  |
 |                                                                                              |
-| 3. Click **Save & Next**.                                                                    |
+|    * For the **Message Signing Key** select **saml-agc-sp.acme.com**.                        |
+|                                                                                              |
+|    * For the **Message Signing Certificate** select **saml-agc-sp.acme.com**.                |
+|                                                                                              |
+| 4. Click **Save & Next**.                                                                    |
 +----------------------------------------------------------------------------------------------+
 | |image031|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -388,7 +394,7 @@ TASK 3: Configure the Virtual Server
 |                                                                                              |
 | 2. In the **Client SSL Profile** section, use the arrows to move only the                    |
 |                                                                                              |
-|    **wilcard.acme.com** profile to the right-hand column as shown.                           |
+|    **wildcard.acme.com** profile to the right-hand column as shown.                          |
 |                                                                                              |
 | 3. Click **Save & Next**.                                                                    |
 +----------------------------------------------------------------------------------------------+
@@ -401,11 +407,11 @@ TASK 4: Configure External IdP Connector
 +----------------------------------------------------------------------------------------------+
 | 1. In the **External Identity Provider Connector Settings** section, use the first dropdown  |
 |                                                                                              |
-|    to select the **Metadata**.                                                               |
+|    **Select Method to configure your IdP Connector** to select **Metadata**.                 |
 |                                                                                              |
-| 2. Click the **Choose File** button and then browse the **Jumphost** desktop and select the  |
+| 2. In the updated window, click the **Choose File** button and then browse the **Jumphost**  |
 |                                                                                              |
-|    file **idp_partner_com_metadata.xml**.                                                    |
+|    desktop and select the file **idp_partner_com_metadata.xml**.                             |
 |                                                                                              |
 | 3. In the **Name** field, input **idp.partner.com**                                          |
 |                                                                                              |
@@ -432,9 +438,9 @@ TASK 5: Configure Pool
 |                                                                                              |
 |    **(member)** for **Load Balancing Method**.                                               |
 |                                                                                              |
-| 5. For the **Pool Servers** section, use the first dropdown to select **/Common/10.1.20.6**  |
+| 5. For the **Pool Servers** section, use the first dropdown for **IP Address/Node Name** to  |
 |                                                                                              |
-|    for **IP Address/Node Name**. Ensure port **80** and **HTTP** are set for the **Port**.   |
+|    select **/Common/10.1.20.6**. Ensure port **80** and **HTTP** are set for the **Port**.   |
 |                                                                                              |
 | 6. Click **Save & Next**.                                                                    |
 +----------------------------------------------------------------------------------------------+
@@ -468,7 +474,7 @@ TASK 7: Configure Endpoint Checks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Click **Save & Next**.                                                                    |
+| 1. In the **Endpoints Checks Properties** window, click **Save & Next**.                     |
 |                                                                                              |
 | **Note:** *Endpoints checks can also be configured to protect application access.  The*      |
 |                                                                                              |
@@ -481,9 +487,9 @@ TASK 8: Configure Session Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Review the Session Managment settings, then scroll to the bottom of the window and click  |
+| 1. Review the Session Managment settings, in the **Timeout Settings** section then scroll to |
 |                                                                                              |
-|    **Save & Next**.                                                                          |
+|    the bottom of the window and click **Save & Next**.                                       |
 +----------------------------------------------------------------------------------------------+
 | |image037|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -519,7 +525,7 @@ TASK: 10: Testing the SAML Service Provider (SP)
 |                                                                                              |
 |    bookmark toolbar.                                                                         |
 |                                                                                              |
-| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
+| **Note:** *If you have issues, open Firefox in a New Private Window (Incognito/Safe Mode)*   |
 +----------------------------------------------------------------------------------------------+
 | |image041|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -527,7 +533,7 @@ TASK: 10: Testing the SAML Service Provider (SP)
 +----------------------------------------------------------------------------------------------+
 | 2. Once the page loads, enter **user1** for username and **user1** for password  in the      |
 |                                                                                              |
-|    **Partner Secure Logon** form and click the logon button.                                 |
+|    **Partner Secure Logon** form and click the **Logon** button.                             |
 +----------------------------------------------------------------------------------------------+
 | |image042|                                                                                   |
 +----------------------------------------------------------------------------------------------+
