@@ -68,97 +68,49 @@ Links & Guides
 The following are additional resources included for reference and assistance with
 this lab guide and other APM tasks.
 
--  **Access Policy Manager (APM) Operations Guide:**
-   https://support.f5.com/content/kb/en-us/products/big-ip_apm/manuals/product/f5-apm-operations-guide/_jcr_content/pdfAttach/download/file.res/f5-apm-operations-guide.pdf
+**Access Policy Manage (APM)**:
+  * **Datasheet**: https://www.f5.com/pdf/products/big-ip-access-policy-manager-ds.pdf
+  * **Documentation Portal**: https://support.f5.com/csp/knowledge-center/software/BIG-IP?module=BIG-IP%20APM&version=15.1.0
 
--  **Access Policy Manager (APM) Authentication & Single Sign on Concepts:**
-   https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0.html
+**SAML Federation:**
+  * **Concepts & Configuration**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-saml-configuration.html
+  * **APM as SAML Identity Provider (IdP): https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-saml-configuration/using-apm-as-a-saml-idp-no-sso-portal.html#concept-9265 
+  * **APM as SAML Service Provider (SP): https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-saml-configuration/using-apm-as-a-saml-service-provider.html#GUID-E4CEA553-B0AB-487C-9F37-DF3864F3B462
+  * **Inline SAML Single Sign-On: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-saml-configuration/config-apm-as-saml-idp-inline-sso.html#overview-apm-saml-idp-inline-sso
 
--  **SAML:**
+**OAuth:**
+  * **Concepts & Configuration**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-oauth-configuration.html
+  * **APM OAuth 2.0 Support**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-oauth-configuration/apm-oauth-overview.html#GUID-E91243D6-06B3-4A4B-BC05-BC1C725E42EA
+  * **APM OAuth 2.0 Authorization Server**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-oauth-configuration/using-apm-as-an-oauth-2-server.html#GUID-BDFD21BB-D6B7-4330-B0DB-DDE307371C27
+  * **APM OAuth 2.0 Client/Resource Server**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-oauth-configuration/apm-oauth-client-and-resource-server.html#GUID-D32086A6-B098-4CC6-8FAF-12710A8EB888
 
-   -  **Introduction:**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/28.html#guid-28f26377-6e10-42c9-883a-3ac65eab9092
+**Per Request Policy**:
+  * **Concepts**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies.html
+  * **About zero trust**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/per-request-policy-concepts/about-zero-trust.html
+  * **About per-request policies**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/per-request-policy-concepts/about-per-request-policies.html
+  * **About per-request policy subroutines**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/per-request-policy-concepts/about-per-request-policy-subroutines.html
+  * **About subsessions**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/per-request-policy-concepts/about-subsessions.html
+  * **About gating criteria in subroutines**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/per-request-policy-concepts/about-gating-criteria.html
 
-   -  **F5 SAML IdP (Identity Provider with Portal):**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/29.html#guid-42e93e4b-e4fc-4c3d-ae53-910641d5755c
+**HTTP Connector Concepts**:
+  * **Concepts:** https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/about-http-connector.html
+  * **Defining an HTTP Connector Transport**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/defining-http-connector-transport.html
+  * **Creating an HTTP Connector Request for an external IP blocklist**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/creating-http-connector-request-external-IP-blocklist.html
+  * **Configuring a per-request policy for an HTTP Connector**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/configuring-http-connector-request-prp.html
+  * **Adding an HTTP Connector to a subroutine to check an external blocklist**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/configure-blocklist-check-subroutine.html
+  * **Adding the HTTP Connector subroutine to the per-request policy**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/adding-http-connector-subroutine-prp.html
+  * **Creating an allow-all per-session policy**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/implementing-seamless-sso-azure-saml-mfa/creating-blank-per-session-policy.html
+  * **Creating a virtual server for the HTTP Connector policy**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-per-request-policies/using-http-connector/creating-virtual-server-http-connector.html
 
-   -  **F5 SAML IdP (Identity Provider without Portal):**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/30.html#guid-39ffed07-65f2-40b8-85ae-c80073cc4e82
+**Visual Policy Editor**:
+  * **Concepts**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-visual-policy-editor.html
+  * **Session Variables Reference**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-visual-policy-editor/session-variables/session-variables-reference.html 
+  * **Perflow and Subsession Variables**: https://techdocs.f5.com/en-us/bigip-15-1-0/big-ip-access-policy-manager-visual-policy-editor/perflow-variables/per-flow-and-subsession-variables.html 
 
-   -  **F5 SAML SP (Service Provider):**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/31.html#guid-be2cf224-727e-4a0f-aa68-676fdedba37b
-
-   -  **F5 Federation iApp (Includes o365):**
-      https://www.f5.com/pdf/deployment-guides/saml-idp-saas-dg.pdf
-
-   -  **F5 o365 Deployment Guide:**
-      https://www.f5.com/pdf/deployment-guides/microsoft-office-365-idp-dg.pdf
-
--  **OAuth**
-
-   -  **OAuth Overview:**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/35.html#guid-c1b617a7-07b5-4ad6-9b84-29d6ecd789b4
-
-   -  **OAuth Client & Resource Server:**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/36.html#guid-c6db081e-e8ac-454b-84c8-02a1a282a888
-
-   -  **OAuth Authorization Server:**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/37.html#guid-be8761c9-5e2f-4ad8-b829-871c7feb2a20
-
-   -  **Troubleshooting Tips**
-
-      -  **OAuth Client & Resource Server:**
-         https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/36.html#guid-774384bc-cf63-469d-a589-1595d0ddfba2
-
-      -  **OAuth Authorization Server:**
-         https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-sso-13-0-0/37.html#guid-8b97b512-ec2b-4bfb-a6aa-1af24842ee7a
-
--  **Kerberos**
-
-   -  **Kerberos AAA Object**: (*See Reference section below*)
-
-   -  **Kerberos Constrained Delegation:**
-      http://www.f5.com/pdf/deployment-guides/kerberos-constrained-delegation-dg.pdf
-
--  **Two-factor Integrations/Guides** (**Not a complete list**)
-
-   -  **RSA Integration:**
-      https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-authentication-single-sign-on-12-1-0/6.html#conceptid
-
-   -  **DUO Security: **
-
-      -  https://duo.com/docs/f5bigip
-
-      -  https://duo.com/docs/f5bigip-alt
-
-   -  **Google Authenticator:**
-      https://devcentral.f5.com/articles/two-factor-authentication-with-google-authenticator-and-apm
-
--  **Access Policy Manager (APM) Deployment Guides:**
-
-   -  **F5 Deployment Guide for Microsoft Exchange 2010/2013:**
-      https://f5.com/solutions/deployment-guides/microsoft-exchange-server-2010-and-2013-big-ip-v11
-
-   -  **F5 Deployment Guide for Microsoft Exchange 2016:**
-      https://f5.com/solutions/deployment-guides/microsoft-exchange-server-2016-big-ip-v11-v12-ltm-apm-afm
-
-   -  **F5 Deployment Guide for Microsoft SharePoint 2010/2013:**
-      https://f5.com/solutions/deployment-guides/microsoft-sharepoint-2010-and-2013-new-supported-iapp-big-ip-v114-ltm-apm-asm-aam
-
-   -  **F5 Deployment Guide for Microsoft SharePoint 2016:**
-      https://f5.com/solutions/deployment-guides/microsoft-sharepoint-2016-big-ip-v114-v12-ltm-apm-asm-afm-aam
-
-   -  **F5 Deployment Guide for Citrix XenApp/XenDesktop:**
-      https://f5.com/solutions/deployment-guides/citrix-xenapp-or-xendesktop-release-candidate-big
-
-   -  **F5 Deployment Guide for VMWare Horizon View:**
-      https://f5.com/solutions/deployment-guides/vmware-horizon-view-52-53-60-62-70-release-candidate-iapp-big-ip-v11-v12-ltm-apm-afm?tag=VMware
-
-   -  **F5 Deployment Guide for Microsoft Remote Desktop Gateway Services:**
-      https://f5.com/solutions/deployment-guides/microsoft-remote-desktop-gateway-services-big-ip-v114-ltm-afm-apm
-
-   -  **F5 Deployment Guide for Active Directory Federated Services:**
-      https://f5.com/solutions/deployment-guides/microsoft-active-directory-federation-services-big-ip-v11-ltm-apm
+**Guided Configuration**:
+  * **Concepts**: https://techdocs.f5.com/kb/en-us/products/big-ip_apm/releasenotes/product/relnote-guided-config-6-0.html
+  * **Overview**: https://techdocs.f5.com/kb/en-us/products/big-ip_apm/releasenotes/product/relnote-guided-config-6-0.html#overview
+  * **Access Policy Manager**: https://techdocs.f5.com/kb/en-us/products/big-ip_apm/releasenotes/product/relnote-guided-config-6-0.html#overviewapm
 
 +----------------------------------------------------------------------------------------------+
 | F5 Networks, Inc. \| f5.com                                                                  |
