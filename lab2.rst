@@ -1,28 +1,28 @@
 Lab 2: Extending the SAML Use Case
 ==================================
 
-The purpose of this lab is expand a fairly standard SAML use case. In this
+The purpose of this lab is to expand a fairly standard SAML use case. In this
 Lab Students will not being using Access Guided Configuration but instead 
 making direct SAML configuration changes to familiarize themselves with the 
 underlying SAML components and menus.  
 
 This lab has an existing SAML configuration for ACME in which an ACME SAML
 IdP is already Federated with an ACME SAML Service Provider. Students will 
-and verify the functionality of IDP-Initiated and SP-Initiated SAML flows.
+review and verify the functionality of IDP-Initiated and SP-Initiated SAML flows.
 
 The lab is in two parts.  In Part 1, Students will extend an ACME SAML SP 
-provided application to a Partner. In Part 2, Students will extend ACME's 
-SAML IdP to include a Partner provided SAML SP.
+provided application to a Partner. In Part 2, Students will include a Partner 
+provided SAML SP to extend ACME's federations via ACME's SAML IdP.
 
 Objective:
 ----------
 
--  Gain an understanding of integrating of underlying SAML Configuration
+-  Gain an understanding of integrating underlying SAML Configuration
    objects. 
 
 -  Gain further understanding of IdP-Initiated and SP-Initiated flows.
    
--  Rewview looking at SAML troubleshooting tools.
+-  Review logs and data via SAML troubleshooting tools.
 
 Lab Requirements:
 -----------------
@@ -42,7 +42,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 |                                                                                              |
 |    toolbar.                                                                                  |
 |                                                                                              |
-| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
+| **Note:** *If you have issues, open Firefox in a New Private Window (Incognito/Safe Mode)*   |
 +----------------------------------------------------------------------------------------------+
 | |image001|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -64,7 +64,9 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| 4. The **ACME Application 1** will now open if successfully configured.                      |
+| 4. The **ACME Application 1** will now open if successfully configured. Close the **ACME**   |
+|                                                                                              |
+|    **Application 1** broswer window and logout of the **F5 Dynamic Webtop**.                 |
 |                                                                                              |
 | **Note:** *This was a SAML IdP-Initiated flow.*                                              |
 +----------------------------------------------------------------------------------------------+
@@ -102,7 +104,7 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 |                                                                                              |
 |    bookmark toolbar.                                                                         |
 |                                                                                              |
-| **Note:** *If you have issues, open Firefox in a Provate Window (Incognito/Safe Mode)*       |
+| **Note:** *If you have issues, open Firefox in a New Private Window (Incognito/Safe Mode)*   |
 +----------------------------------------------------------------------------------------------+
 | |image008|                                                                                   |
 +----------------------------------------------------------------------------------------------+
@@ -116,7 +118,9 @@ TASK 1: Review the configured SAML IdP and SAML SP (ACME)
 +----------------------------------------------------------------------------------------------+
  
 +----------------------------------------------------------------------------------------------+
-| 11. The **ACME Application 1** will now open if successfully configured.                     |
+| 11. The **ACME Application 1** will now open if successfully configured. Close the **ACME**  |
+|                                                                                              |
+|    **Application 1** broswer window.                                                         |
 |                                                                                              |
 | **Note:** *This was a SAML SP-Initiated flow.*                                               |
 +----------------------------------------------------------------------------------------------+
@@ -127,7 +131,7 @@ TASK 2: Extend the ACME SAML Service Provider (SP)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Navigate to **Access -> Federation -> SAML Service Provider -> External IdP Connection**  |
+| 1. Navigate to **Access -> Federation -> SAML Service Provider -> External IdP Connectors**  |
 |                                                                                              |
 | 2. In the resulting main window update, click the small **down arrow** beside the **create** |
 |                                                                                              |
@@ -246,7 +250,7 @@ TASK 1: Extend the ACME SAML Identity Provider (IdP)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +----------------------------------------------------------------------------------------------+
-| 1. Navigate to **Access -> Federation -> SAML Identity Provider -> External IdP Connection** |
+| 1. Navigate to **Access -> Federation -> SAML Identity Provider -> External SP Connectors**  |
 |                                                                                              |
 | 2. In the resulting main window update, click the small **down arrow** beside the **create** |
 |                                                                                              |
