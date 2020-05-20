@@ -341,7 +341,7 @@ TASK 4: Create OAuth Server
 |                                                                                              |
 | -  **Type:** **AzureAD** (Select from dropdown)                                              |
 |                                                                                              |
-| -  **OAuth Provider:** **azure\_AD\_provider** (Select from dropdown)                  |
+| -  **OAuth Provider:** **azure\_AD\_provider** (Select from dropdown)                        |
 |                                                                                              |
 | -  **DNS Resolver:** **prebuilt\_dns\_resolver** (Select from dropdown)                      |
 |                                                                                              |
